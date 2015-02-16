@@ -1,0 +1,21 @@
+<script id="news-feed-config" type="application/json">
+  { "newsServiceDomain": "{{ widget.news_service_domain.value }}",
+    "locationURN":       "{{ widget.location_urn.best_value }}",
+    "numberOfPosts":     "{{ widget.number_of_posts.value }}",
+    "headingText":       "{{ widget.heading_text.value }}",
+    "uiType":            "{{ widget.ui_type.best_value }}",
+    "backgroundColor":   "{{ widget.background_color.value }}",
+    "displayPhotos":     "{{ widget.display_photos.value }}",
+    "defaultImage":      "{{ widget.default_image.value }}"
+  }
+</script>
+
+<style>
+  {% if widget.background_color.value != blank %}
+    .news-feed-widget .posts-nav .all-posts{ background:{{ widget.background_color.value }}; }
+  {% endif %} 
+</style>
+
+<div class="news-feed-widget widget" id="news-feed-widget">
+  <h2 id="news-feed-top">{{ widget.heading_text.value }}</h2>
+</div>

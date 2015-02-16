@@ -30,6 +30,10 @@ initializeFlexSlider = (galleryOptions, gallery) ->
       directionNav: true
       controlNav: showThumbs
 
+    setTimeout (->
+      gallery.addClass "loaded"
+    ), 500
+
 
 # Gets the height of the tallest image
 getLargestImage = (gallery) ->

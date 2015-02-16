@@ -13,13 +13,13 @@
 
 <style>
   {% if widget.text_color.value != '' %}
-  #corpSearchWrapper {color:{{widget.text_color.value}}}
+  .corpSearchWrapper {color:{{widget.text_color.value}}}
   {% endif %}
   {% if widget.search_button_color.value != '' %}
-  #corpSearchWrapper .search-form .search-button{background:{{widget.search_button_color.value}}}
-  {% endif %}  
+  .corpSearchWrapper .search-form .search-button{background:{{widget.search_button_color.value}}}
+  {% endif %}
   {% if widget.search_background.value != '' %}
-  #corpSearchWrapper .search-form{background:{{widget.search_background.value}}}
+  .corpSearchWrapper .search-form{background:{{widget.search_background.value}}}
   {% endif %}
 </style>
 

@@ -1,0 +1,30 @@
+<form>
+  <div class="form-field">
+    {{ widget.realpage_id.id_hidden_field }}
+    <label for="{{ widget.realpage_id.value_field_id }}" >
+      Realpage ID
+    </label>
+    <input type="text"
+      placeholder="Realpage ID"
+      id="{{ widget.realpage_id.value_field_id }}"
+      name="{{ widget.realpage_id.value_field_name }}"
+      value="{{ widget.realpage_id.value }}"
+      required
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.realpage_stylesheet.id_hidden_field }}
+    <label for="{{ widget.realpage_stylesheet.value_field_id }}">
+      Realpage Custom Stylesheet URL
+    </label>
+    <input type="text"
+      placeholder="//some-ssl-served/style.css"
+      id="{{ widget.realpage_stylesheet.value_field_id }}"
+      name="{{ widget.realpage_stylesheet.value_field_name }}"
+      value="{{ widget.realpage_stylesheet.value }}"
+    />
+  </div>
+  
+  <input type="submit" value="Save" />
+</form>

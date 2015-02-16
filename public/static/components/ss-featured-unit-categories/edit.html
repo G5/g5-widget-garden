@@ -1,0 +1,81 @@
+<form>
+  <fieldset>
+    <div class="form-field">
+      {{ widget.unit_service_host.id_hidden_field }}
+      <label for="{{ widget.unit_service_host.value_field_id }}">
+        Units Service Host - Api
+      </label>
+      <input type="text"
+        placeholder="//www.g5api.com"
+        id="{{ widget.unit_service_host.value_field_id }}"
+        name="{{ widget.unit_service_host.value_field_name }}"
+        value="{{ widget.unit_service_host.best_value }}"
+      />
+    </div>
+    <div class="form-field">
+      {{ widget.location_urn.id_hidden_field }}
+      <label for="{{ widget.location_urn.value_field_id }}">
+        Location URN
+      </label>
+      <input type="text"
+        placeholder="1234"
+        id="{{ widget.location_urn.value_field_id }}"
+        name="{{ widget.location_urn.value_field_name }}"
+        value="{{ widget.location_urn.best_value }}"
+      />
+    </div>
+    <div class="form-field">
+      {{ widget.unit_page_url.id_hidden_field }}
+      <label for="{{ widget.unit_page_url.value_field_id }}">
+        Unit Category Link Destination Page
+      </label>
+      <select id="{{ widget.unit_page_url.value_field_id }}" name="{{ widget.unit_page_url.value_field_name }}">
+        {% for web_page in widget.navigation.value %}
+          <option value="{{ web_page[1].url | url_encode }}"
+            {% if widget.unit_page_url.value == web_page[1].url %}
+              selected
+            {% endif %} >{{ web_page[1].name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="form-field">
+      {{ widget.primary_color.id_hidden_field }}
+      <label for="{{ widget.primary_color.value_field_id }}">
+        Button BG Color
+      </label>
+      <input type="text"
+        placeholder="#999"
+        id="{{ widget.primary_color.value_field_id }}"
+        name="{{ widget.primary_color.value_field_name }}"
+        value="{{ widget.primary_color.value }}"
+      />
+    </div>
+    <div class="form-field">
+      {{ widget.secondary_color.id_hidden_field }}
+      <label for="{{ widget.secondary_color.value_field_id }}">
+        Text Color
+      </label>
+      <input type="text"
+        placeholder="#005892"
+        id="{{ widget.secondary_color.value_field_id }}"
+        name="{{ widget.secondary_color.value_field_name }}"
+        value="{{ widget.secondary_color.value }}"
+      />
+    </div>
+    <div class="form-field">
+      {{ widget.accent_color_1.id_hidden_field }}
+      <label for="{{ widget.accent_color_1.value_field_id }}">
+        Accent Color ('Select a Size' header color if needed)
+      </label>
+      <input type="text"
+        id="{{ widget.accent_color_1.value_field_id }}"
+        name="{{ widget.accent_color_1.value_field_name }}"
+        value="{{ widget.accent_color_1.value }}"
+        placeholder="#eee"
+      />
+    </div>
+
+  </fieldset>
+
+  <input type="submit" value="Save" class="btn" />
+</form>

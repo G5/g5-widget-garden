@@ -14,7 +14,7 @@
   <div class="form-field">
     {{ widget.service_host.id_hidden_field }}
     <label for="{{ widget.service_host.value_field_id }}">
-      Service Host
+      Inventory Service Host
     </label>
     <input type="text"
       placeholder="http://www.mydomain.com"
@@ -45,18 +45,6 @@
       id="{{ widget.unit_size_help_label.value_field_id }}"
       name="{{ widget.unit_size_help_label.value_field_name }}"
       value="{{ widget.unit_size_help_label.best_value }}"
-    />
-  </div>
-  <div class="form-field">
-    {{ widget.nearby_locations_button_label.id_hidden_field }}
-    <label for="{{ widget.nearby_locations_button_label.value_field_id }}">
-     Nearby Locations Button Label
-    </label>
-    <input type="text"
-      placeholder=""
-      id="{{ widget.nearby_locations_button_label.value_field_id }}"
-      name="{{ widget.nearby_locations_button_label.value_field_name }}"
-      value="{{ widget.nearby_locations_button_label.best_value }}"
     />
   </div>
   <div class="form-field">
@@ -98,13 +86,25 @@
   <div class="form-field">
     {{ widget.text_color.id_hidden_field }}
     <label for="{{ widget.text_color.value_field_id }}">
-      Nav Text Color
+      Text Color
     </label>
     <input type="text"
       placeholder=""
       id="{{ widget.text_color.value_field_id }}"
       name="{{ widget.text_color.value_field_name }}"
       value="{{ widget.text_color.best_value }}"
+    />
+  </div>
+  <div class="form-field">
+    {{ widget.button_text_color.id_hidden_field }}
+    <label for="{{ widget.button_text_color.value_field_id }}">
+      Button Text Color
+    </label>
+    <input type="text"
+      placeholder=""
+      id="{{ widget.button_text_color.value_field_id }}"
+      name="{{ widget.button_text_color.value_field_name }}"
+      value="{{ widget.button_text_color.best_value }}"
     />
   </div>
   <div class="form-field">
@@ -117,6 +117,18 @@
       id="{{ widget.toggle_color.value_field_id }}"
       name="{{ widget.toggle_color.value_field_name }}"
       value="{{ widget.toggle_color.best_value }}"
+    />
+  </div>
+  <div class="form-field">
+    {{ widget.amenity_color.id_hidden_field }}
+    <label for="{{ widget.amenity_color.value_field_id }}">
+      Amenity Icon Color
+    </label>
+    <input type="text"
+      placeholder=""
+      id="{{ widget.amenity_color.value_field_id }}"
+      name="{{ widget.amenity_color.value_field_name }}"
+      value="{{ widget.amenity_color.best_value }}"
     />
   </div>
   <input type="submit" value="Save" class="btn" />

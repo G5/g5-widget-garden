@@ -26,13 +26,16 @@
         maxItems: getGridSize()
       });
     } else {
-      return gallery.find('.gallery-slideshow').flexslider({
+      gallery.find('.gallery-slideshow').flexslider({
         animation: 'fade',
         useCSS: true,
         touch: true,
         directionNav: true,
         controlNav: showThumbs
       });
+      return setTimeout((function() {
+        return gallery.addClass("loaded");
+      }), 500);
     }
   };
 

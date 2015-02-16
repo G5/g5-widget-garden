@@ -3,55 +3,55 @@
 
   <style>
     {% if widget.text_color.best_value != '' %}
-    #corpSearchWrapper {color:{{widget.text_color.best_value}}}
+    .corpSearchWrapper {color:{{widget.text_color.best_value}}}
     {% endif %}
     {% if widget.search_button_color.best_value != '' %}
-    #corpSearchWrapper .search-form .search-button{background:{{widget.search_button_color.best_value}}}
+    .corpSearchWrapper .search-form .search-button{background:{{widget.search_button_color.best_value}}}
     {% endif %}
     {% if widget.photo_border_color.best_value != '' %}
-    #corpSearchWrapper .store-summary .resultPhoto img{border:1px solid {{widget.photo_border_color.best_value}}}
+    .corpSearchWrapper .store-summary .resultPhoto img{border:1px solid {{widget.photo_border_color.best_value}}}
     {% endif %}
     {% if widget.card_background_color.best_value != '' %}
-    #corpSearchWrapper .store-summary {background:{{widget.card_background_color.best_value}}}
+    .corpSearchWrapper .store-summary {background:{{widget.card_background_color.best_value}}}
     {% endif %}
     {% if widget.card_text_color.best_value != '' %}
-    #corpSearchWrapper .store-summary {color:{{widget.card_text_color.best_value}}}
+    .corpSearchWrapper .store-summary {color:{{widget.card_text_color.best_value}}}
     {% endif %}
     {% if widget.unit_info_border.best_value != '' %}
-    #corpSearchWrapper .store-summary .resultUnitInfo{border-top:1px solid {{widget.unit_info_border.best_value}}}; border-bottom:1px solid {{widget.unit_info_border.best_value}}}
+    .corpSearchWrapper .store-summary .resultUnitInfo{border-top:1px solid {{widget.unit_info_border.best_value}}}; border-bottom:1px solid {{widget.unit_info_border.best_value}}}
     {% endif %}
     {% if widget.cta_color.best_value != '' %}
-    #corpSearchWrapper .store-summary .resultAvailability{background:{{widget.cta_color.best_value}}}
+    .corpSearchWrapper .store-summary .resultAvailability{background:{{widget.cta_color.best_value}}}
     {% endif %}
     {% if widget.cta_text_color.best_value != '' %}
-    #corpSearchWrapper .store-summary .resultAvailability{color:{{widget.cta_text_color.best_value}}}
+    .corpSearchWrapper .store-summary .resultAvailability{color:{{widget.cta_text_color.best_value}}}
     {% endif %}
     {% if widget.header_text_color.best_value != '' %}
-    #corpSearchWrapper .pagination-nav span.page {color:{{widget.header_text_color.best_value}}}
-    #corpSearchWrapper .search-form h2{color:{{widget.header_text_color.best_value}}}
+    .corpSearchWrapper .pagination-nav span.page {color:{{widget.header_text_color.best_value}}}
+    .corpSearchWrapper .search-form h2{color:{{widget.header_text_color.best_value}}}
     {% endif %}
     {% if widget.search_color.best_value != '' %}
-    #corpSearchWrapper .search-form span{color:{{widget.search_color.best_value}}}
-    #corpSearchWrapper .search-form button{color:{{widget.search_color.best_value}}}
+    .corpSearchWrapper .search-form span{color:{{widget.search_color.best_value}}}
+    .corpSearchWrapper .search-form button{color:{{widget.search_color.best_value}}}
     {% endif %}
     {% if widget.dropdown_color.best_value != '' %}
-    #corpSearchWrapper .search-form span{background:{{widget.dropdown_color.best_value}}}
-    #corpSearchWrapper .search-form-inner span.locations-loading > select{color: {{widget.dropdown_color.best_value}}}
-    #corpSearchWrapper .search-form-inner .loading-gray{background-color: {{widget.dropdown_color.best_value}}}
+    .corpSearchWrapper .search-form span{background:{{widget.dropdown_color.best_value}}}
+    .corpSearchWrapper .search-form-inner span.locations-loading > select{color: {{widget.dropdown_color.best_value}}}
+    .corpSearchWrapper .search-form-inner .loading-gray{background-color: {{widget.dropdown_color.best_value}}}
     {% endif %}
     {% if widget.dropdown_text_color.best_value != '' %}
-    #corpSearchWrapper .search-form-inner span select{color: {{widget.dropdown_text_color.best_value}}}
-    #corpSearchWrapper .search-form-inner span option{color: {{widget.dropdown_text_color.best_value}}}
-    #corpSearchWrapper .search-form-inner span label{color: {{widget.dropdown_text_color.best_value}}}
+    .corpSearchWrapper .search-form-inner span select{color: {{widget.dropdown_text_color.best_value}}}
+    .corpSearchWrapper .search-form-inner span option{color: {{widget.dropdown_text_color.best_value}}}
+    .corpSearchWrapper .search-form-inner span label{color: {{widget.dropdown_text_color.best_value}}}
     {% endif %}
     {% if widget.search_background.best_value != '' %}
-    #corpSearchWrapper .search-form{background:{{widget.search_background.best_value}}}
-    #corpSearchWrapper .pagination-nav span.next{border-left: 15px solid {{widget.search_background.best_value}}}
-    #corpSearchWrapper .pagination-nav a.next{border-left: 15px solid {{widget.search_background.best_value}}}
-    #corpSearchWrapper .pagination-nav span.previous{border-right: 15px solid {{widget.search_background.best_value}}}
-    #corpSearchWrapper .pagination-nav a.previous{border-right: 15px solid {{widget.search_background.best_value}}}
-    #corpSearchWrapper .pagination-nav a.page{color:{{widget.search_background.best_value}}}
-    #corpSearchWrapper .pagination-nav span.page{background:{{widget.search_background.best_value}}}
+    .corpSearchWrapper .search-form{background:{{widget.search_background.best_value}}}
+    .corpSearchWrapper .pagination-nav span.next{border-left: 15px solid {{widget.search_background.best_value}}}
+    .corpSearchWrapper .pagination-nav a.next{border-left: 15px solid {{widget.search_background.best_value}}}
+    .corpSearchWrapper .pagination-nav span.previous{border-right: 15px solid {{widget.search_background.best_value}}}
+    .corpSearchWrapper .pagination-nav a.previous{border-right: 15px solid {{widget.search_background.best_value}}}
+    .corpSearchWrapper .pagination-nav a.page{color:{{widget.search_background.best_value}}}
+    .corpSearchWrapper .pagination-nav span.page{background:{{widget.search_background.best_value}}}
     {% endif %}
   </style>
 
@@ -66,7 +66,7 @@
         serviceHost: "{{ widget.core_service_url.best_value | url_encode }}"
     };
 
-    var EmberAppConfig = {  
+    var EmberAppConfig = {
      "modulePrefix":"multi-family-search",
      "environment":"production",
      "baseURL":"/",

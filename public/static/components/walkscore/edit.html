@@ -1,0 +1,64 @@
+<form>
+  <div class="form-field">
+    {{ widget.walkscore_client.id_hidden_field }}
+    <label for="{{ widget.walkscore_client.value_field_id }}" >
+      Client URN
+    </label>
+    <input type="text"
+      id="{{ widget.walkscore_client.value_field_id }}"
+      name="{{ widget.walkscore_client.value_field_name }}"
+      value="{{ widget.walkscore_client.value }}"
+      required
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.walkscore_location.id_hidden_field }}
+    <label for="{{ widget.walkscore_location.value_field_id }}" >
+      Location URN
+    </label>
+    <input type="text"
+      id="{{ widget.walkscore_location.value_field_id }}"
+      name="{{ widget.walkscore_location.value_field_name }}"
+      value="{{ widget.walkscore_location.value }}"
+    />
+  </div>
+  <div class="form-field">
+    {{ widget.primary_color.id_hidden_field }}
+    <label for="{{ widget.primary_color.value_field_id }}">
+      Walkscore BG Color
+    </label>
+    <input type="text"
+      placeholder="#ffffff"
+      id="{{ widget.primary_color.value_field_id }}"
+      name="{{ widget.primary_color.value_field_name }}"
+      value="{{ widget.primary_color.value }}"
+    />
+  </div>
+  <div class="form-field">
+    {{ widget.border_color.id_hidden_field }}
+    <label for="{{ widget.border_color.value_field_id }}">
+      Walkscore Border Color
+    </label>
+    <input type="text"
+      placeholder="#eeeeee"
+      id="{{ widget.border_color.value_field_id }}"
+      name="{{ widget.border_color.value_field_name }}"
+      value="{{ widget.border_color.value }}"
+    />
+  </div>
+  <div class="form-field">
+    {{ widget.secondary_color.id_hidden_field }}
+    <label for="{{ widget.secondary_color.value_field_id }}">
+      Walkscore Text Color
+    </label>
+    <input type="text"
+      placeholder="#000000"
+      id="{{ widget.secondary_color.value_field_id }}"
+      name="{{ widget.secondary_color.value_field_name }}"
+      value="{{ widget.secondary_color.value }}"
+    />
+  </div>
+
+  <input type="submit" value="Save" />
+</form>

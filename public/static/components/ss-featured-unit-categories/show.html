@@ -1,0 +1,42 @@
+<div class="ss-featured-unit-categories widget">
+
+<script id="ss-featured-unit-categories-config" type="application/javascript">
+  var ssFeaturedUnitCategories = {
+    "unit_service_host": "{{ widget.unit_service_host.value }}",
+    "location_urn": "{{ widget.location_urn.value }}",
+    "unit_page_url": "{{ widget.unit_page_url.value }}"
+  }
+</script>
+
+{% if widget.primary_color.value != blank or widget.secondary_color.value != blank or widget.accent_color.value != blank %}
+<style>
+  {% if widget.primary_color.value != blank %}
+  /* Button Color color customizations */
+    .ss-featured-unit-categories .iui-size > a,
+    .ss-featured-unit-categories .iui-steps span:first-child{ background-color:{{widget.primary_color.value}}; }
+  {% endif %}
+  {% if widget.secondary_color.value != blank %}
+  /* Secondary  color customizations */
+    .ss-featured-unit-categories .iui-title,
+    .ss-featured-unit-categories .iui-size .btn,
+    .ss-featured-unit-categories .iui-steps span:first-child{ color:{{widget.secondary_color.value}}; }
+  {% endif %}
+  {% if widget.accent_color_1.value != blank %}
+  /* Text-Color-1 color customizations */
+    .ss-featured-unit-categories .iui-title{color:{{widget.accent_color_1.value}} !important;}
+  {% endif %}
+</style>
+{% endif %}
+
+  <div class="iui-steps">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+  </div>
+
+  <p class="iui-title">Select a Size</p>
+
+  <div class="iui-container">
+    <p>Loading Unit Options</p>
+  </div>
+</div>

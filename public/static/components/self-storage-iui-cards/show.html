@@ -25,57 +25,75 @@
   </script>
 
   <style>
-    .iui-cards-wrapper h3,
-    .iui-cards-wrapper div.iui-cards-size-help a,
-    .iui-cards-wrapper .iui-cards-nav a.active span,
-    .iui-cards-wrapper .iui-cards-amenities-section span,
-    .iui-cards-wrapper .nearby-locations-toggle-link,
-    .iui-cards-wrapper .nearby-locations-toggle-link .nearby-locations-arrow,
-    .iui-cards-wrapper a.iui-cards-nearby-location-card div,
-    .iui-cards-wrapper .iui-cards-lead-form div.html_wrapper .html_field_text { color:{{ widget.primary_color.best_value }}; }
-    .iui-cards-wrapper a.iui-cards-nearby-location-card div.iui-cards-nearby-distance { border-top:1px solid {{ widget.primary_color.best_value }}; }
-    .iui-cards-wrapper .iui-cards-category-card,
-    .iui-cards-wrapper .iui-cards-unit-header,
-    .iui-cards-wrapper .iui-cards-unit-actions a:nth-of-type(1),
-    .iui-cards-wrapper .iui-cards-nearby-locations.nearby-locations-open { background:{{ widget.primary_color.best_value }}; }
+    .self-storage-iui-cards .iui-cards-wrapper h3,
+    .self-storage-iui-cards .iui-cards-wrapper div.iui-cards-size-help a,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-nav a.active span,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-amenities-section span,
+    .self-storage-iui-cards .iui-cards-wrapper .nearby-locations-toggle-link,
+    .self-storage-iui-cards .iui-cards-wrapper .nearby-locations-toggle-link .nearby-locations-arrow,
+    .self-storage-iui-cards .iui-cards-wrapper a.iui-cards-nearby-location-card div,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-unit-description,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-unit-actions a.is-phone,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-unit-actions a.is-phone:hover,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-unit-actions a.is-phone span,
+    .self-storage-iui-cards .iui-cards-wrapper .hold-leads-form form p,
+    .self-storage-iui-cards .iui-cards-wrapper .hold-leads-form form label,
+    .self-storage-iui-cards .iui-cards-wrapper .hold-leads-form form legend,
+    .self-storage-iui-cards .iui-cards-wrapper .hold-leads-form form span,
+    .self-storage-iui-cards .iui-cards-wrapper .hold-leads-form form div,
+    .self-storage-iui-cards .iui-cards-wrapper .hold-leads-form form .g5-submission-response,
+    .self-storage-iui-cards .iui-cards-wrapper .hold-leads-form form div.html_wrapper .html_field_text { color:{{ widget.primary_color.best_value }}; }
+    .self-storage-iui-cards .iui-cards-wrapper a.iui-cards-nearby-location-card div.iui-cards-nearby-distance { border-top:1px solid {{ widget.primary_color.best_value }}; }
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-category-card,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-unit-header,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-nearby-locations.nearby-locations-open { background:{{ widget.primary_color.best_value }}; }
 
-    .iui-cards-wrapper h3 span,
-    .iui-cards-wrapper div.iui-cards-size-help a span,
-    .iui-cards-wrapper .iui-cards-nav a.active,
-    .iui-cards-wrapper .iui-cards-category-special,
-    .iui-cards-wrapper .iui-cards-unit-header .iui-cards-special-tag,
-    .iui-cards-wrapper .iui-cards-special-section,
-    .iui-cards-wrapper a.iui-cards-nearby-location-card div.iui-cards-nearby-heading,
-    .iui-cards-wrapper .iui-cards-nearby-heading,
-    .iui-cards-wrapper .iui-thank-you-top,
-    .iui-cards-wrapper .iui-cards-lead-form div.html_wrapper .html_field_label { background:{{ widget.secondary_color.best_value }}; }
-    .iui-cards-wrapper .iui-cards-unit-header .iui-cards-special-tag .iui-cards-special-arrow { border-right:13px solid {{ widget.secondary_color.best_value }}; }
-    .iui-cards-wrapper.narrow .iui-cards-unit-header .iui-cards-special-tag .iui-cards-special-arrow { border-right:7px solid {{ widget.secondary_color.best_value }}; }
+    .self-storage-iui-cards .iui-cards-wrapper h3 span,
+    .self-storage-iui-cards .iui-cards-wrapper div.iui-cards-size-help a span,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-nav a.active,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-category-special,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-unit-header .iui-cards-special-tag,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-special-section,
+    .self-storage-iui-cards .iui-cards-wrapper a.iui-cards-nearby-location-card div.iui-cards-nearby-heading,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-nearby-heading,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-thank-you-top,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-lead-form div.html_wrapper .html_field_label { background:{{ widget.secondary_color.best_value }}; }
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-unit-header .iui-cards-special-tag .iui-cards-special-arrow { border-right:13px solid {{ widget.secondary_color.best_value }}; }
+    .self-storage-iui-cards .iui-cards-wrapper.narrow .iui-cards-unit-header .iui-cards-special-tag .iui-cards-special-arrow { border-right:7px solid {{ widget.secondary_color.best_value }}; }
 
-    .iui-cards-wrapper .iui-cards-unit-header .iui-cards-online-price { color:{{ widget.accent_color.best_value }}; }
-    .iui-cards-wrapper .iui-cards-amenities-section svg path,
-    .iui-cards-wrapper .iui-cards-amenities-section svg rect { fill:{{ widget.accent_color.best_value }}; }
-    .iui-cards-wrapper .iui-cards-lead-form .iui-submit-button input,
-    .iui-cards-wrapper .iui-cards-unit-actions a:nth-of-type(2),
-    .iui-cards-wrapper .iui-cards-final-links .iui-cards-directions-link { background:{{ widget.accent_color.best_value }} }
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-unit-header .iui-cards-online-price { color:{{ widget.accent_color.best_value }}; }
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-amenities-section svg path,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-amenities-section svg rect { fill:{{ widget.accent_color.best_value }}; }
+    .self-storage-iui-cards .spinner > div,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-unit-actions a,
+    .self-storage-iui-cards .iui-cards-wrapper .hold-leads-form form a,
+    .self-storage-iui-cards .iui-cards-wrapper .hold-leads-form form input[type=submit],
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-final-links .iui-cards-directions-link { background:{{ widget.accent_color.best_value }} }
 
-    .iui-cards-wrapper div,
-    .iui-cards-wrapper span,
-    .iui-cards-wrapper a,
-    .iui-cards-wrapper .iui-cards-nav a,
-    .iui-cards-wrapper .iui-cards-unit-actions a,
-    .iui-cards-wrapper .iui-cards-unit-actions a:hover,
-    .iui-cards-wrapper .iui-cards-nearby-locations.nearby-locations-open .nearby-locations-toggle-link,
-    .iui-cards-wrapper a.iui-cards-nearby-location-card div.iui-cards-nearby-heading,
-    .iui-cards-wrapper .iui-cards-nearby-heading,
-    .iui-cards-wrapper .iui-thank-you-top,
-    .iui-cards-wrapper .iui-cards-lead-form div.html_wrapper .html_field_label,
-    .iui-cards-wrapper .iui-cards-lead-form .iui-submit-button input,
-    .iui-cards-wrapper .iui-cards-final-links .iui-cards-directions-link { color:{{ widget.text_color.best_value }}; }
-    .iui-cards-wrapper .category-card-title,
-    .iui-cards-wrapper .iui-cards-special-section .special-price { border-bottom:1px solid {{ widget.text_color.best_value }}; }
+    .self-storage-iui-cards .iui-cards-wrapper div,
+    .self-storage-iui-cards .iui-cards-wrapper span,
+    .self-storage-iui-cards .iui-cards-wrapper a,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-nav a,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-unit-actions a,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-unit-actions a:hover,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-nearby-locations.nearby-locations-open .nearby-locations-toggle-link,
+    .self-storage-iui-cards .iui-cards-wrapper a.iui-cards-nearby-location-card div.iui-cards-nearby-heading,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-nearby-heading,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-thank-you-top,
+    .self-storage-iui-cards .iui-cards-wrapper .hold-leads-form form div.html_wrapper .html_field_label,
+    .self-storage-iui-cards .iui-cards-wrapper .hold-leads-form form input[type=submit],
+    .self-storage-iui-cards .iui-cards-wrapper .hold-leads-form form input[type=submit]:hover,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-final-links .iui-cards-directions-link { color:{{ widget.button_text_color.best_value }}; }
+    .self-storage-iui-cards .iui-cards-wrapper .category-card-title,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-special-section .special-price { border-bottom:1px solid {{ widget.button_text_color.best_value }}; }
 
-    .iui-cards-wrapper .iui-cards-unit-header .iui-cards-header-arrow{ background: {{ widget.toggle_color.best_value }} url(http://cdn11.g5search.com/assets/257595/iui-cards-unit-header-arrow.png) no-repeat center center; }
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-unit-description,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-amenities-section span { color: {{ widget.text_color.best_value }};}
+
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-unit-header .iui-cards-header-arrow{ background-color: {{ widget.toggle_color.best_value }}; }
+
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-amenities-section svg path,
+    .self-storage-iui-cards .iui-cards-wrapper .iui-cards-amenities-section svg rect { fill:{{ widget.amenity_color.best_value }}; }
   </style>
 
   <div id="iui-container">

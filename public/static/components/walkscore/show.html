@@ -1,0 +1,31 @@
+<div class="walkscore widget">
+  <script id="walkscore-config" type="application/javascript">
+    var walkFeedVarsConfig = {
+      "walkscore_client": "{{ widget.walkscore_client.value }}",
+      "walkscore_location": "{{ widget.walkscore_location.value }}",
+      "primary_color": "{{ widget.primary_color.value }}",
+      "border_color": "{{ widget.border_color.value }}",
+      "secondary_color": "{{ widget.secondary_color.value }}"
+    }
+  </script>
+
+  {% if widget.primary_color.value != blank or widget.border_color.value != blank or widget.secondary_color.value != blank %}
+    <style>
+      {% if widget.primary_color.value != blank %}
+        /* Button BG Color color customizations */
+        .walkscore-listing{ background:{{widget.primary_color.value}}; }
+      {% endif %}
+      {% if widget.border_color.value != blank %}
+        /* Border Color color customizations */
+        .walkscore-listing{ border: 1px solid {{widget.border_color.value}}; }
+      {% endif %}
+      {% if widget.secondary_color.value != blank %}
+        /* Secondary  color customizations */
+        .walkscore-listing a span{ color:{{widget.secondary_color.value}}; }
+      {% endif %}
+    </style>
+  {% endif %}
+
+  <div class="walkscore-listing {% if widget.primary_color.value != blank %}btn{% endif %}">
+  </div>
+</div>

@@ -139,7 +139,7 @@ CUSTOM STYLES
 .flex-control-thumbs li:nth-child(4n+1) {
   clear: left
 }
-.csstransforms .full-gallery.gallery-slideshow .slides img {
+.csstransforms .loaded .full-gallery.gallery-slideshow .slides img {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);

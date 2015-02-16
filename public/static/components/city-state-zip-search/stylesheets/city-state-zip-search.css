@@ -85,7 +85,7 @@
 .zip-search-location .phone{ font-weight:bold; }
 
 .zip-search-location-link,
-.view-all-link{ 
+.view-all-link{
   display:block;
   background:#1772a2;
   color:#f3f3f3;
@@ -122,4 +122,4 @@ div.location-search-info-window{ color: #000; }
 .wide .zip-search-results{ width:55%; }
 
 /*.narrow */.zip-search-map{ width:86%; float:none; margin:0 auto; }
-.wide .zip-search-map{ width:43%; margin: 0; float:right; }
+.wide .zip-search-map{ width:43%; margin: 3.5em 0 0; float:right; }

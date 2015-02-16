@@ -1,0 +1,60 @@
+.ss-featured-unit-categories{
+  background: #999;
+}
+.ss-featured-unit-categories {
+  clear: both;
+  padding: 30px;
+}
+.ss-featured-unit-categories .iui-steps {
+  margin-bottom: 1em;
+  overflow: hidden;
+  position: relative;
+}
+.ss-featured-unit-categories .iui-steps:before {
+  content: '';
+  background-color: white;
+  display: block;
+  height: 1px;
+  width: 7.87em;
+  position: absolute;
+  top: .75em;
+}
+.ss-featured-unit-categories .iui-steps span {
+  background-color: white;
+  color: #15006c;
+  border-radius: 50%;
+  line-height: 1;
+  text-align: center;
+  float: left;
+  margin-right: 30px;
+  padding-top: .25em;
+  height: 1.5em;
+  width: 1.5em;
+  position: relative;
+}
+.ss-featured-unit-categories .iui-title {
+  margin: 0;
+}
+.ss-featured-unit-categories .iui-container {
+  text-align: center;
+  overflow: hidden;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.ss-featured-unit-categories .iui-size {
+  display: inline-block;
+  padding: 5px;
+  width: 50%;
+  opacity:1;
+}
+
+.ss-featured-unit-categories .iui-size:nth-child(odd):last-child,
+.ss-featured-unit-categories .iui-size:nth-last-child(2):nth-child(odd){
+  width: 100%;
+}
+
+.ss-featured-unit-categories .iui-size > a{
+  display:block;
+  padding: 1em 3px;
+  font-size: .935em;
+}

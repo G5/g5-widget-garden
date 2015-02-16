@@ -1,0 +1,120 @@
+<form>
+  <fieldset>
+
+    <div class="form-field">
+      {{ widget.news_service_domain.id_hidden_field }}
+      <label for="{{ widget.news_service_domain.value_field_id }}">
+        News Service Domain
+      </label>
+      <input type="text"
+        placeholder="Domain for client news and events service"
+        id="{{ widget.news_service_domain.value_field_id }}"
+        name="{{ widget.news_service_domain.value_field_name }}"
+        value="{{ widget.news_service_domain.best_value }}"
+      />
+    </div>
+
+    <div class="form-field">
+      {{ widget.location_urn.id_hidden_field }}
+      <label for="{{ widget.location_urn.value_field_id }}">
+        Location URN
+      </label>
+      <input type="text"
+        placeholder="g5-cl-blahblahblah"
+        id="{{ widget.location_urn.value_field_id }}"
+        name="{{ widget.location_urn.value_field_name }}"
+        value="{{ widget.location_urn.best_value }}"
+      />
+    </div>
+
+    <div class="form-field">
+      {{ widget.number_of_posts.id_hidden_field }}
+      <label for="{{ widget.number_of_posts.value_field_id }}">
+        Number of Posts
+      </label>
+      <input type="text"
+        placeholder="Defaults to 3 if blank"
+        id="{{ widget.number_of_posts.value_field_id }}"
+        name="{{ widget.number_of_posts.value_field_name }}"
+        value="{{ widget.number_of_posts.best_value }}"
+      />
+    </div>
+
+    <div class="form-field">
+      {{ widget.heading_text.id_hidden_field }}
+      <label for="{{ widget.heading_text.value_field_id }}">
+        Heading Text
+      </label>
+      <input type="text"
+        placeholder=""
+        id="{{ widget.heading_text.value_field_id }}"
+        name="{{ widget.heading_text.value_field_name }}"
+        value="{{ widget.heading_text.value }}"
+      />
+    </div>
+
+    <div class="form-field">
+      {{ widget.news_page_path.id_hidden_field }}
+      <label for="{{ widget.news_page_path.value_field_id }}">
+        News Page
+      </label>
+      <select id="{{ widget.news_page_path.value_field_id }}" name="{{ widget.news_page_path.value_field_name }}">
+        {% for web_page in widget.navigation.value %}
+          <option value="{{ web_page[1].url | url_encode }}"
+            {% if widget.news_page_path.value == web_page[1].url %}
+              selected
+            {% endif %} >{{ web_page[1].name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="form-field">
+      {{ widget.background_color.id_hidden_field }}
+      <label for="{{ widget.background_color.value_field_id }}">
+        Button Background Color
+      </label>
+      <input type="text"
+        placeholder="Defaults to white if blank"
+        id="{{ widget.background_color.value_field_id }}"
+        name="{{ widget.background_color.value_field_name }}"
+        value="{{ widget.background_color.value }}"
+      />
+    </div>
+
+    <div class="form-field check-field">
+      {{ widget.display_photos.id_hidden_field }}
+      <input type="hidden"
+        id="{{ widget.display_photos.value_field_id }}_false"
+        name="{{ widget.display_photos.value_field_name }}"
+        value="false"
+      />
+      <input type="checkbox"
+        id="{{ widget.display_photos.value_field_id }}"
+        name="{{ widget.display_photos.value_field_name }}"
+        value="true"
+        {% if widget.display_photos.best_value == "true" %}
+        checked="checked"
+        {% endif %}
+      />
+      <label for="{{ widget.display_photos.value_field_id }}" >
+        Display Photos
+      </label>
+    </div>
+
+    <div class="form-field">
+      {{ widget.default_image.id_hidden_field }}
+      <label for="{{ widget.default_image.value_field_id }}">
+        Default Image
+      </label>
+      <input type="text"
+        placeholder="Used only when an article's image is empty"
+        id="{{ widget.default_image.value_field_id }}"
+        name="{{ widget.default_image.value_field_name }}"
+        value="{{ widget.default_image.best_value }}"
+      />
+    </div>
+
+  </fieldset>
+
+  <input type="submit" value="Save" class="btn" />
+</form>
