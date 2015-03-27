@@ -12,13 +12,13 @@
     </div>
          
     <div class="form-field">
-      {{ widget.cta_link_1.id_hidden_field }}
-      <select id="{{ widget.cta_link_1.value_field_id }}" name="{{ widget.cta_link_1.value_field_name }}">
-        {% for web_page in widget.navigation.value %}
-          <option value="{{ web_page[1].url | url_encode }}"
-            {% if widget.cta_link_1.value == web_page[1].url %}
+      {{ widget.page_slug_1.id_hidden_field }}
+      <select id="{{ widget.page_slug_1.value_field_id }}" name="{{ widget.page_slug_1.value_field_name }}">
+        {% for page in widget.navigateable_pages %}
+          <option value="{{ page.slug }}"
+            {% if widget.page_slug_1.value == page.slug %}
               selected
-            {% endif %} >{{ web_page[1].name }}</option>
+            {% endif %} >{{ page.slug }}</option>
         {% endfor %}
       </select>
     </div>
@@ -37,13 +37,13 @@
     </div>
          
     <div class="form-field">
-      {{ widget.cta_link_2.id_hidden_field }}
-      <select id="{{ widget.cta_link_2.value_field_id }}" name="{{ widget.cta_link_2.value_field_name }}">
-        {% for web_page in widget.navigation.value %}
-          <option value="{{ web_page[1].url | url_encode }}"
-            {% if widget.cta_link_2.value == web_page[1].url %}
+      {{ widget.page_slug_2.id_hidden_field }}
+      <select id="{{ widget.page_slug_2.value_field_id }}" name="{{ widget.page_slug_2.value_field_name }}">
+        {% for page in widget.navigateable_pages %}
+          <option value="{{ page.slug }}"
+            {% if widget.page_slug_2.value == page.slug %}
               selected
-            {% endif %} >{{ web_page[1].name }}</option>
+            {% endif %} >{{ page.slug }}</option>
         {% endfor %}
       </select>
     </div>
@@ -62,13 +62,13 @@
     </div>
          
     <div class="form-field">
-      {{ widget.cta_link_3.id_hidden_field }}
-      <select id="{{ widget.cta_link_3.value_field_id }}" name="{{ widget.cta_link_3.value_field_name }}">
-        {% for web_page in widget.navigation.value %}
-          <option value="{{ web_page[1].url | url_encode }}"
-            {% if widget.cta_link_3.value == web_page[1].url %}
+      {{ widget.page_slug_3.id_hidden_field }}
+      <select id="{{ widget.page_slug_3.value_field_id }}" name="{{ widget.page_slug_3.value_field_name }}">
+        {% for page in widget.navigateable_pages %}
+          <option value="{{ page.slug }}"
+            {% if widget.page_slug_3.value == page.slug %}
               selected
-            {% endif %} >{{ web_page[1].name }}</option>
+            {% endif %} >{{ page.slug }}</option>
         {% endfor %}
       </select>
     </div>
@@ -87,13 +87,13 @@
     </div>
          
     <div class="form-field">
-      {{ widget.cta_link_4.id_hidden_field }}
-      <select id="{{ widget.cta_link_4.value_field_id }}" name="{{ widget.cta_link_4.value_field_name }}">
-        {% for web_page in widget.navigation.value %}
-          <option value="{{ web_page[1].url | url_encode }}"
-            {% if widget.cta_link_4.value == web_page[1].url %}
+      {{ widget.page_slug_4.id_hidden_field }}
+      <select id="{{ widget.page_slug_4.value_field_id }}" name="{{ widget.page_slug_4.value_field_name }}">
+        {% for page in widget.navigateable_pages %}
+          <option value="{{ page.slug }}"
+            {% if widget.page_slug_4.value == page.slug %}
               selected
-            {% endif %} >{{ web_page[1].name }}</option>
+            {% endif %} >{{ page.slug }}</option>
         {% endfor %}
       </select>
     </div>
