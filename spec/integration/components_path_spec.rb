@@ -38,6 +38,12 @@ describe "components_path" do
       end
     end
 
+    it "has a popover" do
+      all(".h-g5-component").each do |widget|
+        expect(widget.find(".e-popover")).to be_present
+      end
+    end
+
     it "has a photo" do
       all(".h-g5-component").each do |widget|
         expect(widget.find(".u-photo")).to be_present

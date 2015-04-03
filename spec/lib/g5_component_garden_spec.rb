@@ -92,6 +92,10 @@ describe G5ComponentGarden do
       it "contains the summary" do
         component.summary.to_s.should == "What this component does/looks like"
       end
+
+      it "contains a Popover description with HTML" do
+        component.popover.should be_an_instance_of Microformats2::Property::Embedded
+      end
     end
 
     describe "#targets" do
