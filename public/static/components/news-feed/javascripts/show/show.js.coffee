@@ -55,8 +55,8 @@ class NewsFeedBuilder
   toggleMarkup: (post, index) ->
     toggle  = "<a class='post-toggle' href='#' data-post-index='#{index}'>"
     toggle += "  <img src='#{post.image}' />" unless post.image == "" || @configs.displayPhotos != "true"
-    toggle += "  <h3 class='post-title'>#{post.title}</h3>" unless post.title == ""
     toggle += "</a>"
+    toggle += "<h3 class='post-title'>#{post.title}</h3>" unless post.title == ""
 
   bottomToggles: (index) ->
     toggles  = "<a class='post-toggle toggle-button post-expand' href='#' data-post-index='#{index}'>Read More</a>"

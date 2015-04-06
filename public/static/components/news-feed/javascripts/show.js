@@ -55,10 +55,10 @@
       if (!(post.image === "" || this.configs.displayPhotos !== "true")) {
         toggle += "  <img src='" + post.image + "' />";
       }
+      toggle += "</a>";
       if (post.title !== "") {
-        toggle += "  <h3 class='post-title'>" + post.title + "</h3>";
+        return toggle += "<h3 class='post-title'>" + post.title + "</h3>";
       }
-      return toggle += "</a>";
     };
 
     NewsFeedBuilder.prototype.bottomToggles = function(index) {
