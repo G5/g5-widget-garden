@@ -63,9 +63,9 @@
 
     NewsFeedBuilder.prototype.bottomToggles = function(index) {
       var toggles;
-      toggles = "<a class='post-toggle post-expand' href='#' data-post-index='" + index + "'>Read More</a>";
+      toggles = "<a class='post-toggle toggle-button post-expand' href='#' data-post-index='" + index + "'>Read More</a>";
       if (this.configs.uiType !== "full-page") {
-        toggles += "<a class='post-toggle post-collapse' href='#'>Hide This</a>";
+        toggles += "<a class='post-toggle toggle-button post-collapse' href='#'>Hide This</a>";
       }
       return toggles;
     };

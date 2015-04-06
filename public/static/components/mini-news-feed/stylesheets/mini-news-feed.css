@@ -61,8 +61,12 @@
 
 .mini-news-feed-widget .news-item-link{
   display:block;
-  padding:.25em 0;
+  padding:.25em 1em;
+  margin:20px 0;
   font-weight:bold;
+  color:#fff;
+  background-color:#77787b;
+  float:left; clear:both;
 }
 
 .mini-news-feed-widget .all-news{

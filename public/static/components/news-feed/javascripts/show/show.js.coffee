@@ -59,8 +59,8 @@ class NewsFeedBuilder
     toggle += "</a>"
 
   bottomToggles: (index) ->
-    toggles  = "<a class='post-toggle post-expand' href='#' data-post-index='#{index}'>Read More</a>"
-    toggles += "<a class='post-toggle post-collapse' href='#'>Hide This</a>" if @configs.uiType != "full-page"
+    toggles  = "<a class='post-toggle toggle-button post-expand' href='#' data-post-index='#{index}'>Read More</a>"
+    toggles += "<a class='post-toggle toggle-button post-collapse' href='#'>Hide This</a>" if @configs.uiType != "full-page"
     toggles
 
   detailsMarkup: (post) ->
