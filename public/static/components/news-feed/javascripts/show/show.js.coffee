@@ -57,6 +57,7 @@ class NewsFeedBuilder
     toggle += "  <img src='#{post.image}' />" unless post.image == "" || @configs.displayPhotos != "true"
     toggle += "</a>"
     toggle += "<h3 class='post-title'>#{post.title}</h3>" unless post.title == ""
+    toggle
 
   bottomToggles: (index) ->
     toggles  = "<a class='post-toggle toggle-button post-expand' href='#' data-post-index='#{index}'>Read More</a>"

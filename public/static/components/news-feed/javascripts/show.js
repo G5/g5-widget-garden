@@ -57,8 +57,9 @@
       }
       toggle += "</a>";
       if (post.title !== "") {
-        return toggle += "<h3 class='post-title'>" + post.title + "</h3>";
+        toggle += "<h3 class='post-title'>" + post.title + "</h3>";
       }
+      return toggle;
     };
 
     NewsFeedBuilder.prototype.bottomToggles = function(index) {
