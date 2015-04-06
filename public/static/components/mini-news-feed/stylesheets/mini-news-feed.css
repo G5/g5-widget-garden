@@ -50,11 +50,11 @@
 .mini-news-feed-widget .post-title{
   font-weight:normal;
   margin:0;
-  padding:.25em 0;
+  padding:.75em 0;
 }
 
 .mini-news-feed-widget .post-details{
-  padding:.25em 0;
+  padding:.25em 0 .75em 0;
   font-size:80%;
   text-transform: uppercase;
 }

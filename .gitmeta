@@ -277,7 +277,7 @@
 }, 
 "public/static/components/mini-news-feed/stylesheets/mini-news-feed.css": {
 "mode": 33188, 
-"mtime": 1428351540
+"mtime": 1428353043
 }, 
 "public/static/components/news-feed/index.html": {
 "mode": 33188, 
@@ -1841,7 +1841,7 @@
 }, 
 ".gitmeta": {
 "mode": 33188, 
-"mtime": 1428351785
+"mtime": 1428352758
 }, 
 "public/static/components/tour-form/index.html": {
 "mode": 33188, 
