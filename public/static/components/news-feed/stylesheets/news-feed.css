@@ -111,7 +111,8 @@
   border:1px solid #888;
   padding:.25em;
   line-height: 1em;
-  background:#fff;
+  background-color:#77787b;
+  color:#fff;
 }
 
 .posts-nav .author-divider{ display:none; }
