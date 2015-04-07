@@ -57,13 +57,18 @@
   padding:.25em 0 .75em 0;
   font-size:80%;
   text-transform: uppercase;
+  border-bottom: 1px solid #888;
+  margin-bottom:0.75em;
+}
+
+.mini-news-feed-widget.narrow .post-details{
+  border-bottom: none;
 }
 
 .mini-news-feed-widget .news-item-link{
   display:block;
   padding:.25em 1em;
   margin:20px 0;
-  font-weight:bold;
   color:#fff;
   background-color:#77787b;
   float:left; clear:both;
