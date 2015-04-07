@@ -1,8 +1,9 @@
 class populateUnitData
   constructor: (floorplanConfig) -> 
     dataFeed = floorplanConfig['floorplanDataFeed']
-    $.getJSON(dataFeed, (unitData) -> buildHTML(unitData, floorplanConfig)).then (response) ->
-      new customizeUnitGrid(floorplanConfig)
+    $ ->
+      $.getJSON(dataFeed, (unitData) -> buildHTML(unitData, floorplanConfig)).then (response) ->
+        new customizeUnitGrid(floorplanConfig)
 
   buildHTML = (unitData, floorplanConfig) ->
     unitsDiv = $('.floorplans-cards').first()

@@ -1,5 +1,19 @@
 <form>
   <div class="row-edit" data-row-id="{{widget.id}}">
+    <!-- Custom CSS Class (Optional) -->
+    <div class="form-field">
+      {{ widget.row_css_custom.id_hidden_field }}
+
+      <label for="{{ widget.row_css_custom.value_field_id }}" >
+        Custom CSS Class
+      </label>
+
+      <input type="text"
+      id="{{ widget.row_css_custom.value_field_id }}"
+      name="{{ widget.row_css_custom.value_field_name }}"
+      value="{{ widget.row_css_custom.value }}"
+      placeholder="custom-class" />
+    </div>
     <!-- Row Background Color (Optional) -->
     <div class="form-field">
       {{ widget.row_bg_color.id_hidden_field }}

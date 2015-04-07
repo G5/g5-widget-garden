@@ -1,7 +1,14 @@
+<script type="text/javascript">
+  var logoConfigs = {
+    "single_domain_location":"{{widget.single_domain_location.value}}"
+  }
+</script>
+
 {% if widget.display_logo.value == "true" %}
 <h1 class="h-card" itemscope itemtype="http://schema.org/LocalBusiness">
   <a class="logo widget u-url" href="/" itemprop="url">
     <img class="u-logo p-name" src="{{ widget.logo_url.value | url_encode }}" alt="{{ widget.business_name.value }}" itemprop="logo" />
   </a>
 </h1>
+
 {% endif %}

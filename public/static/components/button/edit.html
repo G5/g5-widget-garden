@@ -58,6 +58,25 @@
       value="{{ widget.button_image_url.best_value | url_encode }}"
     />
   </div>
+  <div class="form-field check-field">
+    {{ widget.button_new_window.id_hidden_field }}
+    <input type="hidden"
+      id="{{ widget.button_new_window.value_field_id }}_false"
+      name="{{ widget.button_new_window.value_field_name }}"
+      value="false"
+    />
+    <input type="checkbox"
+      id="{{ widget.button_new_window.value_field_id }}"
+      name="{{ widget.button_new_window.value_field_name }}"
+      value="true"
+      {% if widget.button_new_window.value == "true" %}
+      checked="checked"
+      {% endif %}
+    />
+    <label for="{{ widget.button_new_window.value_field_id }}" >
+      Opens in a New Window
+    </label>
+  </div>
 
   <div class="form-field check-field">
     <fieldset>

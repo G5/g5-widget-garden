@@ -31,6 +31,26 @@
     </label>
   </div>
 
+  <div class="form-field check-field">
+    {{ widget.single_domain_location.id_hidden_field }}
+    <input type="hidden"
+      id="{{ widget.single_domain_location.value_field_id }}_false"
+      name="{{ widget.single_domain_location.value_field_name }}"
+      value="false"
+    />
+    <input type="checkbox"
+      id="{{ widget.single_domain_location.value_field_id }}"
+      name="{{ widget.single_domain_location.value_field_name }}"
+      value="true"
+      {% if widget.single_domain_location.value == "true" %}
+      checked="checked"
+      {% endif %}
+    />
+    <label for="{{ widget.single_domain_location.value_field_id }}" >
+      Single Domain Location website? (i.e. - Builds Logo link differently than standard primary domain)
+    </label>
+  </div>
+
   <div class="form-field">
     {{ widget.logo_url.id_hidden_field }}
     <label for="{{ widget.logo_url.value_field_id }}" >

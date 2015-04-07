@@ -1,7 +1,7 @@
 {% if widget.button_label.best_value != blank or widget.button_image_url.best_value != blank %}
 <span class="button button-{{widget.button_layout.best_value}} widget">
 
-  <a href="{{ widget.button_url.best_value | url_encode }}">
+  <a href="{{ widget.button_url.best_value | url_encode }}" {% if widget.button_new_window.value == "true" %}target="_blank"{% endif %}>
     {% if widget.button_image_url.best_value != blank %}
       <img class="btn-img" src="{{ widget.button_image_url.best_value | url_encode }}" />
     {% endif %}

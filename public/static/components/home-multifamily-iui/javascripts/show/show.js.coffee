@@ -1,4 +1,4 @@
-$ -> 
+$ ->
   configs = JSON.parse($('#home-multifamily-iui-config').html())
 
   $.ajax
@@ -7,12 +7,13 @@ $ ->
     success: (data) =>
       categories = data.unit_categories
       if typeof(categories) != "undefined" && categories.length > 0
-        new iuiMarkupBuilder(categories, configs) 
+        new iuiMarkupBuilder(categories, configs)
 
-class iuiMarkupBuilder 
+class iuiMarkupBuilder
   constructor: (categories, configs) ->
     categories.sort((a, b) -> return a.beds - b.beds)
     markupHash = []
+    categoryClass = "count-" + categories.length
 
     for category, index in categories
       markupHash.push(buttonTemplate(category.beds, configs))
@@ -25,8 +26,9 @@ class iuiMarkupBuilder
 
     markupHash.push(allButton)
 
-    $('.home-multifamily-iui .iui-container').html(markupHash.join(''))
+    $('.home-multifamily-iui').addClass(categoryClass).find('.iui-container').html(markupHash.join(''))
 
   buttonTemplate = (beds, configs) ->
-    buttonText = if beds > 0 then "#{beds} Bedroom" else "Studio"
-    "<div class='iui-size'><a class='btn' href='#{configs.floorplan_page_url}#/bedrooms/#{beds}/floorplans'>#{buttonText}</a></div>"
+    buttonClass = if beds > 0 then "btn-beds" else "btn-studio"
+    buttonText = if beds > 0 then "<strong>#{beds}</strong> Bedroom" else "Studio"
+    "<div class='iui-size'><a class='btn #{buttonClass}' href='#{configs.floorplan_page_url}#/bedrooms/#{beds}/floorplans'>#{buttonText}</a></div>"

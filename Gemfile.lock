@@ -66,6 +66,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     kgio (2.9.2)
+    le (2.6.2)
     lograge (0.2.2)
       actionpack (>= 3)
       activesupport (>= 3)
@@ -176,6 +177,7 @@ DEPENDENCIES
   highline
   honeybadger
   jquery-rails
+  le
   lograge
   microformats2 (~> 2.0.0)
   newrelic_rpm

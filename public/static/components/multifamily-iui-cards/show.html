@@ -7,7 +7,6 @@
       "locationType":"auto",
       "EmberENV":{
         "FEATURES":{},
-        "MAX_UNIT_AVAILABILITY": 6,
         "PER_PAGE":20
       },
       "APP":{
@@ -16,8 +15,9 @@
         'storeId': '{{ widget.core_store_id.value }}',
         'leadFormUrl': '{{ widget.lead_form_url.value | url_encode }}',
         'floorplansServiceHost': "{{ widget.floorplans_service_host.value | url_encode }}",
-        'maxUnitAvailability': {{ widget.max_unit_availability.value }},
-        'enableLeaseTerms': "{{ widget.lease_terms.value }}"
+        'maxUnitAvailability': "{{ widget.max_unit_availability.value }}",
+        'enableLeaseTerms': "{{ widget.lease_terms.value }}",
+        'successRedirectUrl':"{{widget.success_redirect_url.value}}"
       },
       "exportApplicationGlobal":false
     }
@@ -39,6 +39,7 @@
     #iui-cards-wrapper .unit-numbers{ background:{{widget.primary_color.value}}; }
 
     /* Secondary color customizations */
+    #iui-container .spinner > div,
     #iui-cards-wrapper .iui-cards-unit-categories a.iui-cards-view-all,
     #iui-cards-wrapper .iui-cards-unit-categories a.iui-cards-view-all:hover,
     #iui-cards-wrapper .floorplan-card a.floorplan-card-cta,
@@ -78,5 +79,11 @@
     #iui-cards-wrapper .iui-cards-nav a.active span{ color:{{widget.nav_text_color.value}}; }
   </style>
 
-  <div id="iui-container"></div>
+  <div id="iui-container">
+    <div id="app-loading" class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div> 
+  </div>
 </div>

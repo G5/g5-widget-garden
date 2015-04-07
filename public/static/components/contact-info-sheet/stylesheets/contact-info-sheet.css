@@ -5,10 +5,11 @@
   position: fixed;
   z-index: 9999; }
   .contact-info-sheet .info-sheet-toggle,
-  .contact-info-sheet .info-sheet-pagination {
+  .contact-info-sheet .info-sheet-pagination,
+  .contact-info-sheet .info-sheet-icon{
     background-repeat: no-repeat;
     display: block; }
-  .web-page-template .contact-info-sheet .info-sheet-pagination {
+  .web-page-template .contact-info-sheet .info-sheet-pagination{
     display: none; }
   .contact-info-sheet .info-sheet-content {
     min-height: 75px;
@@ -29,7 +30,7 @@
         .contact-info-sheet .info-sheet-nav:after {
           clear: both; }
       .contact-info-sheet .info-sheet-toggle,
-      .contact-info-sheet .info-sheet-pagination {
+      .contact-info-sheet .info-sheet-pagination{
         background-image: url("https://widgets.g5dxm.com/contact-info/contact-icons-light.png"); }
       .contact-info-sheet .info-sheet-toggle {
         float: left;
@@ -41,10 +42,17 @@
         background-position: 10px 10px; }
       .contact-info-sheet .info-sheet-email-btn {
         background-position: 10px -135px; }
+      .contact-info-sheet .info-sheet-chat-btn{
+        background-position: 10px -135px;
+      }
       .contact-info-sheet .info-sheet-content {
         display: none !important; } }
   @media screen and (max-width: 1169px) {
-    .contact-info-sheet .info-sheet-pagination {
+    .contact-info-sheet .info-sheet-pagination{
+      display: none; }
+  }
+  @media screen and (max-width: 909px) {
+    .contact-info-sheet .info-sheet-icon {
       display: none; }
   }
   @media screen and (min-width: 668px) {
@@ -63,18 +71,30 @@
         position: fixed;
         left: 0; }
       .contact-info-sheet .info-sheet-toggle,
-      .contact-info-sheet .info-sheet-pagination {
-        background-image: url("https://widgets.g5dxm.com/contact-info-sheet/contact-info-sheet-icons.png");
+      .contact-info-sheet .info-sheet-pagination,
+      .contact-info-sheet .info-sheet-icon{
+        background-image: url("https://widgets.g5dxm.com/contact-info-sheet/contact-info-sheet-icons-test.png");
         height: 75px;
         width: 75px;
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden; }
+      .contact-info-sheet .info-sheet-icon.chat-code{
+        text-indent: 0;
+        background-image:none;
+      }
+      .contact-info-sheet .info-sheet-icon.chat-code img{
+        max-width: 75px;
+        max-height: 75px;
+      }
       .contact-info-sheet .info-sheet-phone-btn {
         background-position: center 21px; }
       .contact-info-sheet .info-sheet-email-btn {
         background-position: center -55px; }
-      .contact-info-sheet .info-sheet-pagination {
+      .contact-info-sheet .info-sheet-chat-btn {
+        background-position: center -289px; }
+      .contact-info-sheet .info-sheet-pagination,
+      .contact-info-sheet .info-sheet-icon {
         cursor: pointer; }
       .contact-info-sheet .info-sheet-page-up {
         background-position: center -134px; }

@@ -86,24 +86,24 @@
               {{ web_page[1].name }}
             </label>
           </li>
-          {% for web_page in web_page[1].child_templates %}
+          {% for sub_page in web_page[1].child_templates %}
             <li class="field check-field">
               - 
               <input type="hidden"
-                id="{{ widget.navigation.value_field_id }}_{{ web_page[0] }}_display_false"
-                name="{{ widget.navigation.value_field_name }}[{{ web_page[0] }}][display]"
+                    id="{{ widget.navigation.value_field_id }}_{{ web_page[0] }}_child_templates_{{sub_page[0]}}_display_false"
+                  name="{{ widget.navigation.value_field_name }}[{{ web_page[0] }}][child_templates][{{sub_page[0]}}][display]"
                 value="false"
               />
               <input type="checkbox"
-                id="{{ widget.navigation.value_field_id }}_{{ web_page[0] }}_display"
-                name="{{ widget.navigation.value_field_name }}[{{ web_page[0] }}][display]"
+                  id="{{ widget.navigation.value_field_id }}_{{ web_page[0] }}_child_templates_{{sub_page[0]}}_display"
+                name="{{ widget.navigation.value_field_name }}[{{web_page[0]}}][child_templates][{{ sub_page[0] }}][display]"
                 value="true"
-                {% if web_page[1].display != "false" %}
+                {% if sub_page[1].display != "false" %}
                 checked="checked"
                 {% endif %}
               />
-              <label for="{{ widget.navigation.value_field_id }}_{{ web_page[0] }}_display">
-                {{ web_page[1].name }}
+              <label for="{{ widget.navigation.value_field_id }}_{{web_page[0]}}_child_templates_{{ sub_page[0] }}_display">
+                {{ sub_page[1].name }}
               </label>
             </li>
 

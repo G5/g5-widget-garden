@@ -67,6 +67,17 @@
     </label>
   </div>
   <div class="form-field">
+    <label for="{{ widget.success_redirect_url.value_field_id }}" >
+      Successful Submission Redirect URL
+    </label>
+    {{ widget.success_redirect_url.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.success_redirect_url.value_field_id }}"
+      name="{{ widget.success_redirect_url.value_field_name }}"
+      value="{{ widget.success_redirect_url.value | url_encode }}"
+    />
+  </div>
+  <div class="form-field">
     {{ widget.primary_color.id_hidden_field }}
     <label for="{{ widget.primary_color.value_field_id }}">
       Primary Color

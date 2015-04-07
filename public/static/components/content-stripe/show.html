@@ -1,4 +1,6 @@
-<div class="row{% if widget.row_text_color.value != 'default' %} text-{{widget.row_text_color.value}}{% endif %}" {% if widget.row_bg_color.value != '' %}style="background-color: {{ widget.row_bg_color.value }}"{% endif %}>
+
+<div class="row{% if widget.row_text_color.value != 'default' %} text-{{widget.row_text_color.value}}{% endif %}{% if widget.row_css_custom.value != blank %} {{widget.row_css_custom.value}}{% endif %}" {% if widget.row_bg_color.value != '' %}style="background-color: {{ widget.row_bg_color.value }}"{% endif %}>
+
   <div class="content row-{{ widget.row_layout.value }}">
     <div class="row-grid">
 

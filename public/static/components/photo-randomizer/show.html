@@ -1,0 +1,15 @@
+<script id="photo-randomizer-config" type="application/javascript">
+  var photoRandomizerVarsConfig = { 
+    "photos": [
+      { "url": "{{ widget.photo_1_url.value }}", "alt": "{{ widget.photo_1_alt.value }}" },
+      { "url": "{{ widget.photo_2_url.value }}", "alt": "{{ widget.photo_2_alt.value }}" },
+      { "url": "{{ widget.photo_3_url.value }}", "alt": "{{ widget.photo_3_alt.value }}" },
+      { "url": "{{ widget.photo_4_url.value }}", "alt": "{{ widget.photo_4_alt.value }}" },
+      { "url": "{{ widget.photo_5_url.value }}", "alt": "{{ widget.photo_5_alt.value }}" },
+    ] 
+  }
+</script>
+{% if widget.photo_1_url.value != blank %}
+<figure class="photo-randomizer widget photo h-media" itemscope itemtype="http://schema.org/Photograph">
+</figure>
+{% endif %}

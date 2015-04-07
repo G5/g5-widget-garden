@@ -49,6 +49,55 @@
   </div>
 
   <div class="form-field">
+    {{ widget.third_party_chat_code.id_hidden_field }}
+    <label for="{{ widget.third_party_chat_code.value_field_id }}" >
+      3rd Party Chat HTML
+    </label>
+    <textarea
+      id="{{ widget.third_party_chat_code.value_field_id }}"
+      name="{{ widget.third_party_chat_code.value_field_name }}"
+     >
+      {{ widget.third_party_chat_code.value }}
+    </textarea>
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.third_party_chat_url.value_field_id }}" >
+      3rd Party Chat URL
+    </label>
+    {{ widget.third_party_chat_url.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.third_party_chat_url.value_field_id }}"
+      name="{{ widget.third_party_chat_url.value_field_name }}"
+      value="{{ widget.third_party_chat_url.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.chat_width.value_field_id }}" >
+      3rd Party Chat Window Width
+    </label>
+    {{ widget.chat_width.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.chat_width.value_field_id }}"
+      name="{{ widget.chat_width.value_field_name }}"
+      value="{{ widget.chat_width.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.chat_height.value_field_id }}" >
+      3rd Party Chat Window Height
+    </label>
+    {{ widget.chat_height.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.chat_height.value_field_id }}"
+      name="{{ widget.chat_height.value_field_name }}"
+      value="{{ widget.chat_height.value }}"
+    />
+  </div>
+
+  <div class="form-field">
     <label for="{{ widget.success_redirect_url.value_field_id }}" >
       Successful Submission Redirect URL
     </label>
@@ -73,4 +122,5 @@
   </div>
 
   <input type="submit" value="Save" class="btn" />
+  
 </form>

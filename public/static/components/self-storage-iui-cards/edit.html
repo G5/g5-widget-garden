@@ -72,6 +72,18 @@
     />
   </div>
   <div class="form-field">
+    {{ widget.form_bg_color.id_hidden_field }}
+    <label for="{{ widget.form_bg_color.value_field_id }}">
+      Form BG Color
+    </label>
+    <input type="text"
+      placeholder=""
+      id="{{ widget.form_bg_color.value_field_id }}"
+      name="{{ widget.form_bg_color.value_field_name }}"
+      value="{{ widget.form_bg_color.best_value }}"
+    />
+  </div>
+  <div class="form-field">
     {{ widget.accent_color.id_hidden_field }}
     <label for="{{ widget.accent_color.value_field_id }}">
       Accent Color
@@ -93,6 +105,18 @@
       id="{{ widget.text_color.value_field_id }}"
       name="{{ widget.text_color.value_field_name }}"
       value="{{ widget.text_color.best_value }}"
+    />
+  </div>
+  <div class="form-field">
+    {{ widget.form_text_color.id_hidden_field }}
+    <label for="{{ widget.form_text_color.value_field_id }}">
+      Form Text Color
+    </label>
+    <input type="text"
+      placeholder=""
+      id="{{ widget.form_text_color.value_field_id }}"
+      name="{{ widget.form_text_color.value_field_name }}"
+      value="{{ widget.form_text_color.best_value }}"
     />
   </div>
   <div class="form-field">

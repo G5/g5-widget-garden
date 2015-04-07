@@ -23,6 +23,25 @@
       value="{{ widget.core_service_url.best_value }}"
     />
   </div>
+  <div class="form-field check-field">
+    {{ widget.orion_single_domain.id_hidden_field }}
+    <input type="hidden"
+      id="{{ widget.orion_single_domain.value_field_id }}_false"
+      name="{{ widget.orion_single_domain.value_field_name }}"
+      value="no"
+    />
+    <input type="checkbox"
+      id="{{ widget.orion_single_domain.value_field_id }}"
+      name="{{ widget.orion_single_domain.value_field_name }}"
+      value="true"
+      {% if widget.orion_single_domain.value == "true" %}
+      checked="checked"
+      {% endif %}
+    />
+    <label for="{{ widget.orion_single_domain.value_field_id }}" >
+      Single Domain Url
+    </label>
+  </div>
   <div class="form-field">
     {{ widget.per_page.id_hidden_field }}
     <label for="{{ widget.per_page.value_field_id }}">

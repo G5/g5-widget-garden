@@ -13,8 +13,19 @@ setUpContactInfoSheet = ->
       idle: delay * 1000
       events: 'mousemove keypress mousedown scroll'
     })
-
   setFadeDelay(phoneOptions.fadeDelay) 
+  
+
+  chatWindow = (configs) ->
+    chatMarkup =  """<a href="#{configs.third_party_chat}" class="info-sheet-chat-btn info-sheet-icon">Third Party Chat</a>"""
+    $(chatMarkup).insertAfter($(".info-sheet-email-btn")) if configs.third_party_chat.length > 1 
+    width = if configs.chat_width.length > 1 then configs.chat_width else 600
+    height = if configs.chat_height.length > 1 then configs.chat_height else 600
+
+    $('.info-sheet-chat-btn').click ->
+      openChatWindow = window.open(configs.third_party_chat, 'Chat', """width=#{width}, height=#{height}, scrollbars=yes, resizable=yes""")
+      false 
+  chatWindow(phoneOptions) if phoneOptions.third_party_chat.length > 1
 
   showPhone = (widget) ->
     widget.removeClass "opened showing-email"
@@ -33,8 +44,11 @@ setUpContactInfoSheet = ->
     $("body").css "padding-bottom", 0
     widget = $(".contact-info-sheet").first()
     screenHeight = $(window).height()
+    chatPresent = if phoneOptions.third_party_chat.length > 1 or phoneOptions.third_party_url is true then true else false
 
     if $("body").hasClass("web-home-template") or Modernizr.mq("(min-width: 1325px)")
+      widgetPosition = $("header[role=banner]").outerHeight() + 30
+    else if Modernizr.mq("(min-width: 910px)") and chatPresent is true
       widgetPosition = $("header[role=banner]").outerHeight() + 30
     else
       widgetPosition = $("header[role=banner]").outerHeight() + $("section[role=main] .row:first-of-type").outerHeight() + 30

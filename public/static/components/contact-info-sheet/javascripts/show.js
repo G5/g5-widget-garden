@@ -2,7 +2,7 @@
   var setUpContactInfoSheet;
 
   setUpContactInfoSheet = function() {
-    var initializeContactInfoSheet, phoneOptions, setFadeDelay, setupContactInfoSheet, setupMobileContactInfoSheet, showEmail, showPhone, stopContactInfoSheet;
+    var chatWindow, initializeContactInfoSheet, phoneOptions, setFadeDelay, setupContactInfoSheet, setupMobileContactInfoSheet, showEmail, showPhone, stopContactInfoSheet;
     phoneOptions = JSON.parse($('.contact-info-sheet .config:first').html());
     new phoneNumber(phoneOptions);
     setFadeDelay = function(seconds) {
@@ -24,6 +24,23 @@
       });
     };
     setFadeDelay(phoneOptions.fadeDelay);
+    chatWindow = function(configs) {
+      var chatMarkup, height, width;
+      chatMarkup = "<a href=\"" + configs.third_party_chat + "\" class=\"info-sheet-chat-btn info-sheet-icon\">Third Party Chat</a>";
+      if (configs.third_party_chat.length > 1) {
+        $(chatMarkup).insertAfter($(".info-sheet-email-btn"));
+      }
+      width = configs.chat_width.length > 1 ? configs.chat_width : 600;
+      height = configs.chat_height.length > 1 ? configs.chat_height : 600;
+      return $('.info-sheet-chat-btn').click(function() {
+        var openChatWindow;
+        openChatWindow = window.open(configs.third_party_chat, 'Chat', "width=" + width + ", height=" + height + ", scrollbars=yes, resizable=yes");
+        return false;
+      });
+    };
+    if (phoneOptions.third_party_chat.length > 1) {
+      chatWindow(phoneOptions);
+    }
     showPhone = function(widget) {
       widget.removeClass("opened showing-email");
       widget.find(".info-sheet-email").hide();
@@ -37,11 +54,14 @@
       return widget.addClass("opened showing-email");
     };
     setupContactInfoSheet = function() {
-      var screenHeight, widget, widgetHeight, widgetPosition;
+      var chatPresent, screenHeight, widget, widgetHeight, widgetPosition;
       $("body").css("padding-bottom", 0);
       widget = $(".contact-info-sheet").first();
       screenHeight = $(window).height();
+      chatPresent = phoneOptions.third_party_chat.length > 1 || phoneOptions.third_party_url === true ? true : false;
       if ($("body").hasClass("web-home-template") || Modernizr.mq("(min-width: 1325px)")) {
+        widgetPosition = $("header[role=banner]").outerHeight() + 30;
+      } else if (Modernizr.mq("(min-width: 910px)") && chatPresent === true) {
         widgetPosition = $("header[role=banner]").outerHeight() + 30;
       } else {
         widgetPosition = $("header[role=banner]").outerHeight() + $("section[role=main] .row:first-of-type").outerHeight() + 30;

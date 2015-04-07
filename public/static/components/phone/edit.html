@@ -74,6 +74,26 @@
     </label>
   </div>
 
+  <div class="form-field check-field">
+    {{ widget.prepend_phone.id_hidden_field }}
+    <input type="hidden"
+      id="{{ widget.prepend_phone.value_field_id }}_false"
+      name="{{ widget.prepend_phone.value_field_name }}"
+      value="false"
+    />
+    <input type="checkbox"
+      id="{{ widget.prepend_phone.value_field_id }}"
+      name="{{ widget.prepend_phone.value_field_name }}"
+      value="true"
+      {% if widget.prepend_phone.value == "true" %}
+      checked="checked"
+      {% endif %}
+    />
+    <label for="{{ widget.prepend_phone.value_field_id }}" >
+      Prepend Phone Number to Other Elements
+    </label>
+  </div>
+
   <div class="form-field">
     {{ widget.append_elements.id_hidden_field }}
     <label for="{{ widget.append_elements.value_field_id }}" >

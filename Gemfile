@@ -12,6 +12,7 @@ gem "sass-rails", "~> 4.0.0"
 gem "coffee-rails", "~> 4.0.0"
 gem "uglifier", ">= 1.0.3"
 gem "highline"
+gem "le"
 
 group :development, :test do
   gem "dotenv-rails", "~> 0.9.0"

@@ -68,9 +68,13 @@
 
     {% if widget.linkedin_username.value != blank  %}
       {% if widget.linkedin_account_type.value == "INDIVIDUAL"  %}
-        <a href="http://www.linkedin.com/in/{{ widget.linkedin_username.value | url_encode }}" class="linked-in" title="LinkedIn" rel="me" target="_blank">LinkedIn</a>
+        <a href="http://www.linkedin.com/in/{{ widget.linkedin_username.value | url_encode }}" class="linked-in" title="LinkedIn" rel="me" target="_blank"><svg class="icon">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#footer-icon-linkedin" />
+        </svg></a>
       {% else %}
-        <a href="http://www.linkedin.com/company/{{ widget.linkedin_username.value | url_encode }}" class="linked-in" title="LinkedIn" rel="me" target="_blank">LinkedIn</a>
+        <a href="http://www.linkedin.com/company/{{ widget.linkedin_username.value | url_encode }}" class="linked-in" title="LinkedIn" rel="me" target="_blank"><svg class="icon">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#footer-icon-linkedin" />
+        </svg></a>
       {% endif %}
     {% endif %}
   </div>
@@ -91,7 +95,7 @@
   <p class="copyright">Copyright &copy; <span id="current-year">    </span> {{widget.location_name.value}}</p>
   {% endif %}
 
-  {% if widget.display_housing_icon.value == "true"  or widget.display_handicap_icon.value == "true" %}
+  {% if widget.display_housing_icon.value == "true" or widget.display_handicap_icon.value == "true" or widget.display_dxm.value == "true" %}
   <p class="housing-icons">
     {% if widget.display_dxm.value == "true" %}
       <a href="http://getg5.com" class="dxm" target="_blank">DXM by G5</a>

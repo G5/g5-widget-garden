@@ -10,7 +10,17 @@ A garden of widgets that can be used in client location sites.
 
 1. Install all the required gems `bundle`
 2. Set timestamps & symlink git hooks `rake dev:init`
+
+   this configures git hooks(commit, merge) to maintain timestamps in `.gitmeta`.
+   everytime you make a commit the file timestamps will be updated.
+   if you want to update timestamps without commiting code, you can commit with allow empty.
+   i.e. `git commit --allow-empty -m "update timestamps"`
 3. Install all the required node dependencies. `npm install`
+
+##### resolve .gitmeta branch conflicts:
+1. reset your branch .gitmeta to origin master. `git checkout origin/master .gitmeta`
+2. then sync your file system timestamps to .gitmeta by running a empty commit(runs git hook). `git commit --allow-empty -m "update timestamps"`
+
 
 ## Grunt Task
 
@@ -32,6 +42,94 @@ The Gruntfile is watching *.js & *.js.coffee files under public/static/component
 1. Run a concat task - concat *.js and *.compiled.js files into public/static/components/*/javascripts/ as either show.js or edit.js (depending on which folder it's coming from)
 1. Run a clean task - remove *.compiled.js files from public/static/components/*/javascripts/{show, edit}/
 
+
+## Specs
+
+```bash
+bundle exec rspec
+```
+
+
+## Widget CSS conventions
+
+The css used for widgets should be the minimal amount to get it working
+and layed out correctly. The theme css will handle the majority of
+styles
+
+**1** Namespace all styles with the top level widget class, which should be
+the name of the widget. For example:
+
+```css
+.widget-name .title { }
+```
+
+**2** Try to limit selectors to 3 levels. For example:
+
+DO THIS
+```
+.widget-name .title span { }
+```
+
+NOT THIS
+```
+.widget-name .widget-wrapper .title a span { }
+```
+
+**3** If possible, do not use tag names in conjunction with class names
+
+DO THIS
+```
+.btn { }
+```
+
+NOT THIS
+```
+a.btn { }
+```
+
+**4** Do not use the font-family property
+
+**5** Try to limit use of color, font-size, font-style, font-weight, borders, etc.
+
+**6** Do not use !important unless you know for sure that the color
+will never need to be changed. This should be rare
+
+
+### Regarding configurable widget settings
+
+Sometimes you may want the widget to have some custom styling options,
+typically related to color. These use inline styles in the show view.
+Please follow these conventions:
+
+**1** Use the background-color attribute, rather than background
+
+**2** If you give the option to change the background, also give the option
+to change the text color within that element
+
+**3** For these custom colors, set the defaults in the css file, not the index file
+
+**4** Limit these types of widget settings as much as possible
+
+
+## Available classes for styling in themes using boilerplate
+
+* .primary-color, .secondary-color, .tertiary-color *(sets color to custom variables)*
+* .primary-bg, .secondary-bg, .tertiary-bg *(sets background-color to custom variables)*
+* .primary-font, .secondary-font *(sets font-family to custom font variable)*
+* .clearfix
+* .hidden
+* .visually-hidden *(hides from screen but not screen readers)*
+* .image-replace *(for hiding text and using background image)*
+* .btn
+* .form-field *(to wrap a label and input)*
+* .form-instruction *(any form notes or instructions)*
+* .required *(place on labels of required form fields)*
+* .center *(centers text)*
+* .float-left, .float-right, .float-none
+* .clear-left, .clear-right, .clear-both
+* http://g5-theme-garden.herokuapp.com/static/g5-icons
+
+
 ## Authors
 
   * Jessica Lynn Suttles / [@jlsuttles](https://github.com/jlsuttles)
@@ -39,6 +137,7 @@ The Gruntfile is watching *.js & *.js.coffee files under public/static/component
   * Jessica Dillon / [@jessicard](https://github.com/jessicard)
   * Chad Crissman / [@crissmancd](https://github.com/crissmancd)
   * Brian Bauer / [@bbauer](https://github.com/bbauer)
+  * Levi Brown / [@levibrown](https://github.com/levibrown)
 
 ## Contributing
 
@@ -53,15 +152,10 @@ The Gruntfile is watching *.js & *.js.coffee files under public/static/component
 If you find bugs, have feature requests or questions, please
 [file an issue](https://github.com/G5/g5-widget-garden/issues).
 
-## Specs
-
-```bash
-bundle exec rspec
-```
 
 ## License
 
-Copyright (c) 2013 G5
+Copyright (c) 2015 G5
 
 MIT License
 

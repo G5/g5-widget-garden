@@ -35,7 +35,7 @@
     <ul class="top-nav">
       {% for web_page in widget.navigation.value %}
         {% if web_page[1].display != "false" and web_page[1].child_template? == false %}
-        <li {% if web_page[1].child_templates != blank %}class="has-subnav"{% endif %}>
+        <li {% if web_page[1].sub_nav %}class="has-subnav"{% endif %}>
           <a href="{{ web_page[1].url | url_encode }}">{{ web_page[1].name }}</a>
           {% if web_page[1].child_templates != blank %}
             <ul class="subnav">
@@ -43,7 +43,9 @@
                 {% if forloop.first %}
                   <li><a href="{{ web_page[1].url | url_encode }}">{{ web_page[1].name }}</a></li>
                 {% endif %}
-                <li><a href="{{ child_page[1].url | url_encode }}">{{ child_page[1].name }}</a></li>
+                {% if child_page[1].display != "false" %}
+                  <li><a href="{{ child_page[1].url | url_encode }}">{{ child_page[1].name }}</a></li>
+                {% endif %}
               {% endfor %}
             </ul>
           {% endif %}

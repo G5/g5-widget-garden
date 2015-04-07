@@ -5,7 +5,13 @@
     {
       "cpnsUrl": "{{ widget.secure_cpns_url }}",
       "locationUrn": "{{ widget.location_urn.value }}",
-      "fadeDelay":"{{ widget.fade_delay.value }}"
+      "fadeDelay":"{{ widget.fade_delay.value }}",
+      "third_party_chat":"{{widget.third_party_chat_url.value}}",
+      "chat_width":"{{widget.chat_width.value}}",
+      "chat_height":"{{widget.chat_height.value}}"
+      {% if widget.third_party_chat_code.value != blank %}
+      ,"third_party_url":true
+      {% endif %}
     }
   </script>
 
@@ -13,6 +19,9 @@
     <!-- use phone service for this number -->
     <a class="number info-sheet-phone-btn info-sheet-toggle" href="tel://{{ widget.phone_number.value }}"><span class="p-tel">{{ widget.phone_number.value }}</span></a>
     <a class="info-sheet-email-btn info-sheet-toggle" href="{{ widget.contact_url.value | url_encode }}">Email</a>
+    {% if widget.third_party_chat_code.value != blank %}
+      <span class="info-sheet-chat-btn info-sheet-icon chat-code">{{widget.third_party_chat_code.value}}</span>
+    {% endif %}
     <div class="info-sheet-page-up info-sheet-pagination">UP</div>
     <div class="info-sheet-page-down info-sheet-pagination">DOWN</div>
   </div> <!-- end .info-sheet-nav -->

@@ -2,25 +2,25 @@
   <ul>
     {% if widget.cta_text_1.value != blank %}
       <li>
-        <a href="{{ widget.cta_link_1.value }}">{{ widget.cta_text_1.value }}</a>
+        <a href="{{ widget.generated_url_1 }}">{{ widget.cta_text_1.value }}</a>
       </li>
     {% endif %}
 
     {% if widget.cta_text_2.value != blank %}
       <li>
-        <a href="{{ widget.cta_link_2.value }}">{{ widget.cta_text_2.value }}</a>
+        <a href="{{ widget.generated_url_2}}">{{ widget.cta_text_2.value }}</a>
       </li>
     {% endif %}
 
     {% if widget.cta_text_3.value != blank %}
       <li>
-        <a href="{{ widget.cta_link_3.value }}">{{ widget.cta_text_3.value }}</a>
+        <a href="{{ widget.generated_url_3 }}">{{ widget.cta_text_3.value }}</a>
       </li>
     {% endif %}
 
     {% if widget.cta_text_4.value != blank %}
       <li>
-        <a href="{{ widget.cta_link_4.value }}">{{ widget.cta_text_4.value }}</a>
+        <a href="{{ widget.generated_url_4 }}">{{ widget.cta_text_4.value }}</a>
       </li>
     {% endif %}
   </ul>

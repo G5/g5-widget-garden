@@ -18,6 +18,7 @@
   </p>
   {% endif %}
 
+  {% if widget.location_street_address.best_value != blank or widget.location_city.best_value != blank or widget.location_state.best_value != blank or widget.location_postal_code.best_value != blank or widget.location_country.best_value != blank %}
   <p class="h-adr p-adr adr" itemscope itemtype="http://schema.org/PostalAddress">
     <a href="{{ widget.maps_url.best_value | url_encode }}">
       {% if widget.location_street_address.best_value != "" %}
@@ -50,6 +51,7 @@
       {% endif %}
     </a>
   </p>
+  {% endif %}
 
   {% if widget.location_email.best_value != "" %}
   <p class="u-email email" itemprop="email">
