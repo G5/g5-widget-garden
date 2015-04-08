@@ -21,7 +21,7 @@
   padding:10px;
   margin:5px auto;
   float:none;
-  border-top:1px solid #888;
+  /*border-top:1px solid #888;*/
 }
 
 .mini-news-feed-widget.narrow .news-item-preview:first-of-type{ border-top:none; }
@@ -62,7 +62,7 @@
 }
 
 .mini-news-feed-widget.narrow .post-details{
-  border-bottom: none;
+  /*border-bottom: none;*/
 }
 
 .mini-news-feed-widget .news-item-link{
