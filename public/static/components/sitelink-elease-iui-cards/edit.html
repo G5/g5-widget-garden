@@ -35,6 +35,22 @@
     />  
   </div>
   <div class="form-field">
+    {{ widget.max_lease_days.id_hidden_field }}
+    <label for="{{ widget.max_lease_days.value_field_id }}">
+      Max Lease Start Days
+    </label>
+    <input type="number", min="1" max="31"
+      placeholder=""
+      id="{{ widget.max_lease_days.value_field_id }}"
+      name="{{ widget.max_lease_days.value_field_name }}"
+      {% if widget.max_lease_days.best_value %}
+      value="{{ widget.max_lease_days.best_value }}"
+      {% else %}
+      value="7"
+      {% endif %}
+    />
+  </div>
+  <div class="form-field">
     {{ widget.unit_size_help_url.id_hidden_field }}
     <label for="{{ widget.unit_size_help_url.value_field_id }}">
       Unit Size Help URL
