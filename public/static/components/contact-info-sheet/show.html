@@ -36,7 +36,7 @@
             {% if widget.success_redirect_url.value != '' %}
               "successRedirectUrl": "{{ widget.success_redirect_url.value}}",
             {% endif %}
-            "formUrl": "{{ widget.cls_url }}api/v1/locations/{{ widget.location_urn.value }}/html_forms/contact"
+            "formUrl": "{{ widget.secure_cls_url }}api/v1/locations/{{ widget.location_urn.value }}/html_forms/contact"
           }
         </script>
 
