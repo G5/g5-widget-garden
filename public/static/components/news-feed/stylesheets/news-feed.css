@@ -4,6 +4,9 @@
   padding:10px 0;
   margin:10px 0;
   border-bottom:1px solid #888;
+  clear:both;
+  float:left;
+  width:100%;
 }
 
 .news-feed-post:first-of-type img{
@@ -16,7 +19,14 @@
 
 .news-feed-post .post-toggle{
   display:block;
-  font-weight: bold;
+}
+
+.news-feed-post .post-toggle.toggle-button{
+  margin:20px 0;
+  padding:.25em 1em;
+  color:#fff;
+  background-color:#77787b;
+  float:left; clear:both;
 }
 
 .news-feed-single-post img,
@@ -100,7 +110,8 @@
   border:1px solid #888;
   padding:.25em;
   line-height: 1em;
-  background:#fff;
+  background-color:#77787b;
+  color:#fff;
 }
 
 .posts-nav .author-divider{ display:none; }
@@ -115,3 +126,4 @@
 .news-feed-widget.narrow .posts-nav .post-author{
   display:none;
 }
+

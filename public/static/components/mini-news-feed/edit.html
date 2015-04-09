@@ -71,13 +71,26 @@
     <div class="form-field">
       {{ widget.background_color.id_hidden_field }}
       <label for="{{ widget.background_color.value_field_id }}">
-        Button Background Color
+        Button Background Color - See More News
       </label>
       <input type="text"
         placeholder="Defaults to white if blank"
         id="{{ widget.background_color.value_field_id }}"
         name="{{ widget.background_color.value_field_name }}"
         value="{{ widget.background_color.value }}"
+      />
+    </div>
+
+    <div class="form-field">
+      {{ widget.read_more_background_color.id_hidden_field }}
+      <label for="{{ widget.read_more_background_color.value_field_id }}">
+        Button Background Color - Read More
+      </label>
+      <input type="text"
+        placeholder="Defaults to white if blank"
+        id="{{ widget.read_more_background_color.value_field_id }}"
+        name="{{ widget.read_more_background_color.value_field_name }}"
+        value="{{ widget.read_more_background_color.value }}"
       />
     </div>
 

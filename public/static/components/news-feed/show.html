@@ -13,6 +13,9 @@
 <style>
   {% if widget.background_color.value != blank %}
     .news-feed-widget .posts-nav .all-posts{ background:{{ widget.background_color.value }}; }
+  {% endif %}
+  {% if widget.read_more_background_color.value != blank %}
+    .news-feed-post a.post-toggle.toggle-button{ background-color:{{ widget.read_more_background_color.value }}; }
   {% endif %} 
 </style>
 
