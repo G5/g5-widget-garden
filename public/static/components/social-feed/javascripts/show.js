@@ -132,7 +132,7 @@
 
     tweetTemplate = function(tweet, feedVars) {
       var avatar;
-      avatar = feedVars.display_avatar ? "<span class='post-thumb'><img src='" + tweet.user.profile_image_url + "'/></span>" : "";
+      avatar = feedVars.display_avatar ? "<span class='post-thumb'><img src='" + tweet.user.profile_image_url_https + "'/></span>" : "";
       return " <li>        " + avatar + "        <div><a href='https://twitter.com/" + tweet.user.screen_name + "' class='tweet-name author-name' target='_blank'> " + tweet.user.screen_name + " says:</a></div>        <span class='tweet-text'>" + tweet.text + "</span>      </li>";
     };
 
