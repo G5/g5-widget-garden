@@ -277,7 +277,7 @@
 }, 
 "public/static/components/mini-news-feed/stylesheets/mini-news-feed.css": {
 "mode": 33188, 
-"mtime": 1428602979
+"mtime": 1428603161
 }, 
 "public/static/components/news-feed/index.html": {
 "mode": 33188, 
@@ -1297,7 +1297,7 @@
 }, 
 "public/static/components/news-feed/stylesheets/news-feed.css": {
 "mode": 33188, 
-"mtime": 1428602979
+"mtime": 1428603143
 }, 
 "public/static/components/multifamily-search/images/thumbnail.png": {
 "mode": 33188, 
@@ -1841,7 +1841,7 @@
 }, 
 ".gitmeta": {
 "mode": 33188, 
-"mtime": 1428603008
+"mtime": 1428603067
 }, 
 "public/static/components/tour-form/index.html": {
 "mode": 33188, 
