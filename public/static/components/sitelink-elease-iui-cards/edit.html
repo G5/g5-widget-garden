@@ -122,29 +122,33 @@
       value="{{ widget.final_instructions_3.value }}"
     />
   </div>
+
+  <!-- Map Page -->
   <div class="form-field">
-    {{ widget.map_page_path.id_hidden_field }}
-    <label for="{{ widget.map_page_path.value_field_id }}">
+    {{ widget.page_slug_1.id_hidden_field }}
+    <label for="{{ widget.page_slug_1.value_field_id }}">
       Map Page
     </label>
-    <select id="{{ widget.map_page_path.value_field_id }}" name="{{ widget.map_page_path.value_field_name }}">
+    <select id="{{ widget.page_slug_1.value_field_id }}" name="{{ widget.page_slug_1.value_field_name }}">
       {% for page in widget.navigateable_pages %}
         <option value="{{ page.slug }}"
-          {% if widget.map_page_path.value == page.slug %}
+          {% if widget.page_slug_1.value == page.slug %}
             selected
           {% endif %} >{{ page.slug }}</option>
       {% endfor %}
     </select>
   </div>
+
+  <!-- return to site page -->
   <div class="form-field">
-    {{ widget.return_to_site_path.id_hidden_field }}
-    <label for="{{ widget.return_to_site_path.value_field_id }}">
+    {{ widget.page_slug_2.id_hidden_field }}
+    <label for="{{ widget.page_slug_2.value_field_id }}">
       Return Page
     </label>
-    <select id="{{ widget.return_to_site_path.value_field_id }}" name="{{ widget.return_to_site_path.value_field_name }}">
+    <select id="{{ widget.page_slug_2.value_field_id }}" name="{{ widget.page_slug_2.value_field_name }}">
       {% for page in widget.navigateable_pages %}
         <option value="{{ page.slug }}"
-          {% if widget.return_to_site_path.value == page.slug %}
+          {% if widget.page_slug_2.value == page.slug %}
             selected
           {% endif %} >{{ page.slug }}</option>
       {% endfor %}
