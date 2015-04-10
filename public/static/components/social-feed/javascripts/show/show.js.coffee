@@ -10,7 +10,7 @@ $ ->
   if feedVars.feed_url.length > 10
     blogConfig = new window.BlogConfig(feedVars)
     new window.BlogInterface($("#blog-feed .feed"), blogConfig)
-  
+
   # Facebook Setup
   if feedVars.facebook_page_id.length > 1
     facebookFeed = new facebookInitializer(feedVars)
@@ -28,7 +28,7 @@ class window.BlogConfig
 
 class BlogFetcher
   constructor: (@url) ->
-    
+
   fetch: ->
     $.ajax
       url: '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=3&callback=?&q=' + encodeURIComponent(@url)
@@ -71,7 +71,7 @@ class window.BlogInterface
                   </svg>
                 </a>"
     $('.feed-switcher').append(feedTab)
-     
+
     feedBlock = " <div id='blog-feed' class='blog-feed feed-section' style='display: none;'>
                     <ul class='h-feed feed'>#{feedList}</ul>
                   </div>"
@@ -118,7 +118,7 @@ class tweetBuilder
     new tabListener('#feed-switch-twitter', '#twitter-feed')
 
   tweetTemplate = (tweet, feedVars) ->
-    avatar = if feedVars.display_avatar then "<span class='post-thumb'><img src='#{tweet.user.profile_image_url}'/></span>" else ""
+    avatar = if feedVars.display_avatar then "<span class='post-thumb'><img src='#{tweet.user.profile_image_url_https}'/></span>" else ""
     " <li>
         #{avatar}
         <div><a href='https://twitter.com/#{tweet.user.screen_name}' class='tweet-name author-name' target='_blank'> #{tweet.user.screen_name} says:</a></div>
@@ -131,7 +131,7 @@ class tweetBuilder
 class facebookInitializer
   constructor: (feedVars) ->
     return getpage feedVars
-    
+
   getpage = (feedVars) ->
     $.ajax
       url: "//g5-social-feed-service.herokuapp.com/facebook-feed/#{feedVars.facebook_page_id}"
@@ -180,7 +180,7 @@ class facebookFeedBuilder
 class googlePlusInitializer
   constructor: (feedVars) ->
     return getpage feedVars
-    
+
   getpage = (feedVars) ->
     $.ajax
       url: "//g5-social-feed-service.herokuapp.com/google-plus-feed/#{feedVars.google_plus_page_id}"
