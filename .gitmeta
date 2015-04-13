@@ -1841,7 +1841,7 @@
 }, 
 ".gitmeta": {
 "mode": 33188, 
-"mtime": 1428944568
+"mtime": 1428944736
 }, 
 "public/static/components/tour-form/index.html": {
 "mode": 33188, 
@@ -1913,7 +1913,7 @@
 }, 
 "public/static/components/footer-info": {
 "mode": 16877, 
-"mtime": 1428938990
+"mtime": 1428944947
 }, 
 "public/static/components/multifamily-mini-search/javascripts": {
 "mode": 16877, 
@@ -1973,7 +1973,7 @@
 }, 
 "public/static/components/footer-info/index.html": {
 "mode": 33188, 
-"mtime": 1428938990
+"mtime": 1428944947
 }, 
 "git-hooks/pre-commit": {
 "mode": 33261, 
