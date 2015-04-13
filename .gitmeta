@@ -685,7 +685,7 @@
 }, 
 "public/static/components/mini-news-feed": {
 "mode": 16877, 
-"mtime": 1428938990
+"mtime": 1428947352
 }, 
 "public/static/components/contact-form/edit.html": {
 "mode": 33188, 
@@ -1841,7 +1841,7 @@
 }, 
 ".gitmeta": {
 "mode": 33188, 
-"mtime": 1428947185
+"mtime": 1428947300
 }, 
 "public/static/components/tour-form/index.html": {
 "mode": 33188, 
@@ -1885,7 +1885,7 @@
 }, 
 "public/static/components/mini-news-feed/index.html": {
 "mode": 33188, 
-"mtime": 1428938990
+"mtime": 1428947352
 }, 
 "public/static/components/request-info-form/images/thumbnail.png": {
 "mode": 33188, 
