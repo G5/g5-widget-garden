@@ -693,7 +693,7 @@
 }, 
 "public/static/components/gallery-basic": {
 "mode": 16877, 
-"mtime": 1419363521
+"mtime": 1428945381
 }, 
 "LICENSE.txt": {
 "mode": 33188, 
@@ -1841,7 +1841,7 @@
 }, 
 ".gitmeta": {
 "mode": 33188, 
-"mtime": 1428944980
+"mtime": 1428945190
 }, 
 "public/static/components/tour-form/index.html": {
 "mode": 33188, 
@@ -2001,7 +2001,7 @@
 }, 
 "public/static/components/gallery-basic/index.html": {
 "mode": 33188, 
-"mtime": 1416247185
+"mtime": 1428945381
 }, 
 "public/static/components/google-translate/show.html": {
 "mode": 33188, 
