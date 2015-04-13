@@ -25,7 +25,7 @@
 }, 
 "public/static/components/news-feed": {
 "mode": 16877, 
-"mtime": 1428948849
+"mtime": 1428949919
 }, 
 "public/static/components/phone/images": {
 "mode": 16877, 
@@ -1841,7 +1841,7 @@
 }, 
 ".gitmeta": {
 "mode": 33188, 
-"mtime": 1428949533
+"mtime": 1428949645
 }, 
 "public/static/components/tour-form/index.html": {
 "mode": 33188, 
@@ -2257,7 +2257,7 @@
 }, 
 "public/static/components/news-feed/edit.html": {
 "mode": 33188, 
-"mtime": 1428938990
+"mtime": 1428949919
 }, 
 "public/static/components/review-form": {
 "mode": 16877, 
