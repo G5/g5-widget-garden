@@ -42,15 +42,13 @@ class EditWidgetModal
     if @widgetId == null
       @widgetId = $(".row-edit").data("row-id")
 
-    @getUrlDomain() + '/widgets/' + @widgetId + "/edit"
+    url = '/widgets/' + @widgetId + "/edit"
+    @urlDomain(url) + url
 
   urlDomain: (data) ->
     a = document.createElement('a')
     a.href = data
     a.protocol + '//' + a.host
-
-  getUrlDomain: ->
-    @urlDomain(@get('adapter').buildURL())
 
   #  Submits the widget configuration to the widget controller
   saveEditForm: ->
