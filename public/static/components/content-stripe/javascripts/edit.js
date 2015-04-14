@@ -32,6 +32,7 @@
       this.widgetName = widgetName;
       this.rowWidgetId = rowWidgetId;
       $('#modal').data("component").set("selectedWidgetName", this.widgetName);
+      $('#myModalLabel').text("Edit " + this.widgetName);
     }
 
     EditWidgetModal.prototype.getEditForm = function() {
@@ -64,7 +65,18 @@
       if (this.widgetId === null) {
         this.widgetId = $(".row-edit").data("row-id");
       }
-      return '/widgets/' + this.widgetId + "/edit";
+      return this.getUrlDomain() + '/widgets/' + this.widgetId + "/edit";
+    };
+
+    EditWidgetModal.prototype.urlDomain = function(data) {
+      var a;
+      a = document.createElement('a');
+      a.href = data;
+      return a.protocol + '//' + a.host;
+    };
+
+    EditWidgetModal.prototype.getUrlDomain = function() {
+      return this.urlDomain(this.get('adapter').buildURL());
     };
 
     EditWidgetModal.prototype.saveEditForm = function() {
