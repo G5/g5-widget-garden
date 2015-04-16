@@ -75,7 +75,9 @@
     }
 
     BusinessSchemaUpdater.prototype.update = function(feed) {
-      return $(this.insert_review_schema).append(this.schemaTemplate(feed.location));
+      if (feed.location.review_count > 0) {
+        return $(this.insert_review_schema).append(this.schemaTemplate(feed.location));
+      }
     };
 
     BusinessSchemaUpdater.prototype.schemaTemplate = function(location) {
@@ -103,7 +105,7 @@
     };
 
     ReviewTemplater.prototype.reviewTemplate = function(location, review) {
-      return "<div itemscope itemtype=\"http://schema.org/Review\" itemprop=\"review\" class=\"review\">\n  <div itemprop=\"reviewBody\" class=\"review-body\">" + review.excerpt + "</div>\n  <div itemprop=\"itemreviewed\" class=\"location-name\">" + this.branded_name + "</div>\n  <div itemprop=\"author\" itemscope itemtype=\"http://schema.org/Person\" class=\"author\">\n    Written by: <span itemprop=\"name\">" + review.author + "</span> \n    <span class=\"" + (this.classifyReputationSiteName(review.reputation_site_name)) + " via\">\n      via " + review.reputation_site_name + "\n    </span>\n  </div>\n  <div class=\"date\">\n    <meta itemprop=\"datePublished\" content=\"" + review.date + "\">Date published: " + review.date + "\n  </div>\n  <div itemprop=\"reviewRating\" itemscope itemtype=\"http://schema.org/Rating\" class=\"rating\">\n    <meta itemprop=\"worstRating\" content=\"1\"><span itemprop=\"ratingValue\">" + review.rating + "</span> / <span itemprop=\"bestRating\">" + location.out_of + "</span> stars\n    <span class=\"gold-stars\" style=\"width:" + (Math.round(review.rating * 16)) + "px;\"></span>\n  </div>\n</div>";
+      return "<div itemscope itemtype=\"http://schema.org/Review\" itemprop=\"review\" class=\"review\">\n  <div itemprop=\"reviewBody\" class=\"review-body\">" + review.excerpt + "</div>\n  <div itemprop=\"itemreviewed\" class=\"location-name\">" + this.branded_name + "</div>\n  <div itemprop=\"author\" itemscope itemtype=\"http://schema.org/Person\" class=\"author\">\n    Written by: <span itemprop=\"name\">" + review.author + "</span>\n    <span class=\"" + (this.classifyReputationSiteName(review.reputation_site_name)) + " via\">\n      via " + review.reputation_site_name + "\n    </span>\n  </div>\n  <div class=\"date\">\n    <meta itemprop=\"datePublished\" content=\"" + review.date + "\">Date published: " + review.date + "\n  </div>\n  <div itemprop=\"reviewRating\" itemscope itemtype=\"http://schema.org/Rating\" class=\"rating\">\n    <meta itemprop=\"worstRating\" content=\"1\"><span itemprop=\"ratingValue\">" + review.rating + "</span> / <span itemprop=\"bestRating\">" + location.out_of + "</span> stars\n    <span class=\"gold-stars\" style=\"width:" + (Math.round(review.rating * 16)) + "px;\"></span>\n  </div>\n</div>";
     };
 
     ReviewTemplater.prototype.classifyReputationSiteName = function(name) {

@@ -14,12 +14,12 @@ $ ->
     targetElement = if hcardReviewsConfig.insert_review_schema == "" then ".contact-info" else hcardReviewsConfig.insert_review_schema
     $(feedSource).bind("feedReady", (event) =>
       new BusinessSchemaUpdater(targetElement, hcardReviewsConfig.review_page_url).update(feedSource.feed))
-  
+
   feedSource.getFeed()
 
 class ReviewFeedSource
   constructor: (@url) ->
-    
+
   getFeed: ->
     if @feedFromStorage()
       $(this).trigger("feedReady")
@@ -53,7 +53,7 @@ class BusinessSchemaUpdater
   constructor: (@insert_review_schema, @review_page_url) ->
 
   update: (feed) ->
-    $(@insert_review_schema).append(@schemaTemplate(feed.location))
+    $(@insert_review_schema).append(@schemaTemplate(feed.location)) if feed.location.review_count > 0
 
   schemaTemplate: (location) ->
     """
@@ -81,7 +81,7 @@ class ReviewTemplater
       <div itemprop="reviewBody" class="review-body">#{review.excerpt}</div>
       <div itemprop="itemreviewed" class="location-name">#{@branded_name}</div>
       <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="author">
-        Written by: <span itemprop="name">#{review.author}</span> 
+        Written by: <span itemprop="name">#{review.author}</span>
         <span class="#{@classifyReputationSiteName(review.reputation_site_name)} via">
           via #{review.reputation_site_name}
         </span>
