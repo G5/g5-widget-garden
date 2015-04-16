@@ -7,6 +7,7 @@
     <input type="text"
       id="{{ widget.business_name.value_field_id }}"
       name="{{ widget.business_name.value_field_name }}"
+      placeholder="{%raw%}{{location_name}} or {{client_name}}{%endraw%}"
       value="{{ widget.business_name.value | url_encode }}"
     />
   </div>

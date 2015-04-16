@@ -4,18 +4,18 @@
   <div class="content row-{{ widget.row_layout.value }}">
     <div class="row-grid">
 
-      <div class="col col-1" id="drop-target-first-col"></div>
+      <div class="col col-1" id="drop-target-1-column-{{widget.id}}"></div>
 
       {% if widget.row_layout.value != "single" %}
-        <div class="col col-2" id="drop-target-second-col"></div>
+        <div class="col col-2" id="drop-target-2-column-{{widget.id}}"></div>
       {% endif %}
 
       {% if widget.row_layout.value == "thirds" or widget.row_layout.value == "quarters" %}
-        <div class="col col-3" id="drop-target-third-col"></div>
+        <div class="col col-3" id="drop-target-3-column-{{widget.id}}"></div>
       {% endif %}
 
       {% if widget.row_layout.value == "quarters" %}
-        <div class="col col-4" id="drop-target-fourth-col"></div>
+        <div class="col col-4" id="drop-target-4-column-{{widget.id}}"></div>
       {% endif %}
 
     </div>

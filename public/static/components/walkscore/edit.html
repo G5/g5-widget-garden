@@ -7,6 +7,7 @@
     <input type="text"
       id="{{ widget.walkscore_client.value_field_id }}"
       name="{{ widget.walkscore_client.value_field_name }}"
+      placeholder="{%raw%}{{client_urn}}{%endraw%}"
       value="{{ widget.walkscore_client.value }}"
       required
     />
@@ -20,6 +21,7 @@
     <input type="text"
       id="{{ widget.walkscore_location.value_field_id }}"
       name="{{ widget.walkscore_location.value_field_name }}"
+      placeholder="{%raw%}{{location_urn}}{%endraw%}"
       value="{{ widget.walkscore_location.value }}"
     />
   </div>

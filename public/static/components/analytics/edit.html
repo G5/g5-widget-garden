@@ -8,7 +8,7 @@
                id="{{ widget.tracking_code.value_field_id }}"
                name="{{ widget.tracking_code.value_field_name }}"
                value="{{ widget.tracking_code.value }}"
-               placeholder="UA-XXXXXXXX"
+               placeholder="{%raw%}{{location_ga_tracking_id}}{%endraw%}"
                required
                 />
     </div>
@@ -22,7 +22,7 @@
                id="{{ widget.go_squared_client_code.value_field_id }}"
                name="{{ widget.go_squared_client_code.value_field_name }}"
                value="{{ widget.go_squared_client_code.value }}"
-               placeholder="GSN-111111-D"
+               placeholder="{%raw%}{{client_go_squared_id}}{%endraw%}"
                 />
     </div>
 
@@ -35,7 +35,7 @@
                id="{{ widget.go_squared_code.value_field_id }}"
                name="{{ widget.go_squared_code.value_field_name }}"
                value="{{ widget.go_squared_code.value }}"
-               placeholder="GSN-111111-M"
+               placeholder="{%raw%}{{location_go_squared_tag}}{%endraw%}"
                 />
     </div>
     <input type="submit" value="Save"/>
