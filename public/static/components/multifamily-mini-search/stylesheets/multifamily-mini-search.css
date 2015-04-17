@@ -1,3 +1,4 @@
+/* multifamily-mini-search */
 .leaflet-cluster-anim .leaflet-marker-icon,.leaflet-cluster-anim .leaflet-marker-shadow {
 -webkit-transition: -webkit-transform .3s ease-out,opacity .3s ease-in;
 -moz-transition: -moz-transform .3s ease-out,opacity .3s ease-in;
@@ -66,11 +67,11 @@ width: 100%;
 display: block
 }
 .corpSearchWrapper .search-form {
-background: #252b32;
 float: left;
 width: 100%;
 position: relative;
-padding: 20px 0
+padding: 20px;
+background-color: rgba(61, 61, 61, .5);
 }
 .corpSearchWrapper .search-form h2 {
 color: #acb4bd;
@@ -83,7 +84,7 @@ display: block;
 position: relative;
 float: left;
 background: #acb4bd;
-margin: 4px;
+margin: 0;
 min-height: 43px;
 max-height: 43px
 }
@@ -132,11 +133,18 @@ color: #000
 .corpSearchWrapper .search-form select::-ms-expand {
 display: none
 }
+.corpSearchWrapper .search-form input[type=radio] {
+height: auto;
+width: auto;
+}
 .corpSearchWrapper .search-form .state {
-width: 99px
+width: 30%;
+margin-bottom: 2%;
 }
 .corpSearchWrapper .search-form .city {
-width: 162px
+width: 68%;
+margin-left: 2%;
+margin-bottom: 2%;
 }
 .corpSearchWrapper .search-form .neighborhood {
 width: 213px
@@ -161,12 +169,14 @@ text-align: center
 .corpSearchWrapper .search-form-center {
 float: left;
 position: relative;
-left: 50%
+left: 50%;
+width:100%;
 }
 .corpSearchWrapper .search-form-inner {
 float: left;
 position: relative;
-left: -50%
+left: -50%;
+width: 100%;
 }
 .corpSearchWrapper .leaflet-div-icon {
 background: 0 0;
@@ -465,4 +475,7 @@ width: 100%;
 height: 100px
 }
 
+.corpSearchWrapper  .search-form .search-button{
+  width:100%;
+}
 

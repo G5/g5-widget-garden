@@ -12,14 +12,53 @@
 </script>
 
 <style>
-  {% if widget.text_color.value != '' %}
-  .corpSearchWrapper {color:{{widget.text_color.value}}}
+  {% if widget.text_color.value != blank %}
+  .corpSearchWrapper .search-form label,
+  .corpSearchWrapper .search-form h2 {color:{{widget.text_color.value}}}
   {% endif %}
   {% if widget.search_button_color.value != '' %}
-  .corpSearchWrapper .search-form .search-button{background:{{widget.search_button_color.value}}}
+  .corpSearchWrapper .search-form .search-button,
+  .corpSearchWrapper .search-form .search-button button{background:{{widget.search_button_color.value}}}
   {% endif %}
-  {% if widget.search_background.value != '' %}
-  .corpSearchWrapper .search-form{background:{{widget.search_background.value}}}
+  {% if widget.search_background.value != blank %}
+  .corpSearchWrapper .search-form{background-color:{{widget.search_background.value}}}
+  {% endif %}
+
+  {% if widget.city_state_button_bg_color.value != blank %}
+  .corpSearchWrapper .search-form .state,
+  .corpSearchWrapper .search-form .city{
+    background: {{widget.city_state_button_bg_color.value}};
+  }
+  {% endif %}
+
+  {% if widget.city_state_button_text_color.value != blank %}
+  .corpSearchWrapper .search-form .state select,
+  .corpSearchWrapper .search-form .city select {
+    background: none;
+    color: {{widget.city_state_button_text_color.value}};
+  }
+
+  .corpSearchWrapper .search-form .state:after,
+  .corpSearchWrapper .search-form .city:after{
+    top: 45%;
+    right: 5%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: {{widget.city_state_button_text_color.value}};
+    border-width: 6px;
+    margin-left: -6px;
+  }
+  {% endif %}
+
+  {% if widget.search_button_text_color.value != blank %}
+  .corpSearchWrapper .search-form button{
+    color: {{widget.search_button_text_color.value}};
+  }
   {% endif %}
 </style>
 
