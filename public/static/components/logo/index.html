@@ -1,45 +1,46 @@
 <div class="h-g5-component">
-
   <header>
     <dl>
       <dt>Name</dt>
       <dd><span class="p-name">Logo</span></dd>
       <dt>Widget ID</dt>
       <dd><span class="p-widget-id">25</span></dd>
-
       <dt>Summary</dt>
       <dd><span class="p-summary">Business Logo with link to home page</span></dd>
-
+      <dt>Liquid</dt>
+      <dd><span class="p-g5-liquid">true</span></dd>
+      <dd>
+        <span class="e-popover">
+          <h4 class="popover-header">Resources</h4>
+          <ul class="popover-dependencies">
+            <li><a href="https://g5.jiveon.com/docs/DOC-7180" target="_blank">Logo Documentation</a></li>
+          </ul>
+        </span>
+      </dd>
       <dt>Property Group</dt>
       <dd>
         <dl class="e-g5-property-group h-g5-property-group">
           <dt>Name</dt>
           <dd class="p-name">Logo</dd>
-
           <dt>Category</dt>
           <dd class="p-category">Instance</dd>
-
           <dt>Properties</dt>
           <dd class="e-g5-property h-g5-property">
             <dl>
               <dt>Business Name</dt>
               <dd class="p-g5-name">business_name</dd>
-
               <dt>Editable</dt>
               <dd class="p-g5-editable">true</dd>
-
               <dt>Default Value</dt>
-              <dd class="p-g5-default-value"></dd>
+              <dd class="p-g5-default-value">{{location_name}}</dd>
             </dl>
           </dd>
           <dd class="e-g5-property h-g5-property">
             <dl>
               <dt>Display Logo</dt>
               <dd class="p-g5-name">display_logo</dd>
-
               <dt>Editable</dt>
               <dd class="p-g5-editable">true</dd>
-
               <dt>Default Value</dt>
               <dd class="p-g5-default-value">true</dd>
             </dl>
@@ -48,10 +49,8 @@
             <dl>
               <dt>Single Domain Location website</dt>
               <dd class="p-g5-name">single_domain_location</dd>
-
               <dt>Editable</dt>
               <dd class="p-g5-editable">true</dd>
-
               <dt>Default Value</dt>
               <dd class="p-g5-default-value">false</dd>
             </dl>
@@ -60,10 +59,8 @@
             <dl>
               <dt>Url</dt>
               <dd class="p-g5-name">logo_url</dd>
-
               <dt>Editable</dt>
               <dd class="p-g5-editable">true</dd>
-
               <dt>Default Value</dt>
               <dd class="p-g5-default-value">https://placehold.it/350x150&text=LOGO+PLACEHOLDER</dd>
             </dl>
@@ -72,5 +69,4 @@
       </dd>  <!-- END e-g5-property-group -->
     </dl>
   </header>
-
 </div>

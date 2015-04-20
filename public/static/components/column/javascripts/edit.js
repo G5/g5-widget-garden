@@ -32,6 +32,7 @@
       this.widgetName = widgetName;
       this.columnWidgetId = columnWidgetId;
       $('#modal').data("component").set("selectedWidgetName", this.widgetName);
+      $('#myModalLabel').text("Edit " + this.widgetName);
     }
 
     EditWidgetModal.prototype.getEditForm = function() {
@@ -61,10 +62,19 @@
     };
 
     EditWidgetModal.prototype.editURL = function() {
+      var url;
       if (this.widgetId === null) {
         this.widgetId = $(".column-edit").data("column-id");
       }
-      return '/widgets/' + this.widgetId + "/edit";
+      url = '/widgets/' + this.widgetId + "/edit";
+      return this.urlDomain(url) + url;
+    };
+
+    EditWidgetModal.prototype.urlDomain = function(data) {
+      var a;
+      a = document.createElement('a');
+      a.href = data;
+      return a.protocol + '//' + a.host;
     };
 
     EditWidgetModal.prototype.saveEditForm = function() {

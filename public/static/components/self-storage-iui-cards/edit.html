@@ -2,12 +2,12 @@
   <div class="form-field">
     {{ widget.store_urn.id_hidden_field }}
     <label for="{{ widget.store_urn.value_field_id }}">
-      Store URN
+      Location URN
     </label>
     <input type="text"
-      placeholder="1234"
       id="{{ widget.store_urn.value_field_id }}"
       name="{{ widget.store_urn.value_field_name }}"
+      placeholder="{%raw%}{{location_urn}}{%endraw%}"
       value="{{ widget.store_urn.best_value }}"
     />
   </div>

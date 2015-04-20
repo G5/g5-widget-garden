@@ -8,6 +8,8 @@
       <dd><span class="p-widget-id">2</span></dd>
       <dt>Summary</dt>
       <dd><span class="p-summary">Form for customer to apply online</span></dd>
+      <dt>Liquid</dt>
+      <dd><span class="p-g5-liquid">true</span></dd>
       <dt>Lib Javascripts</dt>
       <dd><a class="u-g5-lib-javascript" href="javascripts/libs/form-urls.js">form-urls.js</a></dd>
       <dt>Property Groups</dt>
@@ -19,31 +21,7 @@
           <dt>Category</dt>
           <dd class="p-category">Instance</dd>
 
-          <dt>Attributes</dt>
-          <dd class="e-g5-property h-g5-property">
-            <dl>
-              <dt>Client URN</dt>
-              <dd class="p-g5-name">client_urn</dd>
-
-              <dt>Editable</dt>
-              <dd class="p-g5-editable">true</dd>
-
-              <dt>Default Value</dt>
-              <dd class="p-g5-default-value"></dd>
-            </dl>
-          </dd>
-          <dd class="e-g5-property h-g5-property">
-            <dl>
-              <dt>Client Leads Service URL</dt>
-              <dd class="p-g5-name">cls_url</dd>
-
-              <dt>Editable</dt>
-              <dd class="p-g5-editable">true</dd>
-
-              <dt>Default Value</dt>
-              <dd class="p-g5-default-value"></dd>
-            </dl>
-          </dd>
+          <dt>Attributes</dt> 
           <dd class="e-g5-property h-g5-property">
             <dl>
               <dt>Form UID</dt>
@@ -100,6 +78,31 @@
               <dd class="p-g5-default-value">true</dd>
             </dl>
           </dd>
+          <dd class="e-g5-property h-g5-property">
+            <dl>
+              <dt>Client URN</dt>
+              <dd class="p-g5-name">client_urn</dd>
+
+              <dt>Editable</dt>
+              <dd class="p-g5-editable">true</dd>
+
+              <dt>Default Value</dt>
+              <dd class="p-g5-default-value">{{client_urn}}</dd>
+            </dl>
+          </dd>
+          <dd class="e-g5-property h-g5-property">
+            <dl>
+              <dt>Client Leads Service URL</dt>
+              <dd class="p-g5-name">cls_url</dd>
+
+              <dt>Editable</dt>
+              <dd class="p-g5-editable">true</dd>
+
+              <dt>Default Value</dt>
+              <dd class="p-g5-default-value">{{client_cls_url}}</dd>
+            </dl>
+          </dd>
+
         </dl>
       </dd>
 

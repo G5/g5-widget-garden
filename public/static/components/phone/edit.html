@@ -5,7 +5,7 @@
       Phone Number
     </label>
     <input type="tel"
-      placeholder="Optional. Only used as fallback if call tracking numbers are not set up"
+      placeholder="Optional. Only used as fallback if call tracking numbers are not set up or, {%raw%}{{location_phone_number}}{%endraw%}"
       id="{{ widget.phone_number.value_field_id }}"
       name="{{ widget.phone_number.value_field_name }}"
       value="{{ widget.phone_number.value }}"
@@ -19,6 +19,7 @@
     <input type="text"
       id="{{ widget.client_urn.value_field_id }}"
       name="{{ widget.client_urn.value_field_name }}"
+      placeholder="{%raw%}{{client_urn}}{%endraw%}"
       value="{{ widget.client_urn.value }}"
     />
   </div>
@@ -30,6 +31,7 @@
     <input type="text"
       id="{{ widget.location_urn.value_field_id }}"
       name="{{ widget.location_urn.value_field_name }}"
+      placeholder="{%raw%}{{location_urn}}{%endraw%}"
       value="{{ widget.location_urn.value }}"
     />
   </div>

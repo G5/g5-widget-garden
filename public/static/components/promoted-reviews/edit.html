@@ -7,9 +7,9 @@
         Location Branded Name
       </label>
       <input type="text"
-        placeholder="Optional"
         id="{{ widget.branded_name.value_field_id }}"
         name="{{ widget.branded_name.value_field_name }}"
+        placeholder="{%raw%}{{location_name}}{%endraw%}"
         value="{{ widget.branded_name.value }}"
       />
     </div>

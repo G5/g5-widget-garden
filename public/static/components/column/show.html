@@ -1,26 +1,26 @@
 <div class="column">
   <div class="column-content column-{{ widget.row_count.value }}">
 
-    <div class="row-1" id="drop-target-first-row"></div>
+    <div class="row-1" id="drop-target-1-row-{{widget.id}}"></div>
 
     {% if widget.row_count.value != "one" %}
-      <div class="row-2" id="drop-target-second-row"></div>
+      <div class="row-2" id="drop-target-2-row-{{widget.id}}"></div>
     {% endif %}
 
     {% if widget.row_count.best_value == "three" or widget.row_count.best_value == "four" or widget.row_count.best_value == "five" or widget.row_count.best_value == "six" %}
-      <div class="row-3" id="drop-target-third-row"></div>
+      <div class="row-3" id="drop-target-3-row-{{widget.id}}"></div>
     {% endif %}
 
     {% if widget.row_count.best_value == "four" or widget.row_count.best_value == "five" or widget.row_count.best_value == "six" %}
-      <div class="row-4" id="drop-target-fourth-row"></div>
+      <div class="row-4" id="drop-target-4-row-{{widget.id}}"></div>
     {% endif %}
 
     {% if widget.row_count.best_value == "five" or widget.row_count.best_value == "six" %}
-      <div class="row-5" id="drop-target-fifth-row"></div>
+      <div class="row-5" id="drop-target-5-row-{{widget.id}}"></div>
     {% endif %}
 
     {% if widget.row_count.best_value == "six" %}
-      <div class="row-6" id="drop-target-sixth-row"></div>
+      <div class="row-6" id="drop-target-6-row-{{widget.id}}"></div>
     {% endif %}
   </div>
 </div>
