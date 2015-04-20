@@ -50,6 +50,25 @@
              placeholder="http://favicon_url/icon.ico"
               />
   </div>
+  <div class="form-field check-field">
+      {{ widget.use_crazy_egg.id_hidden_field }}
+      <input type="hidden"
+             id="{{ widget.use_crazy_egg.value_field_id }}_false"
+             name="{{ widget.use_crazy_egg.value_field_name }}"
+             value="false"
+              />
+      <input type="checkbox"
+             id="{{ widget.use_crazy_egg.value_field_id }}"
+             name="{{ widget.use_crazy_egg.value_field_name }}"
+             value="true"
+             {% if widget.use_crazy_egg.value == "true" %}
+                checked="checked"
+             {% endif %}
+      />
+      <label for="{{ widget.use_crazy_egg.value_field_id }}" >
+          Use Crazy Egg?
+      </label>
+    </div>
 
   <input type="submit" value="Save" />
 </form>

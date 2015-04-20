@@ -11,3 +11,12 @@
 {% if widget.favicon.best_value != blank %}
   <link rel="shortcut icon" href="{{ widget.favicon.best_value }}" />
 {% endif %}
+{% assign use_crazy_egg = widget.use_crazy_egg.value | downcase %}
+{% if use_crazy_egg == "true" %}
+<script type="text/javascript">
+  setTimeout(function(){var a=document.createElement("script");
+    var b=document.getElementsByTagName("script")[0];
+    a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0024/8426.js?"+Math.floor(new Date().getTime()/3600000);
+    a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+{% endif %}

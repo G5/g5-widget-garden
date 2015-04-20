@@ -20,6 +20,7 @@ chooseWidget.on 'change', ->
 class EditWidgetModal
   constructor: (@widgetId, @widgetName, @columnWidgetId) ->
     $('#modal').data("component").set("selectedWidgetName", @widgetName)
+    $('#myModalLabel').text("Edit #{@widgetName}")
 
   getEditForm: ->
     callback = (response) => @openModal response
@@ -41,7 +42,13 @@ class EditWidgetModal
     if @widgetId == null
       @widgetId = $(".column-edit").data("column-id")
 
-    '/widgets/' + @widgetId + "/edit"
+    url = '/widgets/' + @widgetId + "/edit"
+    @urlDomain(url) + url
+
+  urlDomain: (data) ->
+    a = document.createElement('a')
+    a.href = data
+    a.protocol + '//' + a.host
 
   #  Submits the widget configuration to the widget controller
   saveEditForm: ->
