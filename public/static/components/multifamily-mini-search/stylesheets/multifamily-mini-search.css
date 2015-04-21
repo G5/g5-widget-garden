@@ -161,7 +161,8 @@ width: 269px
 .corpSearchWrapper .search-form .price-range label,.corpSearchWrapper .search-form .square-feet-range label {
 width: 56px
 }
-.corpSearchWrapper .search-form .search-button {
+.corpSearchWrapper .search-form .search-button,
+.corpSearchWrapper .search-form .search-button button{
 width: 212px;
 background: #fe7b6f;
 text-align: center
