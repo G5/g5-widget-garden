@@ -1,0 +1,10 @@
+<form>
+    <div class="form-field">
+        {{ widget.css_override.id_hidden_field }}
+        <label for="{{ widget.css_override.value_field_id }}">
+            CSS Over Ride
+        </label>
+        <textarea id="{{ widget.css_override.value_field_id }}" name="{{ widget.css_override.value_field_name }}" placeholder="p { font-style: italic ! important }">{{ widget.css_override.value }}</textarea>
+    </div>
+  <input type="submit" value="Save" />
+</form>
