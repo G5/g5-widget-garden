@@ -71,8 +71,12 @@ float: left;
 width: 100%;
 position: relative;
 padding: 20px;
-background-color: rgba(61, 61, 61, .5);
 }
+
+.corporate-search{
+  background-color: rgba(61, 61, 61, .5);
+}
+
 .corpSearchWrapper .search-form h2 {
 color: #acb4bd;
 margin: 0;
@@ -171,13 +175,13 @@ text-align: center
 float: left;
 position: relative;
 left: 50%;
-width:100%;
+
 }
 .corpSearchWrapper .search-form-inner {
 float: left;
 position: relative;
 left: -50%;
-width: 100%;
+
 }
 .corpSearchWrapper .leaflet-div-icon {
 background: 0 0;
@@ -474,9 +478,5 @@ right: -5px
 .corpSearchWrapper.narrow .search-form-inner .loading-gray {
 width: 100%;
 height: 100px
-}
-
-.corpSearchWrapper  .search-form .search-button{
-  width:100%;
 }
 
