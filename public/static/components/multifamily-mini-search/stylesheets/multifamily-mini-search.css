@@ -168,7 +168,7 @@ width: 56px
 .corpSearchWrapper .search-form .search-button,
 .corpSearchWrapper .search-form .search-button button{
 width: 100%;
-background: #fe7b6f;
+background-color: #fe7b6f;
 text-align: center
 }
 .corpSearchWrapper .search-form-center {
