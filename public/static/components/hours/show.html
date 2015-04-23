@@ -1,0 +1,23 @@
+<h4 class="p-name">
+  {% if widget.office_hours_label.best_value != blank  %}
+    {{ widget.location_name.best_value }}
+  {% else %}
+    Office Hours
+  {% endif %}
+</h4>
+<hr />
+<div>{{ widget.location_office_hours.value }}</div>
+<div>Sat 9am-3pm</div>
+<div>Closed Sundays</div>
+{% if widget.location_access_hours.best_value != blank  %}
+  <div>&nbsp;</div>
+  <h4 class="p-name">
+    {% if widget.access_hours_label.best_value != blank  %}
+      {{ widget.access_hours_label.best_value }}
+    {% else %}
+      Access Hours
+    {% endif %}
+  </h4>
+  <hr />
+  <div>{{ widget.location_access_hours.value }}</div>
+{% endif %}
