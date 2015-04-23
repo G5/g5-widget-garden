@@ -17,12 +17,7 @@
     <label for="{{ widget.location_office_hours.value_field_id }}" >
       Office Hours
     </label>
-    <input type="text"
-      id="{{ widget.location_office_hours.value_field_id }}"
-      name="{{ widget.location_office_hours.value_field_name }}"
-      placeholder="{%raw%}{{location_office_hours}}{%endraw%}"
-      value="{{ widget.location_office_hours.best_value }}"
-    />
+    <textarea id="{{ widget.location_office_hours.value_field_id }}" name="{{ widget.location_office_hours.value_field_name }}" placeholder="{%raw%}{{location_office_hours}}{%endraw%}">{{ widget.location_office_hours.best_value }}"</textarea>
   </div>
 
   <div class="form-field">
@@ -41,14 +36,9 @@
   <div class="form-field">
     {{ widget.location_access_hours.id_hidden_field }}
     <label for="{{ widget.location_access_hours.value_field_id }}" >
-      Street Address
+      Access Hours
     </label>
-    <input type="text"
-      id="{{ widget.location_access_hours.value_field_id }}"
-      name="{{ widget.location_access_hours.value_field_name }}"
-      placeholder="{%raw%}{{location_access_hours}}{%endraw%}"
-      value="{{ widget.location_access_hours.best_value }}"
-    />
+    <textarea id="{{ widget.location_access_hours.value_field_id }}" name="{{ widget.location_access_hours.value_field_name }}" placeholder="{%raw%}{{location_access_hours}}{%endraw%}">{{ widget.location_access_hours.best_value }}</textarea>
   </div>
 
   <input type="submit" value="Save" class="btn" />
