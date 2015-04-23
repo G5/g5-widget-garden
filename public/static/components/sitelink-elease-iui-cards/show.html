@@ -15,11 +15,12 @@
         "unitSizeHelpLabel":"{{ widget.unit_size_help_label.best_value }}",
         "moveInCostServiceHost":"{{ widget.move_in_cost_service_host.best_value | url_encode }}",
         "disclaimerText":"{{ widget.disclaimer_text.value }}",
-        "locationMapUrl":"{{ widget.map_page_path.value }}",
+        "locationMapUrl":"{{ widget.generated_url_1 }}",
         "finalInstructions": ["{{ widget.final_instructions_1.value }}",
                               "{{ widget.final_instructions_2.value }}",
                               "{{ widget.final_instructions_3.value }}"],
-        "returnToSitePath":"{{widget.return_to_site_path.value}}"
+        "returnToSitePath":"{{ widget.generated_url_2 }}",
+        "maxLeaseDays":"{{ widget.max_lease_days.best_value }}"
       },
       "exportApplicationGlobal":false
     }
@@ -162,3 +163,4 @@
     </div>
   </div>
 </div>
+

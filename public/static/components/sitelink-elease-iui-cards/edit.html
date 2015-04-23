@@ -35,6 +35,22 @@
     />  
   </div>
   <div class="form-field">
+    {{ widget.max_lease_days.id_hidden_field }}
+    <label for="{{ widget.max_lease_days.value_field_id }}">
+      Max Lease Start Days
+    </label>
+    <input type="number", min="1" max="31"
+      placeholder=""
+      id="{{ widget.max_lease_days.value_field_id }}"
+      name="{{ widget.max_lease_days.value_field_name }}"
+      {% if widget.max_lease_days.best_value %}
+      value="{{ widget.max_lease_days.best_value }}"
+      {% else %}
+      value="7"
+      {% endif %}
+    />
+  </div>
+  <div class="form-field">
     {{ widget.unit_size_help_url.id_hidden_field }}
     <label for="{{ widget.unit_size_help_url.value_field_id }}">
       Unit Size Help URL
@@ -106,29 +122,33 @@
       value="{{ widget.final_instructions_3.value }}"
     />
   </div>
+
+  <!-- Map Page -->
   <div class="form-field">
-    {{ widget.map_page_path.id_hidden_field }}
-    <label for="{{ widget.map_page_path.value_field_id }}">
+    {{ widget.page_slug_1.id_hidden_field }}
+    <label for="{{ widget.page_slug_1.value_field_id }}">
       Map Page
     </label>
-    <select id="{{ widget.map_page_path.value_field_id }}" name="{{ widget.map_page_path.value_field_name }}">
+    <select id="{{ widget.page_slug_1.value_field_id }}" name="{{ widget.page_slug_1.value_field_name }}">
       {% for page in widget.navigateable_pages %}
         <option value="{{ page.slug }}"
-          {% if widget.map_page_path.value == page.slug %}
+          {% if widget.page_slug_1.value == page.slug %}
             selected
           {% endif %} >{{ page.slug }}</option>
       {% endfor %}
     </select>
   </div>
+
+  <!-- return to site page -->
   <div class="form-field">
-    {{ widget.return_to_site_path.id_hidden_field }}
-    <label for="{{ widget.return_to_site_path.value_field_id }}">
+    {{ widget.page_slug_2.id_hidden_field }}
+    <label for="{{ widget.page_slug_2.value_field_id }}">
       Return Page
     </label>
-    <select id="{{ widget.return_to_site_path.value_field_id }}" name="{{ widget.return_to_site_path.value_field_name }}">
+    <select id="{{ widget.page_slug_2.value_field_id }}" name="{{ widget.page_slug_2.value_field_name }}">
       {% for page in widget.navigateable_pages %}
         <option value="{{ page.slug }}"
-          {% if widget.return_to_site_path.value == page.slug %}
+          {% if widget.page_slug_2.value == page.slug %}
             selected
           {% endif %} >{{ page.slug }}</option>
       {% endfor %}
