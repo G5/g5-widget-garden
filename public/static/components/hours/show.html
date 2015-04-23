@@ -7,7 +7,7 @@
   {% endif %}
 </h4>
 <hr />
-<div>{{ widget.location_office_hours.best_value }}</div>
+<div>{{ widget.location_office_hours.best_value | newline_to_br }}</div>
 {% if widget.location_access_hours.best_value != blank  %}
   <div>&nbsp;</div>
   <h4 class="p-name">
@@ -18,6 +18,6 @@
     {% endif %}
   </h4>
   <hr />
-  <div>{{ widget.location_access_hours.best_value }}</div>
+  <div>{{ widget.location_access_hours.best_value | newline_to_br }}</div>
 {% endif %}
 </div>
