@@ -119,6 +119,19 @@
     </div>
 
     <div class="form-field">
+      {{ widget.search_background.id_hidden_field }}
+      <label for="{{ widget.search_background.value_field_id }}">
+        Search / Widget Background
+      </label>
+      <input type="text"
+        placeholder=""
+        id="{{ widget.search_background.value_field_id }}"
+        name="{{ widget.search_background.value_field_name }}"
+        value="{{ widget.search_background.value }}"
+      />
+    </div>
+
+    <div class="form-field">
       {{ widget.text_color.id_hidden_field }}
       <label for="{{ widget.text_color.value_field_id }}">
         Text Color
@@ -134,10 +147,10 @@
     <div class="form-field">
       {{ widget.search_button_color.id_hidden_field }}
       <label for="{{ widget.search_button_color.value_field_id }}">
-        Search Button Color
+        Search Button BG Color
       </label>
       <input type="text"
-        placeholder=""
+        placeholder="{{theme_secondary_color}}"
         id="{{ widget.search_button_color.value_field_id }}"
         name="{{ widget.search_button_color.value_field_name }}"
         value="{{ widget.search_button_color.value }}"
@@ -145,18 +158,43 @@
     </div>
 
     <div class="form-field">
-      {{ widget.search_background.id_hidden_field }}
-      <label for="{{ widget.search_background.value_field_id }}">
-        Search Background
+      {{ widget.search_button_text_color.id_hidden_field }}
+      <label for="{{ widget.search_button_text_color.value_field_id }}">
+        Search Button Text Color
       </label>
       <input type="text"
         placeholder=""
-        id="{{ widget.search_background.value_field_id }}"
-        name="{{ widget.search_background.value_field_name }}"
-        value="{{ widget.search_background.value }}"
+        id="{{ widget.search_button_text_color.value_field_id }}"
+        name="{{ widget.search_button_text_color.value_field_name }}"
+        value="{{ widget.search_button_text_color.value }}"
       />
     </div>
 
+    <div class="form-field">
+      {{ widget.city_state_button_bg_color.id_hidden_field }}
+      <label for="{{ widget.city_state_button_bg_color.value_field_id }}">
+        City / State Button BG Color
+      </label>
+      <input type="text"
+        placeholder="{{theme_secondary_color}}"
+        id="{{ widget.city_state_button_bg_color.value_field_id }}"
+        name="{{ widget.city_state_button_bg_color.value_field_name }}"
+        value="{{ widget.city_state_button_bg_color.value }}"
+      />
+    </div>
+
+    <div class="form-field">
+      {{ widget.city_state_button_text_color.id_hidden_field }}
+      <label for="{{ widget.city_state_button_text_color.value_field_id }}">
+        City / State Button Text Color
+      </label>
+      <input type="text"
+        placeholder=""
+        id="{{ widget.city_state_button_text_color.value_field_id }}"
+        name="{{ widget.city_state_button_text_color.value_field_name }}"
+        value="{{ widget.city_state_button_text_color.value }}"
+      />
+    </div>
   </fieldset>
   <input type="submit" value="Save" class="btn" />
 </form>
