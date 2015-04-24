@@ -1,0 +1,15 @@
+.hours .p-organization-name,
+.hours .h-adr,
+.hours .p-street-address,
+.hours .p-tel,
+.hours .p-url {
+  display: block;
+}
+.hours p {
+  margin-top: 0;
+}
+
+.hours h4 {
+  font-weight: bold;
+  margin-bottom: 0;
+}

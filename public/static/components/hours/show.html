@@ -1,0 +1,23 @@
+<div class="hours h-card vcard widget">
+  <h4 class="p-name">
+  {% if widget.office_hours_label.best_value != blank  %}
+    {{ widget.office_hours_label.best_value }}
+  {% else %}
+    Office Hours
+  {% endif %}
+</h4>
+<hr />
+<div>{{ widget.location_office_hours.best_value | newline_to_br }}</div>
+{% if widget.location_access_hours.best_value != blank  %}
+  <div>&nbsp;</div>
+  <h4 class="p-name">
+    {% if widget.access_hours_label.best_value != blank  %}
+      {{ widget.access_hours_label.best_value }}
+    {% else %}
+      Access Hours
+    {% endif %}
+  </h4>
+  <hr />
+  <div>{{ widget.location_access_hours.best_value | newline_to_br }}</div>
+{% endif %}
+</div>

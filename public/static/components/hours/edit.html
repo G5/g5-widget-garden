@@ -1,0 +1,45 @@
+<form>
+  <div class="form-field">
+    {{ widget.office_hours_label.id_hidden_field }}
+    <label for="{{ widget.office_hours_label.value_field_id }}" >
+      Office Hours Label
+    </label>
+    <input type="text"
+           id="{{ widget.office_hours_label.value_field_id }}"
+           name="{{ widget.office_hours_label.value_field_name }}"
+           placeholder="Office Hours"
+           value="{{ widget.office_hours_label.best_value }}"
+            />
+  </div>
+
+  <div class="form-field">
+    {{ widget.location_office_hours.id_hidden_field }}
+    <label for="{{ widget.location_office_hours.value_field_id }}" >
+      Office Hours
+    </label>
+    <textarea id="{{ widget.location_office_hours.value_field_id }}" name="{{ widget.location_office_hours.value_field_name }}" placeholder="{%raw%}{{location_office_hours}}{%endraw%}">{{ widget.location_office_hours.best_value }}</textarea>
+  </div>
+
+  <div class="form-field">
+    {{ widget.access_hours_label.id_hidden_field }}
+    <label for="{{ widget.access_hours_label.value_field_id }}" >
+      Access Hours Label
+    </label>
+    <input type="text"
+           id="{{ widget.access_hours_label.value_field_id }}"
+           name="{{ widget.access_hours_label.value_field_name }}"
+           placeholder="Access Hours"
+           value="{{ widget.access_hours_label.best_value }}"
+            />
+  </div>
+
+  <div class="form-field">
+    {{ widget.location_access_hours.id_hidden_field }}
+    <label for="{{ widget.location_access_hours.value_field_id }}" >
+      Access Hours
+    </label>
+    <textarea id="{{ widget.location_access_hours.value_field_id }}" name="{{ widget.location_access_hours.value_field_name }}" placeholder="{%raw%}{{location_access_hours}}{%endraw%}">{{ widget.location_access_hours.best_value }}</textarea>
+  </div>
+
+  <input type="submit" value="Save" class="btn" />
+</form>
