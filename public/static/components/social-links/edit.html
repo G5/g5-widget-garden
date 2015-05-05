@@ -1,0 +1,169 @@
+<form>
+  <div class="form-field">
+    <label for="{{ widget.twitter_username.value_field_id }}" >
+      Twitter Username
+    </label>
+    {{ widget.twitter_username.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.twitter_username.value_field_id }}"
+      name="{{ widget.twitter_username.value_field_name }}"
+      placeholder="{%raw%}{{location_twitter_id}}{%endraw%}"
+      value="{{ widget.twitter_username.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.facebook_username.value_field_id }}" >
+      Facebook Username
+    </label>
+    {{ widget.facebook_username.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.facebook_username.value_field_id }}"
+      name="{{ widget.facebook_username.value_field_name }}"
+      placeholder="{%raw%}{{location_facebook_id}}{%endraw%}"
+      value="{{ widget.facebook_username.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.yelp_username.value_field_id }}" >
+      Yelp Username
+    </label>
+    {{ widget.yelp_username.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.yelp_username.value_field_id }}"
+      name="{{ widget.yelp_username.value_field_name }}"
+      placeholder="{%raw%}{{location_yelp_id}}{%endraw%}"
+      value="{{ widget.yelp_username.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.google_plus_id.value_field_id }}" >
+      Google + ID
+    </label>
+    {{ widget.google_plus_id.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.google_plus_id.value_field_id }}"
+      name="{{ widget.google_plus_id.value_field_name }}"
+      value="{{ widget.google_plus_id.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.foursquare_username.value_field_id }}" >
+      Foursquare URL
+    </label>
+    {{ widget.foursquare_username.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.foursquare_username.value_field_id }}"
+      name="{{ widget.foursquare_username.value_field_name }}"
+      value="{{ widget.foursquare_username.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.pinterest_username.value_field_id }}" >
+      Pinterest Username
+    </label>
+    {{ widget.pinterest_username.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.pinterest_username.value_field_id }}"
+      name="{{ widget.pinterest_username.value_field_name }}"
+      placeholder="{%raw%}{{location_pinterest_id}}{%endraw%}"
+      value="{{ widget.pinterest_username.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.tumblr_username.value_field_id }}" >
+      Tumblr Username
+    </label>
+    {{ widget.tumblr_username.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.tumblr_username.value_field_id }}"
+      name="{{ widget.tumblr_username.value_field_name }}"
+      value="{{ widget.tumblr_username.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.instagram_username.value_field_id }}" >
+      Instagram Username
+    </label>
+    {{ widget.instagram_username.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.instagram_username.value_field_id }}"
+      name="{{ widget.instagram_username.value_field_name }}"
+      placeholder="{%raw%}{{location_instagram_id}}{%endraw%}"
+      value="{{ widget.instagram_username.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.vimeo_username.value_field_id }}" >
+      Vimeo Username
+    </label>
+    {{ widget.vimeo_username.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.vimeo_username.value_field_id }}"
+      name="{{ widget.vimeo_username.value_field_name }}"
+      value="{{ widget.vimeo_username.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.youtube_username.value_field_id }}" >
+      YouTube Username
+    </label>
+    {{ widget.youtube_username.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.youtube_username.value_field_id }}"
+      name="{{ widget.youtube_username.value_field_name }}"
+      placeholder="{%raw%}{{location_youtube_id}}{%endraw%}"
+      value="{{ widget.youtube_username.value }}"
+    />
+  </div>
+
+  <fieldset style="padding:0 0 10px 10px;">
+    <legend style="margin-left:-10px;">Linked In</legend>
+    <div class="form-field">
+      <label for="{{ widget.linkedin_username.value_field_id }}" >
+        Username
+      </label>
+      {{ widget.linkedin_username.id_hidden_field }}
+      <input type="text"
+        id="{{ widget.linkedin_username.value_field_id }}"
+        name="{{ widget.linkedin_username.value_field_name }}"
+        value="{{ widget.linkedin_username.value }}"
+      />
+    </div>
+    <div class="field check-field">
+      <label>Account Type</label>
+      {{widget.linkedin_account_type.id_hidden_field}}
+      <br />
+      <label for="{{ widget.linkedin_account_type.value_field_id }}_individual" >
+        Individual
+      <input type="radio"
+        id="{{ widget.linkedin_account_type.value_field_id }}_individual"
+        name="{{ widget.linkedin_account_type.value_field_name }}"
+        value="INDIVIDUAL"
+        checked="checked"
+      />
+      </label>
+      <label for="{{ widget.linkedin_account_type.value_field_id }}_company" >
+        Company
+      <input type="radio"
+        id="{{ widget.linkedin_account_type.value_field_id }}_company"
+        name="{{ widget.linkedin_account_type.value_field_name }}"
+        value="COMPANY"
+        {% if widget.linkedin_account_type.value == "COMPANY" %}
+        checked="checked"
+        {% endif %}
+      />
+      </label>
+    </div>
+  </fieldset>
+
+  <input type="submit" value="Save" class="btn" />
+</form>

@@ -1,0 +1,56 @@
+.coupon {
+  text-align: center;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.coupon:before, .coupon:after {
+  content: " ";
+  display: table;
+}
+.coupon:after {
+  clear: both;
+}
+.coupon .coupon-logo {
+  display: block;
+  margin: 0 auto 2em;
+}
+.coupon .p-name {
+}
+.coupon .p-street-address,
+.coupon .p-tel {
+  display: block;
+}
+.coupon .btn {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+}
+.coupon-actions .btn {
+  margin-bottom: .25em;
+  width: 100%;
+}
+.coupon-actions .btn:focus {
+  outline: none;
+}
+.coupon-drawer {
+  text-align: left;
+  padding: 1em 0;
+}
+.coupon .form-field {
+  overflow: hidden;
+}
+.coupon input[type=text] {
+  width: 100%;
+}
+.coupon input[type=submit] {
+  float: right;
+  margin-top: .5em;
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+}
+
+@media (min-width: 1200px) {
+}

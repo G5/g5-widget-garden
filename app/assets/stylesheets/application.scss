@@ -1,0 +1,85 @@
+/*
+ *= require_self
+ *= require_tree .
+*/
+
+/* Import "bootstrap" in your SCSS file of choice to get all of Bootstrap's 
+ * styles, mixins and variables! We recommend against using //= require 
+ * directives, since none of your other stylesheets will be able to use the 
+ * awesome mixins that Bootstrap has defined. */
+@import "bootstrap";
+@import "bootstrap-responsive";
+
+.page-header span .btn {
+  float: right;
+}
+
+dl dl {
+  padding-left: 2em;
+  border-left: 1px solid #DDD;
+}
+dl dt {
+  font-size: 1.45em;
+  line-height: 1.45em;
+}
+dl dd dl dt {
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
+dl dd dl dd dl dt {
+  font-size: 1.15em;
+  line-height: 1.15em;
+}
+dl dd dl dd dl dd dl dt {
+  font-size: 1em;
+  line-height: 1em;
+}
+
+#toc {
+  position: fixed;
+  top: 2%;
+  right: 20px;
+  max-width: 200px;
+  max-height: 96%;
+  overflow: auto;
+  display: block;
+  padding: 5px 20px;
+  list-style: none;
+  background-color: #f9f9f9;
+  background-image: -moz-linear-gradient(top, white, #f2f2f2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#f2f2f2));
+  background-image: -webkit-linear-gradient(top, white, #f2f2f2);
+  background-image: -o-linear-gradient(top, white, #f2f2f2);
+  background-image: linear-gradient(to bottom, white, #f2f2f2);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFF2F2F2', GradientType=0);
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  font-size: 0.8em;
+  box-sizing: border-box;
+  ul {
+    list-style: none;
+    margin: 0;
+    li {
+      list-style: none;
+      font-weight: normal;
+      &.nearest {
+        list-style: disc;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.well {
+  margin-right: 190px;
+}
+
+.navbar {
+  margin-right: 190px;
+}

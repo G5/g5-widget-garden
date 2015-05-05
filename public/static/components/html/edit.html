@@ -1,0 +1,15 @@
+<form>
+  <div class="form-field">
+    {{ widget.text.id_hidden_field }}
+    <label for="{{ widget.text.value_field_id }}" >
+      Enter text
+    </label>
+    <textarea
+      id="ckeditor"
+      name="{{ widget.text.value_field_name }}"
+     >
+      {{ widget.text.value }}
+    </textarea>
+  </div>
+  <input type="submit" value="Save" class="btn" />
+</form>

@@ -1,0 +1,34 @@
+<% property_group = property_group.format %>
+<h3><span class="p-name"><%= property_group.name %></span> Settings</h3>
+<% property_group.categories.each do |category| %>
+  <p class="p-category"><%= category %></p>
+<% end %>
+<% property_group.g5_properties.each do |property| %>
+  <% property = property.format %>
+  <div class="row">
+    <div class="span5">
+      <table class="table table-striped table-bordered e-g5-property h-g5-property">
+        <tr>
+          <th>Name</th>
+          <td class="p-g5-name"><%= property.g5_name %></th>
+        </tr>
+        <% if property.respond_to?(:g5_editable)%>
+          <tr>
+            <th style="width:40%">Editable</th>
+            <td class="p-g5-editable">
+              <%= property.g5_editable %>
+            </td>
+          </tr>
+        <% end %>
+        <% if property.respond_to?(:g5_default_value)%>
+          <tr>
+            <th style="width:40%">Default Value</th>
+            <td class="p-g5-default-value">
+              <%= property.g5_default_value %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+<% end %>

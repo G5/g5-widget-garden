@@ -1,0 +1,23 @@
+<figure class="photo {{widget.photo_alignment.value}} {{widget.photo_class.value}} widget h-media" itemscope itemtype="http://schema.org/Photograph">
+  {% if widget.photo_link_url.value != blank %}
+  <a href="{{ widget.photo_link_url.value | url_encode }}">
+  {% endif %}
+  <img class="u-photo" src="{{ widget.photo_source_url.value | url_encode }}" alt="{{ widget.photo_alt_tag.value }}" itemprop="image" />
+  {% if widget.photo_link_url.value != blank %}
+  </a>
+  {% endif %}
+
+  {% if widget.photo_caption.value != blank %}
+    <figcaption class="p-name" itemprop="description">
+      {% if widget.photo_link_url.value != blank %}
+      <a href="{{ widget.photo_link_url.value | url_encode }}">
+      {% endif %}
+
+      {{ widget.photo_caption.value }}
+
+      {% if widget.photo_link_url.value != blank %}
+      </a>
+      {% endif %}
+    </figcaption>
+  {% endif %}
+</figure>

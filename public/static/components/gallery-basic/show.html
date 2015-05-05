@@ -1,0 +1,94 @@
+<div class="gallery-basic widget">
+
+  <figure class="active">
+    <img
+      src="{{widget.gallery_photo1_url.value | url_encode}}"
+      alt="{{widget.gallery_photo1_alt.value}}" />
+  </figure>
+
+  {% if widget.gallery_photo2_url.value != blank %}
+  <figure>
+    <img
+      src="{{widget.gallery_photo2_url.value | url_encode}}" alt="{{widget.gallery_photo2_alt.value}}"
+      alt="{{widget.gallery_photo2_alt.value}}" />
+  </figure>
+  {% endif %}
+
+  {% if widget.gallery_photo3_url.value != blank %}
+  <!--
+    Set image url in the data-src attribute.
+    Set source to 1x1 transparent gif in base64 string.
+    This prevents a server request until the js loads the image.
+  -->
+  <figure class="lazy-load">
+    <img
+      data-src="{{widget.gallery_photo3_url.value | url_encode}}"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      alt="{{widget.gallery_photo3_alt.value}}" />
+  </figure>
+  {% endif %}
+
+  {% if widget.gallery_photo4_url.value != blank %}
+  <figure class="lazy-load">
+    <img
+      data-src="{{widget.gallery_photo4_url.value | url_encode}}"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      alt="{{widget.gallery_photo4_alt.value}}" />
+  </figure>
+  {% endif %}
+
+  {% if widget.gallery_photo5_url.value != blank %}
+  <figure class="lazy-load">
+    <img
+      data-src="{{widget.gallery_photo5_url.value | url_encode}}"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      alt="{{widget.gallery_photo5_alt.value}}" />
+  </figure>
+  {% endif %}
+
+  {% if widget.gallery_photo6_url.value != blank %}
+  <figure class="lazy-load">
+    <img
+      data-src="{{widget.gallery_photo6_url.value | url_encode}}"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      alt="{{widget.gallery_photo6_alt.value}}" />
+  </figure>
+  {% endif %}
+
+  {% if widget.gallery_photo7_url.value != blank %}
+  <figure class="lazy-load">
+    <img
+      data-src="{{widget.gallery_photo7_url.value | url_encode}}"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      alt="{{widget.gallery_photo7_alt.value}}" />
+  </figure>
+  {% endif %}
+
+  {% if widget.gallery_photo8_url.value != blank %}
+  <figure class="lazy-load">
+    <img
+      data-src="{{widget.gallery_photo8_url.value | url_encode}}"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      alt="{{widget.gallery_photo8_alt.value}}" />
+  </figure>
+  {% endif %}
+
+  {% if widget.gallery_photo9_url.value != blank %}
+  <figure class="lazy-load">
+    <img
+      data-src="{{widget.gallery_photo9_url.value | url_encode}}"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      alt="{{widget.gallery_photo9_alt.value}}" />
+  </figure>
+  {% endif %}
+
+  {% if widget.gallery_photo10_url.value != blank %}
+  <figure class="lazy-load">
+    <img
+      data-src="{{widget.gallery_photo10_url.value | url_encode}}"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      alt="{{widget.gallery_photo10_alt.value}}" />
+  </figure>
+  {% endif %}
+
+</div> <!-- end .gallery-basic -->

@@ -1,0 +1,12 @@
+<% @components = @components.sort{ |a,b| a.try(:name).to_s <=> b.try(:name).to_s } %>
+<%= content_tag(:div, :id => 'toc') do %>
+  <ul>
+  <% @components.each do |component| %>
+    <li><a href='<%= "\##{component.try(:widget_id)}".html_safe %>'><%= component.try(:name).to_s %></a></li>
+  <% end %>
+  </ul>
+<% end %>
+
+<% @components.each do |component| %>
+  <%= render partial: "component", locals: { component: component } %>
+<% end %>

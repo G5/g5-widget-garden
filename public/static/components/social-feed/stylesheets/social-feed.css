@@ -1,0 +1,75 @@
+.social-feed {
+  background-color: white;
+}
+.social-feed .feed-switcher:before,
+.social-feed .feed-switcher:after {
+  content: "";
+  display: table;
+}
+.social-feed .feed-switcher:after {
+  clear: both;
+}
+.social-feed .feed-switcher {
+  border-bottom: 1px solid grey;
+}
+.social-feed .feed-switch {
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  width: 60px;
+  height: 60px;
+  padding-top:8px;
+  text-align:center;
+  float: left;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-color: white;
+  border-right: 1px solid grey;
+  position: relative;
+}
+.social-feed .feed-switch.active {
+  bottom: -1px;
+}
+#feed-switch-twitter {
+  /*background-image: url(https://widgets.g5dxm.com/twitter-feed/twitter-icon.png);*/
+}
+#feed-switch-blog {
+  padding-top:12px;
+  /*background-image: url(https://widgets.g5dxm.com/blog-feed/rss-icon.png);*/
+}
+#feed-switch-blog path{
+  fill:none;
+  stroke:#000000;
+}
+#feed-switch-blog circle{
+  storke:none;
+  fill:#000000;
+}
+.social-feed .feed-section {
+  padding: 15px;
+}
+.social-feed .feed-section li {
+  background-color: #ececec;
+  margin-bottom: 10px;
+  padding: 10px;
+  overflow: hidden;
+}
+.social-feed p {
+  margin: 0;
+}
+.social-feed .post-thumb {
+  float: left;
+  margin-right: 2%;
+  width: 10%;
+}
+.social-feed .post-thumb img {
+  width: 100%;
+}
+.social-feed .tweet-text {
+  float: left;
+  width: 88%;
+}
+.social-feed .author-name{
+  font-weight:bold;
+}

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+./git-meta set || true

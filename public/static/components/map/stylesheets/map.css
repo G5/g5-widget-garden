@@ -1,0 +1,16 @@
+.map .canvas {
+  height: 0;
+  padding-bottom: 75%;
+  padding-top: 30px;
+  width: 100%;
+  position: relative;
+}
+
+/*google map bootstrap fix*/
+.map .canvas img {
+  max-width: none;
+}
+.map .canvas label {
+  width: auto;
+  display: inline;
+}

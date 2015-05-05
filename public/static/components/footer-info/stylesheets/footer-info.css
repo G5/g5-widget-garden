@@ -1,0 +1,43 @@
+.footer-info {
+  float: right;
+  text-align: right;
+}
+.footer-info .social-links,
+.footer-info .nav {
+  margin-bottom: .5em;
+}
+.footer-info .social-links a {
+  display: inline-block;
+}
+.footer-info .copyright {
+  margin-top: 0;
+}
+.footer-info .access {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: top;
+}
+.footer-info .access {
+  background: url(https://themes.g5dxm.com/shared/access-icons.png) 0 0 no-repeat;
+  text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.footer-info .housing-icon {
+  height: 23px;
+  width: 31px;
+}
+.footer-info .handicap-icon {
+  background-position: -43px 0;
+  height: 23px;
+  width: 20px;
+}
+.footer-info .corporate-logo {
+  display: inline-block;
+  max-width: 200px;
+}
+.footer-info .icon {
+  background-color: #000;
+  height: 40px;
+  width: 40px;
+}

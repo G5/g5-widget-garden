@@ -1,0 +1,8 @@
+<div class="quote widget">
+  <blockquote>
+    <p>{{ widget.quote.value }}</p>
+    {% if widget.quote_citation.value != blank %}
+    <cite>{{ widget.quote_citation.value }}</cite>
+    {% endif %}
+  </blockquote>
+</div>

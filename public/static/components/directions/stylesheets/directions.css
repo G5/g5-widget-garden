@@ -1,0 +1,100 @@
+.directions {
+  width: 100%;
+  padding: 0 .5em;
+  margin: .5em 0;
+}
+
+.directions .clearfix:before, .directions .clearfix:after, .directions.clearfix:before, .directions.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.directions .clearfix:after, .directions.clearfix:after {
+  clear: both;
+}
+
+.directions .directions-error {
+  display: none;
+  background:#FBE3E4;
+  color:#8a1f11;
+  border:1px solid #ff0000;
+  padding: .5em;
+  position: relative;
+}
+
+.directions .directions-error.show {
+  display: block;
+}
+
+.directions .canvas {
+  width:86%;
+  height:500px;
+  margin: 0 auto 1em auto;
+  background-color: rgb(229, 227, 223);
+}
+
+/*google map bootstrap fix*/
+.directions .canvas img,
+.directions .panel img {
+  max-width:none;
+}
+.directions .canvas label {
+  width:auto;
+  display:inline;
+}
+
+.directions .text {
+  float: left;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.directions .text label {
+  display: block;
+}
+
+.directions .panel {
+  margin-top: 1em;
+  background-color: rgba(255,255,255,0.85);
+  padding: 0 .5em;
+}
+
+.adp-marker {
+  margin: 5px;
+}
+
+.directions .directions-start {
+  padding: .3em .3em;
+  min-height: 18px;
+  margin: 0 0 .5em 0;
+  min-width: 50%;
+}
+
+.directions .text .directions-submit, .directions .text input[type=submit] {
+  margin-left: 5px;
+  float:right;
+  padding: .4em 2em;
+}
+
+.directions .text .directions-submit.disabled, .directions .text .directions-submit.disabled:hover {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.directions .canvas img { max-width: none; }
+
+.directions.small .text .directions-submit, .directions.small .text input[type=submit] {
+  padding: .4em .4em;
+}
+
+.directions.wide .canvas {
+  width: 50%;
+  margin-right: 2.5%;
+  float: left;
+}
+.directions.wide .panel {
+  margin-top: 0;
+  width: 47.5%;
+  float:left;
+}

@@ -1,0 +1,10 @@
+.contact-info .p-organization-name,
+.contact-info .h-adr,
+.contact-info .p-street-address,
+.contact-info .p-tel,
+.contact-info .p-url {
+  display: block;
+}
+.contact-info p {
+  margin-top: 0;
+}

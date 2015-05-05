@@ -1,0 +1,12 @@
+<div class="map widget">
+
+  <script class="config" type="application/json">
+    {
+      "address": "{{ widget.location_street_address.best_value }}, {{ widget.location_city.best_value }}, {{ widget.location_state.best_value }} {{ widget.location_postal_code.best_value }}",
+      "panZoom": {{ widget.map_allow_pan_zoom.best_value }},
+      "mapType": "{{ widget.map_type.best_value }}"
+    }
+  </script>
+
+  <div class="canvas"></div>
+</div>

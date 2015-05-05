@@ -1,0 +1,271 @@
+<form>
+
+  <div class="form-field">
+    {{ widget.location_name.id_hidden_field }}
+    <label for="{{ widget.location_name.value_field_id }}" >
+      Location Name
+    </label>
+    <input type="text"
+      id="{{ widget.location_name.value_field_id }}"
+      name="{{ widget.location_name.value_field_name }}"
+      placeholder="{%raw%}{{location_name}}{%endraw%}"
+      value="{{ widget.location_name.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.custom_link_1_text.value_field_id }}" >
+      Custom Link 1 Text
+    </label>
+    {{ widget.custom_link_1_text.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.custom_link_1_text.value_field_id }}"
+      name="{{ widget.custom_link_1_text.value_field_name }}"
+      value="{{ widget.custom_link_1_text.value }}"
+      placeholder="e.g. Privacy Policy"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.custom_link_1_url.value_field_id }}" >
+      Custom Link 1 URL
+    </label>
+    {{ widget.custom_link_1_url.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.custom_link_1_url.value_field_id }}"
+      name="{{ widget.custom_link_1_url.value_field_name }}"
+      value="{{ widget.custom_link_1_url.value | url_encode }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.custom_link_2_text.value_field_id }}" >
+      Custom Link 2 Text
+    </label>
+    {{ widget.custom_link_2_text.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.custom_link_2_text.value_field_id }}"
+      name="{{ widget.custom_link_2_text.value_field_name }}"
+      value="{{ widget.custom_link_2_text.value }}"
+      placeholder="e.g. Terms and Conditions"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.custom_link_2_url.value_field_id }}" >
+      Custom Link 2 URL
+    </label>
+    {{ widget.custom_link_2_url.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.custom_link_2_url.value_field_id }}"
+      name="{{ widget.custom_link_2_url.value_field_name }}"
+      value="{{ widget.custom_link_2_url.value | url_encode }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.twitter_username.value_field_id }}" >
+      Twitter Username
+    </label>
+    {{ widget.twitter_username.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.twitter_username.value_field_id }}"
+      name="{{ widget.twitter_username.value_field_name }}"
+      placeholder="{%raw%}{{location_twitter_id}}{%endraw%}"
+      value="{{ widget.twitter_username.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.facebook_username.value_field_id }}" >
+      Facebook Username
+    </label>
+    {{ widget.facebook_username.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.facebook_username.value_field_id }}"
+      name="{{ widget.facebook_username.value_field_name }}"
+      placeholder="{%raw%}{{location_facebook_id}}{%endraw%}"
+      value="{{ widget.facebook_username.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.yelp_username.value_field_id }}" >
+      Yelp Username
+    </label>
+    {{ widget.yelp_username.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.yelp_username.value_field_id }}"
+      name="{{ widget.yelp_username.value_field_name }}"
+      placeholder="{%raw%}{{location_yelp_id}}{%endraw%}"
+      value="{{ widget.yelp_username.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.google_plus_id.value_field_id }}" >
+      Google + ID
+    </label>
+    {{ widget.google_plus_id.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.google_plus_id.value_field_id }}"
+      name="{{ widget.google_plus_id.value_field_name }}"
+      value="{{ widget.google_plus_id.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.linkedin_username.value_field_id }}" >
+      LinkedIn Username
+    </label>
+    {{ widget.linkedin_username.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.linkedin_username.value_field_id }}"
+      name="{{ widget.linkedin_username.value_field_name }}"
+      value="{{ widget.linkedin_username.value }}"
+    />
+  </div>
+
+  <div class="field check-field">
+    <label>LinkedIn Account Type</label>
+    {{widget.linkedin_account_type.id_hidden_field}}
+    <label for="{{ widget.linkedin_account_type.value_field_id }}_individual" >
+      Individual
+    </label>
+    <input type="radio"
+      id="{{ widget.linkedin_account_type.value_field_id }}_individual"
+      name="{{ widget.linkedin_account_type.value_field_name }}"
+      value="INDIVIDUAL"
+      checked="checked"
+    />
+    <label for="{{ widget.linkedin_account_type.value_field_id }}_company" >
+      Company
+    </label>
+    <input type="radio"
+      id="{{ widget.linkedin_account_type.value_field_id }}_company"
+      name="{{ widget.linkedin_account_type.value_field_name }}"
+      value="COMPANY"
+      {% if widget.linkedin_account_type.value == "COMPANY" %}
+      checked="checked"
+      {% endif %}
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.client_name.id_hidden_field }}
+    <label for="{{ widget.client_name.value_field_id }}" >
+      Client Name
+    </label>
+    <input type="text"
+      id="{{ widget.client_name.value_field_id }}"
+      name="{{ widget.client_name.value_field_name }}"
+      value="{{ widget.client_name.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.corporate_url.value_field_id }}" >
+      Corporate Site URL
+    </label>
+    {{ widget.corporate_url.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.corporate_url.value_field_id }}"
+      name="{{ widget.corporate_url.value_field_name }}"
+      value="{{ widget.corporate_url.value | url_encode }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.corporate_logo_url.id_hidden_field }}
+    <label for="{{ widget.corporate_logo_url.value_field_id }}" >
+      Corporate Logo URL
+    </label>
+    <input type="url"
+      id="{{ widget.corporate_logo_url.value_field_id }}"
+      name="{{ widget.corporate_logo_url.value_field_name }}"
+      value="{{ widget.corporate_logo_url.value | url_encode }}"
+    />
+  </div>
+
+  <div class="form-field check-field">
+    {{ widget.display_dxm.id_hidden_field }}
+    <input type="hidden"
+      id="{{ widget.display_dxm.value_field_id }}_false"
+      name="{{ widget.display_dxm.value_field_name }}"
+      value="false"
+    />
+    <input type="checkbox"
+      id="{{ widget.display_dxm.value_field_id }}"
+      name="{{ widget.display_dxm.value_field_name }}"
+      value="true"
+      {% if widget.display_dxm.value == "true" %}
+      checked="checked"
+      {% endif %}
+    />
+    <label for="{{ widget.display_dxm.value_field_id }}" >
+      Display DXM Logo
+    </label>
+  </div>
+
+  <div class="form-field check-field">
+    {{ widget.display_copyright.id_hidden_field }}
+    <input type="hidden"
+      id="{{ widget.display_copyright.value_field_id }}_false"
+      name="{{ widget.display_copyright.value_field_name }}"
+      value="false"
+    />
+    <input type="checkbox"
+      id="{{ widget.display_copyright.value_field_id }}"
+      name="{{ widget.display_copyright.value_field_name }}"
+      value="true"
+      {% if widget.display_copyright.value == "true" %}
+      checked="checked"
+      {% endif %}
+    />
+    <label for="{{ widget.display_copyright.value_field_id }}" >
+      Display Copyright
+    </label>
+  </div>
+
+  <div class="form-field check-field">
+    {{ widget.display_housing_icon.id_hidden_field }}
+    <input type="hidden"
+      id="{{ widget.display_housing_icon.value_field_id }}_false"
+      name="{{ widget.display_housing_icon.value_field_name }}"
+      value="false"
+    />
+    <input type="checkbox"
+      id="{{ widget.display_housing_icon.value_field_id }}"
+      name="{{ widget.display_housing_icon.value_field_name }}"
+      value="true"
+      {% if widget.display_housing_icon.value == "true" %}
+      checked="checked"
+      {% endif %}
+    />
+    <label for="{{ widget.display_housing_icon.value_field_id }}" >
+      Display Equal Opportunity Housing Icon
+    </label>
+  </div>
+
+  <div class="form-field check-field">
+    {{ widget.display_handicap_icon.id_hidden_field }}
+    <input type="hidden"
+      id="{{ widget.display_handicap_icon.value_field_id }}_false"
+      name="{{ widget.display_handicap_icon.value_field_name }}"
+      value="false"
+    />
+    <input type="checkbox"
+      id="{{ widget.display_handicap_icon.value_field_id }}"
+      name="{{ widget.display_handicap_icon.value_field_name }}"
+      value="true"
+      {% if widget.display_handicap_icon.value == "true" %}
+      checked="checked"
+      {% endif %}
+    />
+    <label for="{{ widget.display_handicap_icon.value_field_id }}" >
+      Display Handicap Friendly Icon
+    </label>
+  </div>
+
+  <input type="submit" value="Save" class="btn" />
+</form>

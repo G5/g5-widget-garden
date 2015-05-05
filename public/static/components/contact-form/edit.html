@@ -1,0 +1,83 @@
+<form action="{{ widget.form_action.value | url_encode }}" class="h-entry">
+
+  <div class="form-field">
+    {{ widget.client_urn.id_hidden_field }}
+    <label for="{{ widget.client_urn.value_field_id }}" >
+      Client URN
+    </label>
+    <input type="text"
+      id="{{ widget.client_urn.value_field_id }}"
+      name="{{ widget.client_urn.value_field_name }}"
+      value="{{ widget.client_urn.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.cls_url.value_field_id }}" >
+      Client Leads Service URL
+    </label>
+    {{ widget.cls_url.id_hidden_field }}
+    <input type="url"
+      id="{{ widget.cls_url.value_field_id }}"
+      class="u-syndication"
+      name="{{ widget.cls_url.value_field_name }}"
+      value="{{ widget.cls_url.value | url_encode }}"
+      pattern="^https:\/\/.+"
+      title="The URL must be HTTPS"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.form_uid.value_field_id }}" >
+      Form UID
+    </label>
+    {{ widget.form_uid.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.form_uid.value_field_id }}"
+      class="p-name"
+      name="{{ widget.form_uid.value_field_name }}"
+      value="{{ widget.form_uid.value }}"
+      placeholder="//CMS-DOMAIN/LOCATION-SLUG/forms/FORM-SLUG"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.form_title.value_field_id }}" >
+      Form Title
+    </label>
+    {{ widget.form_title.id_hidden_field }}
+    <input type="text"
+      id="{{ widget.form_title.value_field_id }}"
+      class="p-name"
+      name="{{ widget.form_title.value_field_name }}"
+      value="{{ widget.form_title.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.form_note.value_field_id }}" >
+      Form Note
+    </label>
+    {{ widget.form_note.id_hidden_field }}
+    <textarea
+      id="{{ widget.form_note.value_field_id }}"
+      class="p-summary"
+      name="{{ widget.form_note.value_field_name }}"
+    >{{ widget.form_note.value }}</textarea>
+  </div>
+
+  <div class="form-field">
+    <label for="{{ widget.form_syndication_url.value_field_id }}" >
+      3rd Party Syndication URL
+    </label>
+    {{ widget.form_syndication_url.id_hidden_field }}
+    <input type="url"
+      id="{{ widget.form_syndication_url.value_field_id }}"
+      class="u-syndication"
+      name="{{ widget.form_syndication_url.value_field_name }}"
+      value="{{ widget.form_syndication_url.value | url_encode }}"
+    />
+  </div>
+
+  <input type="submit" value="Save" class="btn" />
+</form>

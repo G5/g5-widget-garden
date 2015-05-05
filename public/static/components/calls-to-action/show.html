@@ -1,0 +1,27 @@
+<nav class="action-calls custom-action-calls widget">
+  <ul>
+    {% if widget.cta_text_1.value != blank %}
+      <li>
+        <a href="{{ widget.generated_url_1 }}">{{ widget.cta_text_1.value }}</a>
+      </li>
+    {% endif %}
+
+    {% if widget.cta_text_2.value != blank %}
+      <li>
+        <a href="{{ widget.generated_url_2}}">{{ widget.cta_text_2.value }}</a>
+      </li>
+    {% endif %}
+
+    {% if widget.cta_text_3.value != blank %}
+      <li>
+        <a href="{{ widget.generated_url_3 }}">{{ widget.cta_text_3.value }}</a>
+      </li>
+    {% endif %}
+
+    {% if widget.cta_text_4.value != blank %}
+      <li>
+        <a href="{{ widget.generated_url_4 }}">{{ widget.cta_text_4.value }}</a>
+      </li>
+    {% endif %}
+  </ul>
+</nav>

@@ -1,0 +1,26 @@
+<form>
+
+  <div class="form-field">
+    {{ widget.quote.id_hidden_field }}
+    <label for="{{ widget.quote.value_field_id }}" >
+      Quotation
+    </label>
+    <textarea name="{{ widget.quote.value_field_name }}">
+      {{ widget.quote.value }}
+    </textarea>
+  </div>
+
+  <div class="form-field">
+    {{ widget.quote_citation.id_hidden_field }}
+    <label for="{{ widget.quote_citation.value_field_id }}" >
+      Quote Citation
+    </label>
+    <input type="text"
+      id="{{ widget.quote_citation.value_field_id }}"
+      name="{{ widget.quote_citation.value_field_name }}"
+      value="{{ widget.quote_citation.value }}"
+    />
+  </div>
+
+  <input type="submit" value="Save" class="btn" />
+</form>

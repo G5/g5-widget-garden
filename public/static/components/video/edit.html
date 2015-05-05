@@ -1,0 +1,42 @@
+<form>
+  <div class="form-field">
+    {{ widget.video_title.id_hidden_field }}
+    <label for="{{ widget.video_title.value_field_id }}" >
+      title
+    </label>
+    <input type="text"
+      id="{{ widget.video_title.value_field_id }}"
+      name="{{ widget.video_title.value_field_name }}"
+      value="{{ widget.video_title.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.video_id.id_hidden_field }}
+    <label for="{{ widget.video_id.value_field_id }}" >
+      Video ID
+    </label>
+    <input type="text"
+      id="{{ widget.video_id.value_field_id }}"
+      name="{{ widget.video_id.value_field_name }}"
+      value="{{ widget.video_id.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.source.id_hidden_field }}
+    <select id="{{ widget.source.value_field_id }}" name="{{ widget.source.value_field_name }}">
+
+        <option value="//www.youtube.com/embed/"
+          {% if widget.source.value == "//www.youtube.com/embed/" %}
+            selected
+          {% endif %} >YouTube</option>
+        <option value="//player.vimeo.com/video/"
+          {% if widget.source.value == "//player.vimeo.com/video/" %}
+            selected
+          {% endif %} >Vimeo</option>
+      
+    </select>
+  </div>
+  <input type="submit" value="Save" class="btn" />
+</form>

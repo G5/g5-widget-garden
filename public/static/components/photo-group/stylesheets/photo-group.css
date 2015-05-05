@@ -1,0 +1,17 @@
+.photo-group {
+  display: table;
+  margin-left: -.5%;
+  margin-right: -.5%;
+  width: 100%;
+}
+.photo-group-container {
+  display: table-row;
+}
+.photo-group figure {
+  display: table-cell;
+  padding: 0 .5%;
+}
+.photo-group img {
+  display: block;
+  width: 100%;
+}

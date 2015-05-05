@@ -1,0 +1,67 @@
+<div class="contact-info h-card vcard widget" itemscope itemtype="http://schema.org/LocalBusiness">
+  <script class="config" type="application/json">
+    {
+      "cpnsUrl": "{{ widget.secure_cpns_url }}",
+      "locationUrn": "{{ widget.location_urn.best_value }}"
+    }
+  </script>
+
+  {% if widget.location_name.best_value != "" %}
+  <h4 class="p-name">{{ widget.location_name.best_value }}</h4>
+  {% endif %}
+
+  {% if widget.location_tel.best_value != "" %}
+  <p class="phone">
+    <a class="number" href="tel:{{ widget.location_tel.best_value }}">
+      <span class="p-tel tel" itemprop="telephone">{{ widget.location_tel.best_value }}</span>
+    </a>
+  </p>
+  {% endif %}
+
+  {% if widget.location_street_address.best_value != blank or widget.location_city.best_value != blank or widget.location_state.best_value != blank or widget.location_postal_code.best_value != blank or widget.location_country.best_value != blank %}
+  <p class="h-adr p-adr adr" itemscope itemtype="http://schema.org/PostalAddress">
+    <a href="{{ widget.maps_url.best_value | url_encode }}">
+      {% if widget.location_street_address.best_value != "" %}
+      <span class="p-street-address street-address" itemprop="streetAddress">
+        {{ widget.location_street_address.best_value}}
+      </span>
+      {% endif %}
+
+      {% if widget.location_city.best_value != "" %}
+      <span class="p-locality locality" itemprop="addressLocality">
+        {{ widget.location_city.best_value }}</span>,
+      {% endif %}
+
+      {% if widget.location_state.best_value != "" %}
+      <span class="p-region region" itemprop="addressRegion">
+        {{ widget.location_state.best_value }}
+      </span>
+      {% endif %}
+
+      {% if widget.location_postal_code.best_value != "" %}
+      <span class="p-postal-code postal-code" itemprop="postalCode">
+        {{ widget.location_postal_code.best_value }}
+      </span>
+      {% endif %}
+
+      {% if widget.location_country.best_value != "" %}
+      <span class="p-country-name country-name" itemprop="addressCountry">
+        {{ widget.location_country.best_value }}
+      </span>
+      {% endif %}
+    </a>
+  </p>
+  {% endif %}
+
+  {% if widget.location_email.best_value != "" %}
+  <p class="u-email email" itemprop="email">
+    <a href="{{ widget.location_email.best_value | url_encode}}">Email Us</a>
+  </p>
+  {% endif %}
+
+  {% if widget.location_chat_url.best_value != "" %}
+  <p class="g5-chat chat">
+    <a href="{{ widget.location_chat_url.best_value | url_encode}}">Live Chat</a>
+  </p>
+  {% endif %}
+</div>

@@ -1,0 +1,13 @@
+.photo figcaption {
+  margin: 1em 0 2em;
+  font-weight: bold;
+  font-size: 13px;
+}
+.photo-left {
+  float: left;
+  margin-right: 1em;
+}
+.photo-right {
+  float: right;
+  margin-left: 1em;
+}

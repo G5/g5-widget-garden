@@ -1,0 +1,129 @@
+.news-feed-widget{}
+
+.news-feed-post{
+  padding:10px 0;
+  margin:10px 0;
+  border-bottom:1px solid #888;
+  clear:both;
+  float:left;
+  width:100%;
+}
+
+.news-feed-post:first-of-type img{
+  max-width:100%;
+}
+
+.news-feed-post img{
+  max-width:300px;
+}
+
+.news-feed-post .post-toggle{
+  display:block;
+}
+
+.news-feed-post .post-toggle.toggle-button{
+  margin:20px 0;
+  padding:.25em 1em;
+  color:#fff;
+  background-color:#77787b;
+  float:left; clear:both;
+}
+
+.news-feed-single-post img,
+.news-feed-post img{ margin-bottom:0.5em; }
+
+.news-feed single-post .post-date,
+.news-feed-post .post-date{
+  padding-right:0.5em;
+}
+
+.news-feed-single-post .post-author,
+.news-feed-post .post-author{
+  padding-left:0.5em;
+}
+
+.news-feed-post .post-body{
+  display:none;
+}
+
+.news-feed-widget .active-post .post-body{
+  display:block;
+}
+
+.active-post .post-description{
+  display:none;
+}
+
+.post-description{ padding: 1em 0 0.5em 0; }
+
+.post-body{ padding:1em 0; }
+
+.news-feed-post .post-expand{ display:block; }
+
+.news-feed-post .post-collapse{ display:none; }
+
+.active-post .post-expand{ display:none; }
+
+.active-post .post-collapse{ display:block; }
+
+.posts-nav{
+  position:relative;
+  width:100%;
+  padding-top:2em;
+  text-align:center;
+  border-top:1px solid #888;
+}
+
+.news-feed-widget .post-image-wrapper {
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #888;
+  border-top: none;
+}
+
+.news-feed-widget .post-image-wrapper > div {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  text-align: center;
+}
+
+.posts-nav .post-toggle{
+  display:inline-block;
+  width:45%;
+  vertical-align:top;
+  margin:0 2%;
+}
+
+.posts-nav .post-nav-top{ border:1px solid #888; padding:5px 10px;}
+.posts-nav .previous-post .post-nav-top{ text-align: left; }
+.posts-nav .next-post .post-nav-top{ text-align: right; }
+
+.posts-nav .all-posts{
+  display:block;
+  position:absolute;
+  width:33%;
+  top:-0.75em;
+  left:33%;
+  text-align:center;
+  border:1px solid #888;
+  padding:.25em;
+  line-height: 1em;
+  background-color:#77787b;
+  color:#fff;
+}
+
+.posts-nav .author-divider{ display:none; }
+.posts-nav .post-title{ margin-top:10px;}
+
+.news-feed-widget.narrow .posts-nav .all-posts{
+  width:60%;
+  left:20%;
+}
+
+.news-feed-widget.narrow .posts-nav .post-date,
+.news-feed-widget.narrow .posts-nav .post-author{
+  display:none;
+}
+

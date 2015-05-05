@@ -1,0 +1,37 @@
+.button,
+.button .btn-img,
+.button a {
+  display: block;
+}
+
+.button-list {
+  overflow: hidden;
+}
+.button-list .btn-img {
+  float: left;
+  margin-right: 1em;
+}
+.button-grid {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+.button-inline {
+  float: left;
+  margin-right: 15px;
+}
+@media (min-width: 500px) {
+  .button-grid {
+    float: left;
+    padding: 0 1em;
+    width: 50%;
+  }
+  section > .button-grid:nth-of-type(2n+1),
+  .row [class*=row]:nth-of-type(2n+1) .button-grid {
+    clear: left;
+  }
+}
+.button-grid .btn-img {
+  margin: 0 auto 1em;
+}

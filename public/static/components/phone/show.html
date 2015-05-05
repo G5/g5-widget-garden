@@ -1,0 +1,19 @@
+<div class="phone widget">
+  <script class="config" type="application/json">
+    {
+      "cpnsUrl": "{{ widget.secure_cpns_url }}",
+      "locationUrn": "{{ widget.location_urn.value }}",
+      "displayPhone": "{{ widget.display_phone.value }}",
+      "appendPhone": "{{ widget.append_phone.value }}",
+      "prependPhone": "{{ widget.prepend_phone.value }}",
+      "appendElements": "{{ widget.append_elements.value }}",
+      "defaultPhoneNumber": "{{ widget.phone_number.value }}"
+    }
+  </script>
+
+  {% if widget.display_phone.value == "true" %}
+  <a href="tel://{{ widget.phone_number.value }}" class="number h-card vcard" itemscope itemtype="http://schema.org/LocalBusiness">
+    <span class="p-tel tel" itemprop="telephone">{{ widget.phone_number.value }}</span>
+  </a>
+  {% endif %}
+</div>

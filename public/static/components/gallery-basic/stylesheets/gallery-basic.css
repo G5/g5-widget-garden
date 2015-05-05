@@ -1,0 +1,18 @@
+.gallery-basic {
+  position: relative;
+  overflow: hidden;
+}
+.gallery-basic figure {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index:1
+}
+.gallery-basic figure:first-child {
+  position: relative;
+}
+.gallery-basic .active {
+  z-index:3
+}

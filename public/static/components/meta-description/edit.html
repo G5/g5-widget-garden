@@ -1,0 +1,16 @@
+<form>
+  <div class="form-field">
+    {{ widget.meta_description.id_hidden_field }}
+    <label for="{{ widget.meta_description.value_field_id }}" >
+      Description
+    </label>
+    <input type="text"
+      id="{{ widget.meta_description.value_field_id }}"
+      name="{{ widget.meta_description.value_field_name }}"
+      value="{{ widget.meta_description.value }}"
+      required
+    />
+  </div>
+
+  <input type="submit" value="Save" />
+</form>

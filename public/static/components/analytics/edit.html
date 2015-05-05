@@ -1,0 +1,42 @@
+<form>
+    <div class="form-field">
+        {{ widget.tracking_code.id_hidden_field }}
+        <label for="{{ widget.tracking_code.value_field_id }}">
+            Tracking Code
+        </label>
+        <input type="text"
+               id="{{ widget.tracking_code.value_field_id }}"
+               name="{{ widget.tracking_code.value_field_name }}"
+               value="{{ widget.tracking_code.value }}"
+               placeholder="{%raw%}{{location_ga_tracking_id}}{%endraw%}"
+               required
+                />
+    </div>
+
+    <div class="form-field">
+        {{ widget.go_squared_client_code.id_hidden_field }}
+        <label for="{{ widget.go_squared_code.value_field_id }}">
+            Go Squared Client Code
+        </label>
+        <input type="text"
+               id="{{ widget.go_squared_client_code.value_field_id }}"
+               name="{{ widget.go_squared_client_code.value_field_name }}"
+               value="{{ widget.go_squared_client_code.value }}"
+               placeholder="{%raw%}{{client_go_squared_id}}{%endraw%}"
+                />
+    </div>
+
+    <div class="form-field">
+        {{ widget.go_squared_code.id_hidden_field }}
+        <label for="{{ widget.go_squared_code.value_field_id }}">
+            Go Squared Location Code
+        </label>
+        <input type="text"
+               id="{{ widget.go_squared_code.value_field_id }}"
+               name="{{ widget.go_squared_code.value_field_name }}"
+               value="{{ widget.go_squared_code.value }}"
+               placeholder="{%raw%}{{location_go_squared_tag}}{%endraw%}"
+                />
+    </div>
+    <input type="submit" value="Save"/>
+</form>

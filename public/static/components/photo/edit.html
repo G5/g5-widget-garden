@@ -1,0 +1,101 @@
+<form>
+  <div class="form-field">
+    {{ widget.photo_source_url.id_hidden_field }}
+    <label for="{{ widget.photo_source_url.value_field_id }}" >
+      Source URL
+    </label>
+    <input type="text"
+      id="{{ widget.photo_source_url.value_field_id }}"
+      name="{{ widget.photo_source_url.value_field_name }}"
+      value="{{ widget.photo_source_url.value | url_encode }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.photo_link_url.id_hidden_field }}
+    <label for="{{ widget.photo_link_url.value_field_id }}" >
+      Link URL
+    </label>
+    <input type="text"
+      id="{{ widget.photo_link_url.value_field_id }}"
+      name="{{ widget.photo_link_url.value_field_name }}"
+      value="{{ widget.photo_link_url.value | url_encode }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.photo_alt_tag.id_hidden_field }}
+    <label for="{{ widget.photo_alt_tag.value_field_id }}" >
+      Alt Tag
+    </label>
+    <input type="text"
+      id="{{ widget.photo_alt_tag.value_field_id }}"
+      name="{{ widget.photo_alt_tag.value_field_name }}"
+      value="{{ widget.photo_alt_tag.value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.photo_caption.id_hidden_field }}
+    <label for="{{ widget.photo_caption.value_field_id }}" >
+      Caption
+    </label>
+    <input type="text"
+      id="{{ widget.photo_caption.value_field_id }}"
+      name="{{ widget.photo_caption.value_field_name }}"
+      value="{{ widget.photo_caption.value }}"
+    />
+  </div>
+
+  <div class="form-field check-field">
+    <fieldset>
+    <legend>Photo Alignment</legend>
+      {{ widget.photo_alignment.id_hidden_field }}
+      <input type="radio"
+        id="{{ widget.photo_alignment.value_field_id }}_left"
+        name="{{ widget.photo_alignment.value_field_name }}"
+        value="photo-left"
+        checked="checked"
+      />
+      <label for="{{ widget.photo_alignment.value_field_id }}_left" >
+        Left
+      </label>
+      <input type="radio"
+        id="{{ widget.photo_alignment.value_field_id }}_right"
+        name="{{ widget.photo_alignment.value_field_name }}"
+        value="photo-right"
+        {% if widget.photo_alignment.value == "photo-right" %}
+        checked="checked"
+        {% endif %}
+      />
+      <label for="{{ widget.photo_alignment.value_field_id }}_right" >
+        Right
+      </label>
+      <input type="radio"
+        id="{{ widget.photo_alignment.value_field_id }}_block"
+        name="{{ widget.photo_alignment.value_field_name }}"
+        value="photo-block"
+        {% if widget.photo_alignment.value == "photo-block" %}
+        checked="checked"
+        {% endif %}
+      />
+      <label for="{{ widget.photo_alignment.value_field_id }}_block" >
+        Block
+      </label>
+    </fieldset>
+  </div>
+
+  <div class="form-field">
+    {{ widget.photo_class.id_hidden_field }}
+    <label for="{{ widget.photo_class.value_field_id }}" >
+      Photo Class
+    </label>
+    <input type="text"
+      id="{{ widget.photo_class.value_field_id }}"
+      name="{{ widget.photo_class.value_field_name }}"
+      value="{{ widget.photo_class.value }}"
+    />
+  </div>
+
+  <input type="submit" value="Save" class="btn" />
+</form>

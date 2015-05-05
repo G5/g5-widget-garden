@@ -1,0 +1,110 @@
+<article class="h-g5-component well">
+  <a name="<%= component.try(:widget_id) %>"></a>
+  <header>
+    <h2 class="p-name">
+      <%= component.resource_link({url: component_url(component.g5_uid),
+                                   html: {class: "u-url u-uid", rel: "bookmark"},
+                                   body: component.name}) %>
+    </h2>
+    <p>Last Modified: <span class="p-modified"><%= component.try(:modified) %></span></p>
+
+    <h3>
+      Widget ID: <span class="p-widget-id"><%= component.try(:widget_id) %></span>
+    </h3>
+
+    <p class="p-widget-type"><%= component.try(:widget_type) %></p>
+
+    <p class="p-summary"><%= component.summary %>
+      <% if component.respond_to?(:g5_targets) %>
+        <h3>Targets</h3>
+        <% component.g5_targets.each do |target| %>
+          <%= link_to target.to_s, target.to_s, class: "u-g5-target" %>
+        <% end %>
+      <% end %>
+    </p>
+    
+    <p>Tooltip:<span class="e-popover"><%= component.try(:popover) %></span></p>
+
+    <p>Supports Liquid?: <span class="p-g5-liquid"><%= component.try(:g5_liquid) || "false" %></span></p>
+
+    <p>
+      <%= component.resource_link({uri: component.photo,
+                                   html: {class: "u-photo u-url"},
+                                   body: raw("<img src=/#{component.photo}>")}) %>
+    </p>
+    <% if component.respond_to?(:g5_edit_template) %>
+      <p>
+        <%= component.resource_link({uri: component.g5_edit_template,
+                                     html: {class: "u-g5-edit-template u-url"}}) %>
+      </p>
+    <% end %>
+    <% if component.respond_to?(:g5_show_template) %>
+      <p>
+        <%= component.resource_link({uri: component.g5_show_template,
+                                     html: {class: "u-g5-show-template u-url"}}) %>
+      </p>
+    <% end %>
+    <% if component.respond_to?(:g5_colors) %>
+      <h3>Colors</h3>
+      <% component.g5_colors.each do |color| %>
+        <p class="p-g5-color"><%= color %></p>
+      <% end %>
+    <% end %>
+    <% if component.respond_to?(:g5_images) %>
+      <h3>Images</h3>
+      <% component.g5_images.each do |image| %>
+        <p>
+          <%= component.resource_link({uri: image,
+                                       html: {class: "u-g5-image u-url"}}) %>
+        </p>
+      <% end %>
+    <% end %>
+
+    <% if component.respond_to?(:g5_edit_javascript) || component.respond_to?(:g5_show_javascript) || component.respond_to?(:g5_lib_javascript) %>
+      <h3>Javascripts</h3>
+    <% end %>
+
+    <% if component.respond_to?(:g5_lib_javascripts) %>
+      <% component.g5_lib_javascripts.each do |lib| %>
+        <p>
+          <%= component.resource_link({uri: lib,
+                                       html: {class: "u-g5-lib-javascript u-url"}}) %>
+        </p>
+      <% end %>
+    <% end %>
+    <% if component.respond_to?(:g5_edit_javascript) %>
+      <p>
+        <%= component.resource_link({uri: component.g5_edit_javascript,
+                                     html: {class: "u-g5-edit-javascript u-url"}}) %>
+      </p>
+    <% end %>
+    <% if component.respond_to?(:g5_show_javascript) %>
+      <p>
+        <%= component.resource_link({uri: component.g5_show_javascript,
+                                     html: {class: "u-g5-show-javascript u-url"}}) %>
+      </p>
+    <% end %>
+    <% if component.respond_to?(:g5_stylesheets) %>
+      <h3>Stylesheets</h3>
+      <% component.g5_stylesheets.each do |stylesheet| %>
+        <p>
+          <%= component.resource_link({uri: stylesheet,
+                                       html: {class: "u-g5-stylesheet u-url"}}) %>
+        </p>
+      <% end %>
+    <% end %>
+    <% if component.respond_to?(:g5_property_groups) %>
+      <ul class="unstyled">
+        <% component.g5_property_groups.each do |property_group| %>
+          <li class="e-g5-property-group h-g5-property-group">
+            <%= render partial: 'property_group',
+              locals: {property_group: property_group} %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </header>
+  <hr>
+
+  <%= content_tag :pre, content_tag(:code, component.content, class: "e-content") %>
+</article>

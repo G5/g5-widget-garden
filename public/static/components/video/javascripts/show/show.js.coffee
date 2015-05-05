@@ -1,0 +1,2 @@
+$ -> 
+  $(".fluid-video").fitVids()

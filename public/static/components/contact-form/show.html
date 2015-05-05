@@ -1,0 +1,67 @@
+<div class="contact-form widget g5-enhanced-form">
+
+  <script class="config" type="application/json">
+    {
+      "clientUrn": "{{ widget.client_urn.value }}"
+    }
+  </script>
+
+  {% if widget.form_title.value != "" %}
+    <h2 class="form-heading">{{ widget.form_title.value}}</h2>
+  {% endif %}
+
+  <form id="form-template" class="form h-entry" action="{{ widget.cls_url.value | url_encode }}html_forms" method="POST">
+    {% if widget.form_note.value != "" %}
+      <p class="form-note">{{ widget.form_note.value }}</p>
+    {% endif %}
+
+    <input type="hidden" class="u-uid" name="u-uid" value="{{ widget.form_uid.value | url_encode }}" />
+    <input type="hidden" class="u-syndication" name="u-syndication" value="{{ widget.form_syndication_url.value | url_encode }}" />
+
+    <div class="p-author h-card">
+      <div class="form-field">
+        <label for="p-name" class="required">Full Name</label>
+        <input type="text" id="p-name" class="p-name" name="p-name" required />
+      </div>
+
+      <div class="form-field">
+        <fieldset>
+          <legend class="required">Are you a current resident?</legend>
+          <label><input type="radio" class="p-g5-resident" name="p-g5-resident" value="Yes"> Yes</label>
+          <label><input type="radio" class="p-g5-resident" name="p-g5-resident" value="No" checked> No</label>
+        </fieldset>
+      </div>
+
+      <div class="form-field">
+        <label for="p-g5-resident-2">If not, how did you hear about us?</label>
+        <input type="text" id="p-g5-resident-2" class="p-g5-resident-2" name="p-g5-resident-2" />
+      </div>
+
+      <div class="form-field">
+        <label for="p-tel">Phone Number</label>
+        <input type="tel" id="p-tel" class="p-tel" name="p-tel" />
+      </div>
+
+      <div class="form-field">
+        <label for="u-email" class="required">Email</label>
+        <input type="email" id="u-email" class="u-email" name="u-email" required />
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="e-content">Message</label>
+      <textarea id="e-content" class="e-content" name="e-content"></textarea>
+    </div>
+
+    <!-- for bots only. inline js/css necessary to make sure this is always hidden -->
+    <input id="lead_comments" name="lead_comments" onfocus="this.blur();" style="margin-left: -9999px; float: left;" type="text" value="" />
+
+    <input type="submit" value="Send" />
+    <span class="form-instruction">* Required Field</span>
+  </form>
+
+  <div class="submitting" style="display: none">Your submission is being sent...</div>
+  <div class="error" style="display: none">We're sorry, but something went wrong.</div>
+  <div class="success" style="display: none">Thank you! Your information was successfully sent.</div>
+
+</div>

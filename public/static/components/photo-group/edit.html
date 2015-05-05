@@ -1,0 +1,75 @@
+<form>
+  <div class="form-field">
+    {{ widget.photo1_url.id_hidden_field }}
+    <label for="{{ widget.photo1_url.value_field_id }}" >
+      Photo 1 Url
+    </label>
+    <input type="url"
+      id="{{ widget.photo1_url.value_field_id }}"
+      name="{{ widget.photo1_url.value_field_name }}"
+      value="{{ widget.photo1_url.value | url_encode }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.photo1_alt.id_hidden_field }}
+    <label for="{{ widget.photo1_alt.value_field_id }}" >
+      Photo 1 Alt Tag
+    </label>
+    <input type="text"
+      id="{{ widget.photo1_alt.value_field_id }}"
+      name="{{ widget.photo1_alt.value_field_name }}"
+      value="{{ widget.photo1_alt.value | url_encode }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.photo2_url.id_hidden_field }}
+    <label for="{{ widget.photo2_url.value_field_id }}" >
+      Photo 2 Url
+    </label>
+    <input type="url"
+      id="{{ widget.photo2_url.value_field_id }}"
+      name="{{ widget.photo2_url.value_field_name }}"
+      value="{{ widget.photo2_url.value | url_encode }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.photo2_alt.id_hidden_field }}
+    <label for="{{ widget.photo2_alt.value_field_id }}" >
+      Photo 2 Alt Tag
+    </label>
+    <input type="text"
+      id="{{ widget.photo2_alt.value_field_id }}"
+      name="{{ widget.photo2_alt.value_field_name }}"
+      value="{{ widget.photo2_alt.value | url_encode }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.photo3_url.id_hidden_field }}
+    <label for="{{ widget.photo3_url.value_field_id }}" >
+      Photo 3 Url
+    </label>
+    <input type="url"
+      id="{{ widget.photo3_url.value_field_id }}"
+      name="{{ widget.photo3_url.value_field_name }}"
+      value="{{ widget.photo3_url.value | url_encode }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.photo3_alt.id_hidden_field }}
+    <label for="{{ widget.photo3_alt.value_field_id }}" >
+      Photo 3 Alt Tag
+    </label>
+    <input type="text"
+      id="{{ widget.photo3_alt.value_field_id }}"
+      name="{{ widget.photo3_alt.value_field_name }}"
+      value="{{ widget.photo3_alt.value | url_encode }}"
+    />
+  </div>
+
+  <input type="submit" value="Save" class="btn" />
+</form>

@@ -1,0 +1,175 @@
+<form>
+  <fieldset>
+    <legend>Images and Avatars</legend>
+
+    <div class="form-field check-field">
+      {{ widget.display_avatars.id_hidden_field }}
+      <input type="hidden"
+        id="{{ widget.display_avatars.value_field_id }}_false"
+        name="{{ widget.display_avatars.value_field_name }}"
+        value="false"
+      />
+      <input type="checkbox"
+        id="{{ widget.display_avatars.value_field_id }}"
+        name="{{ widget.display_avatars.value_field_name }}"
+        value="true"
+        {% if widget.display_avatars.best_value == "true" %}
+        checked="checked"
+        {% endif %}
+      />
+      <label for="{{ widget.display_avatars.value_field_id }}">
+        Show Avatars
+      </label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Blog Feed Setup</legend>
+
+    <div class="form-field">
+      {{ widget.blog_feed_url.id_hidden_field }}
+      <label for="{{ widget.blog_feed_url.value_field_id }}">
+        Enter the RSS/ATOM Feed URL
+      </label>
+      <input type="text"
+        placeholder="//someurl.com/feed.rss"
+        id="{{ widget.blog_feed_url.value_field_id }}"
+        name="{{ widget.blog_feed_url.value_field_name }}"
+        value="{{ widget.blog_feed_url.best_value | url_encode }}"
+      />
+    </div>
+
+    <div class="form-field check-field">
+      {{ widget.blog_feed_display_summary.id_hidden_field }}
+      <input type="hidden"
+        id="{{ widget.blog_feed_display_summary.value_field_id }}_false"
+        name="{{ widget.blog_feed_display_summary.value_field_name }}"
+        value="false"
+      />
+      <input type="checkbox"
+        id="{{ widget.blog_feed_display_summary.value_field_id }}_true"
+        name="{{ widget.blog_feed_display_summary.value_field_name }}"
+        value="true"
+        {% if widget.blog_feed_display_summary.best_value == "true" %}
+        checked="checked"
+        {% endif %}
+      />
+      <label for="{{ widget.blog_feed_display_summary.value_field_id }}_true">
+        Show Summary
+      </label>
+    </div>
+
+    <div class="form-field">
+      {{ widget.blog_feed_number_to_display.id_hidden_field }}
+      <label for="{{ widget.blog_feed_number_to_display.value_field_id }}">
+        Number of Entries to Show
+      </label>
+      <input type="number", min="0" max="25"
+        placeholder="number_to_display of Feed"
+        id="{{ widget.blog_feed_number_to_display.value_field_id }}"
+        name="{{ widget.blog_feed_number_to_display.value_field_name }}"
+        {% if widget.blog_feed_number_to_display.best_value %}
+        value="{{ widget.blog_feed_number_to_display.best_value }}"
+        {% else %}
+        value="3"
+        {% endif %}
+      />
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Twitter Feed Setup</legend>
+
+    <div class="form-field">
+      {{ widget.twitter_username.id_hidden_field }}
+      <label for="{{ widget.twitter_username.value_field_id }}" >
+        Twitter Username
+      </label>
+      <input type="text"
+        id="{{ widget.twitter_username.value_field_id }}"
+        name="{{ widget.twitter_username.value_field_name }}"
+        placeholder="{%raw%}{{location_twitter_id}}{%endraw%}"
+        value="{{ widget.twitter_username.best_value }}"
+      />
+    </div>
+
+    <div class="form-field">
+      {{ widget.twitter_tweet_count.id_hidden_field }}
+      <label for="{{ widget.twitter_tweet_count.value_field_id }}">
+        Number of Tweets to Show
+      </label>
+      <input type="number"
+        min="1"
+        id="{{ widget.twitter_tweet_count.value_field_id }}"
+        name="{{ widget.twitter_tweet_count.value_field_name }}"
+        value="{{ widget.twitter_tweet_count.best_value }}"
+      />
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Facebook Feed Setup</legend>
+
+    <div class="form-field">
+      {{ widget.facebook_page_id.id_hidden_field }}
+      <label for="{{ widget.facebook_page_id.value_field_id }}" >
+        Facebook Page ID
+      </label>
+      <input type="text"
+        id="{{ widget.facebook_page_id.value_field_id }}"
+        name="{{ widget.facebook_page_id.value_field_name }}"
+        placeholder="{%raw%}{{location_facebook_id}}{%endraw%}"
+        value="{{ widget.facebook_page_id.best_value }}"
+      />
+    </div>
+
+    </div>
+
+    <div class="form-field">
+      {{ widget.facebook_post_count.id_hidden_field }}
+      <label for="{{ widget.facebook_post_count.value_field_id }}">
+        Number of Posts to Show
+      </label>
+      <input type="number"
+        min="1"
+        id="{{ widget.facebook_post_count.value_field_id }}"
+        name="{{ widget.facebook_post_count.value_field_name }}"
+        value="{{ widget.facebook_post_count.best_value }}"
+      />
+    </div>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Google Plus Feed Setup</legend>
+
+    <div class="form-field">
+      {{ widget.google_plus_page_id.id_hidden_field }}
+      <label for="{{ widget.google_plus_page_id.value_field_id }}" >
+        Google Plus Page ID
+      </label>
+      <input type="text"
+        id="{{ widget.google_plus_page_id.value_field_id }}"
+        name="{{ widget.google_plus_page_id.value_field_name }}"
+        value="{{ widget.google_plus_page_id.best_value }}"
+      />
+    </div>
+
+    </div>
+
+    <div class="form-field">
+      {{ widget.google_plus_post_count.id_hidden_field }}
+      <label for="{{ widget.google_plus_post_count.value_field_id }}">
+        Number of posts to show
+      </label>
+      <input type="number"
+        min="1"
+        id="{{ widget.google_plus_post_count.value_field_id }}"
+        name="{{ widget.google_plus_post_count.value_field_name }}"
+        value="{{ widget.google_plus_post_count.best_value }}"
+      />
+    </div>
+
+  </fieldset>
+  <input type="submit" value="Save" class="btn" />
+</form>

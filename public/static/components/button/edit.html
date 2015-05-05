@@ -1,0 +1,120 @@
+<form>
+  <div class="form-field">
+    {{ widget.button_label.id_hidden_field }}
+    <label for="{{ widget.button_label.value_field_id }}" >
+      Button Label
+    </label>
+    <input type="text"
+      id="{{ widget.button_label.value_field_id }}"
+      name="{{ widget.button_label.value_field_name }}"
+      value="{{ widget.button_label.best_value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.button_url.id_hidden_field }}
+    <label for="{{ widget.button_url.value_field_id }}" >
+      Button URL
+    </label>
+    <input type="text"
+      id="{{ widget.button_url.value_field_id }}"
+      name="{{ widget.button_url.value_field_name }}"
+      value="{{ widget.button_url.best_value | url_encode }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.button_color.id_hidden_field }}
+    <label for="{{ widget.button_color.value_field_id }}" >
+      Button Color
+    </label>
+    <input type="text"
+      id="{{ widget.button_color.value_field_id }}"
+      name="{{ widget.button_color.value_field_name }}"
+      value="{{ widget.button_color.best_value | url_encode }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.button_description.id_hidden_field }}
+    <label for="{{ widget.button_description.value_field_id }}" >
+      Button Description
+    </label>
+    <input type="text"
+      id="{{ widget.button_description.value_field_id }}"
+      name="{{ widget.button_description.value_field_name }}"
+      value="{{ widget.button_description.best_value }}"
+    />
+  </div>
+
+  <div class="form-field">
+    {{ widget.button_image_url.id_hidden_field }}
+    <label for="{{ widget.button_image_url.value_field_id }}" >
+      Button Image URL
+    </label>
+    <input type="url"
+      id="{{ widget.button_image_url.value_field_id }}"
+      name="{{ widget.button_image_url.value_field_name }}"
+      value="{{ widget.button_image_url.best_value | url_encode }}"
+    />
+  </div>
+  <div class="form-field check-field">
+    {{ widget.button_new_window.id_hidden_field }}
+    <input type="hidden"
+      id="{{ widget.button_new_window.value_field_id }}_false"
+      name="{{ widget.button_new_window.value_field_name }}"
+      value="false"
+    />
+    <input type="checkbox"
+      id="{{ widget.button_new_window.value_field_id }}"
+      name="{{ widget.button_new_window.value_field_name }}"
+      value="true"
+      {% if widget.button_new_window.value == "true" %}
+      checked="checked"
+      {% endif %}
+    />
+    <label for="{{ widget.button_new_window.value_field_id }}" >
+      Opens in a New Window
+    </label>
+  </div>
+
+  <div class="form-field check-field">
+    <fieldset>
+      <legend>Button Layout</legend>
+      {{ widget.button_layout.id_hidden_field }}
+      <input type="radio"
+        id="{{ widget.button_layout.value_field_id }}_list"
+        name="{{ widget.button_layout.value_field_name }}"
+        value="list"
+        checked="checked"
+      />
+      <label for="{{ widget.button_layout.value_field_id }}_list" >
+        List
+      </label>
+      <input type="radio"
+        id="{{ widget.button_layout.value_field_id }}_grid"
+        name="{{ widget.button_layout.value_field_name }}"
+        value="grid"
+        {% if widget.button_layout.value == "grid" %}
+        checked="checked"
+        {% endif %}
+      />
+      <label for="{{ widget.button_layout.value_field_id }}_grid" >
+        Grid
+      </label>
+      <input type="radio"
+        id="{{ widget.button_layout.value_field_id }}_inline"
+        name="{{ widget.button_layout.value_field_name }}"
+        value="inline"
+        {% if widget.button_layout.value == "inline" %}
+        checked="checked"
+        {% endif %}
+      />
+      <label for="{{ widget.button_layout.value_field_id }}_inline" >
+        Inline
+      </label>
+    </fieldset>
+  </div>
+
+  <input type="submit" value="Save" class="btn" />
+</form>

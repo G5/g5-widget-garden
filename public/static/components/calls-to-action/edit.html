@@ -1,0 +1,104 @@
+<form>
+  <fieldset>
+    <legend>CTA 1</legend>
+    <div class="form-field">
+      {{ widget.cta_text_1.id_hidden_field }}
+      <input type="text"
+        placeholder="Text for CTA 1"
+        id="{{ widget.cta_text_1.value_field_id }}"
+        name="{{ widget.cta_text_1.value_field_name }}"
+        value="{{ widget.cta_text_1.value }}"
+      />
+    </div>
+         
+    <div class="form-field">
+      {{ widget.page_slug_1.id_hidden_field }}
+      <select id="{{ widget.page_slug_1.value_field_id }}" name="{{ widget.page_slug_1.value_field_name }}">
+        {% for page in widget.navigateable_pages %}
+          <option value="{{ page.slug }}"
+            {% if widget.page_slug_1.value == page.slug %}
+              selected
+            {% endif %} >{{ page.slug }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>CTA 2</legend>
+    <div class="form-field">
+      {{ widget.cta_text_2.id_hidden_field }}
+      <input type="text"
+        placeholder="Text for CTA 2"
+        id="{{ widget.cta_text_2.value_field_id }}"
+        name="{{ widget.cta_text_2.value_field_name }}"
+        value="{{ widget.cta_text_2.value }}"
+      />
+    </div>
+         
+    <div class="form-field">
+      {{ widget.page_slug_2.id_hidden_field }}
+      <select id="{{ widget.page_slug_2.value_field_id }}" name="{{ widget.page_slug_2.value_field_name }}">
+        {% for page in widget.navigateable_pages %}
+          <option value="{{ page.slug }}"
+            {% if widget.page_slug_2.value == page.slug %}
+              selected
+            {% endif %} >{{ page.slug }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>CTA 3</legend>
+    <div class="form-field">
+      {{ widget.cta_text_3.id_hidden_field }}
+      <input type="text"
+        placeholder="Text for CTA 3"
+        id="{{ widget.cta_text_3.value_field_id }}"
+        name="{{ widget.cta_text_3.value_field_name }}"
+        value="{{ widget.cta_text_3.value }}"
+      />
+    </div>
+         
+    <div class="form-field">
+      {{ widget.page_slug_3.id_hidden_field }}
+      <select id="{{ widget.page_slug_3.value_field_id }}" name="{{ widget.page_slug_3.value_field_name }}">
+        {% for page in widget.navigateable_pages %}
+          <option value="{{ page.slug }}"
+            {% if widget.page_slug_3.value == page.slug %}
+              selected
+            {% endif %} >{{ page.slug }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>CTA 4</legend>
+    <div class="form-field">
+      {{ widget.cta_text_4.id_hidden_field }}
+      <input type="text"
+        placeholder="Text for CTA 4"
+        id="{{ widget.cta_text_4.value_field_id }}"
+        name="{{ widget.cta_text_4.value_field_name }}"
+        value="{{ widget.cta_text_4.value }}"
+      />
+    </div>
+         
+    <div class="form-field">
+      {{ widget.page_slug_4.id_hidden_field }}
+      <select id="{{ widget.page_slug_4.value_field_id }}" name="{{ widget.page_slug_4.value_field_name }}">
+        {% for page in widget.navigateable_pages %}
+          <option value="{{ page.slug }}"
+            {% if widget.page_slug_4.value == page.slug %}
+              selected
+            {% endif %} >{{ page.slug }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </fieldset>
+
+  <input type="submit" value="Save" class="btn" />
+</form>
+

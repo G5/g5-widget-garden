@@ -1,0 +1,258 @@
+<form>
+  <div class="row-edit" data-row-id="{{widget.id}}">
+    <!-- Custom CSS Class (Optional) -->
+    <div class="form-field">
+      {{ widget.row_css_custom.id_hidden_field }}
+
+      <label for="{{ widget.row_css_custom.value_field_id }}" >
+        Custom CSS Class
+      </label>
+
+      <input type="text"
+      id="{{ widget.row_css_custom.value_field_id }}"
+      name="{{ widget.row_css_custom.value_field_name }}"
+      value="{{ widget.row_css_custom.value }}"
+      placeholder="custom-class" />
+    </div>
+    <!-- Row Background Color (Optional) -->
+    <div class="form-field">
+      {{ widget.row_bg_color.id_hidden_field }}
+
+      <label for="{{ widget.row_bg_color.value_field_id }}" >
+        Background Color
+      </label>
+
+      <input type="text"
+      id="{{ widget.row_bg_color.value_field_id }}"
+      name="{{ widget.row_bg_color.value_field_name }}"
+      value="{{ widget.row_bg_color.best_value }}"
+      placeholder="example: #fff" />
+    </div>
+
+    <div class="form-field check-field">
+      <fieldset>
+      <legend>Row Text Color</legend>
+        {{ widget.row_text_color.id_hidden_field }}
+        <input type="radio"
+          id="{{ widget.row_text_color.value_field_id }}_default"
+          name="{{ widget.row_text_color.value_field_name }}"
+          value="default"
+          checked="checked"
+        />
+        <label for="{{ widget.row_text_color.value_field_id }}_default" >
+          Default
+        </label>
+        <input type="radio"
+          id="{{ widget.row_text_color.value_field_id }}_dark"
+          name="{{ widget.row_text_color.value_field_name }}"
+          value="dark"
+          {% if widget.row_text_color.best_value == "dark" %}
+          checked="checked"
+          {% endif %}
+        />
+        <label for="{{ widget.row_text_color.value_field_id }}_dark" >
+          Dark
+        </label>
+        <input type="radio"
+          id="{{ widget.row_text_color.value_field_id }}_light"
+          name="{{ widget.row_text_color.value_field_name }}"
+          value="light"
+          {% if widget.row_text_color.best_value == "light" %}
+          checked="checked"
+          {% endif %}
+        />
+        <label for="{{ widget.row_text_color.value_field_id }}_light" >
+          Light
+        </label>
+
+      </fieldset>
+    </div>
+
+    <!-- Select Row Layout -->
+    <div class="form-field">
+      {{ widget.row_layout.id_hidden_field }}
+
+      <label for="{{ widget.row_layout.value_field_id }}">
+        Row Layout
+      </label>
+
+      <select id="{{ widget.row_layout.value_field_id }}"
+        class="select-row-layout"
+        name="{{ widget.row_layout.value_field_name }}">
+
+        <option value="single" {% if widget.row_layout.best_value =="single" %}selected{% endif %}>
+        Single Column
+        </option>
+
+        <option value="halves" {% if widget.row_layout.best_value == "halves" %}selected{% endif %}>
+        Two Columns: 1/2-1/2
+        </option>
+
+        <option value="uneven-thirds-1" {% if widget.row_layout.best_value == "uneven-thirds-1" %}selected{% endif %}>
+        Two Columns: 1/3-2/3
+        </option>
+
+        <option value="uneven-thirds-2" {% if widget.row_layout.best_value == "uneven-thirds-2" %}selected{% endif %}>
+        Two Columns: 2/3-1/3
+        </option>
+
+        <option value="thirds" {% if widget.row_layout.best_value == "thirds" %}selected{% endif %}>
+        Three Columns: 1/3-1/3-1/3
+        </option>
+
+        <option value="quarters" {% if widget.row_layout.best_value == "quarters" %}selected{% endif %}>
+        Four Columns: 1/4-1/4-1/4-1/4
+        </option>
+
+      </select>
+    </div>
+
+    <p class="alert alert-info">Please save in order to configure changed widgets</p>
+
+    <!-- Select Column 1 Widget -->
+    <div class="form-field col-widgets single halves uneven-thirds-1 uneven-thirds-2 thirds quarters">
+      {{ widget.column_1_widget_name.id_hidden_field }}
+
+      <label for="{{ widget.column_1_widget_name.value_field_id }}"
+        class="inline">
+        Column 1 Widget
+      </label>
+
+      {% if widget.column_1_widget_name.value %}
+      <a id="edit-{{ widget.column_1_widget_name.value_field_id }}"
+        data-widget-id="{{ widget.column_1_widget_id.value }}"
+        data-widget-name="{{widget.column_1_widget_name.value}}"
+        class="edit-widget"
+        href="#">
+        <small>(Edit)</small>
+      </a>
+      {% endif %}
+
+      <select  id="{{ widget.column_1_widget_name.value_field_id }}"
+        name="{{ widget.column_1_widget_name.value_field_name }}">
+
+        <option value="">
+        {% for garden_widget in widget.row_widget_garden_widgets.best_value %}
+        <option value="{{ garden_widget }}"
+        {% if garden_widget == widget.column_1_widget_name.value %}
+        selected
+        {% endif %}
+        >
+        {{ garden_widget }}
+        </option>
+        {% endfor %}
+
+      </select>
+    </div>
+
+    <!-- Select Column 2 Widget -->
+    <div class="form-field col-widgets halves uneven-thirds-1 uneven-thirds-2 thirds quarters">
+      {{ widget.column_2_widget_name.id_hidden_field }}
+
+      <label for="{{ widget.column_2_widget_name.value_field_id }}"
+        class="inline">
+        Column 2 Widget
+      </label>
+
+      {% if widget.column_2_widget_name.value %}
+      <a id="edit-{{ widget.column_2_widget_name.value_field_id }}"
+        data-widget-id="{{ widget.column_2_widget_id.value }}"
+        data-widget-name="{{widget.column_2_widget_name.value}}"
+        class="edit-widget"
+        href="#">
+        <small>(Edit)</small>
+      </a>
+      {% endif %}
+
+      <select id="{{ widget.column_2_widget_name.value_field_id }}"
+        name="{{ widget.column_2_widget_name.value_field_name }}">
+
+        <option value="">
+        {% for garden_widget in widget.row_widget_garden_widgets.best_value %}
+        <option value="{{ garden_widget }}"
+        {% if garden_widget == widget.column_2_widget_name.value %}
+        selected
+        {% endif %}
+        >
+        {{ garden_widget }}
+        </option>
+        {% endfor %}
+
+      </select>
+    </div>
+
+    <!-- Select Column 3 Widget -->
+    <div class="form-field col-widgets thirds quarters">
+      {{ widget.column_3_widget_name.id_hidden_field }}
+
+      <label for="{{ widget.column_3_widget_name.value_field_id }}"
+        class="inline">
+        Column 3 Widget
+      </label>
+
+      {% if widget.column_3_widget_id.value %}
+      <a id="edit-{{ widget.column_3_widget_name.value_field_id }}"
+        data-widget-id="{{ widget.column_3_widget_id.value }}"
+        data-widget-name="{{widget.column_3_widget_name.value}}"
+        class="edit-widget"
+        href="#">
+        <small>(Edit)</small>
+      </a>
+      {% endif %}
+
+      <select id="{{ widget.column_3_widget_name.value_field_id }}"
+        name="{{ widget.column_3_widget_name.value_field_name }}">
+
+        <option value="">
+        {% for garden_widget in widget.row_widget_garden_widgets.best_value %}
+        <option value="{{ garden_widget }}"
+        {% if garden_widget == widget.column_3_widget_name.value %}
+        selected
+        {% endif %}
+        >
+        {{ garden_widget }}
+        </option>
+        {% endfor %}
+
+      </select>
+    </div>
+
+    <!-- Select Column 4 Widget -->
+    <div class="form-field col-widgets quarters">
+      {{ widget.column_4_widget_name.id_hidden_field }}
+
+      <label for="{{ widget.column_4_widget_name.value_field_id }}"
+        class="inline">
+        Column 4 Widget
+      </label>
+
+      {% if widget.column_4_widget_id.value %}
+      <a id="edit-{{ widget.column_4_widget_name.value_field_id }}"
+        data-widget-id="{{ widget.column_4_widget_id.value }}"
+        data-widget-name="{{widget.column_4_widget_name.value}}"
+        class="edit-widget"
+        href="#">
+        <small>(Edit)</small>
+      </a>
+      {% endif %}
+
+      <select id="{{ widget.column_4_widget_name.value_field_id }}"
+        name="{{ widget.column_4_widget_name.value_field_name }}">
+
+        <option value="">
+        {% for garden_widget in widget.row_widget_garden_widgets.best_value %}
+        <option value="{{ garden_widget }}"
+        {% if garden_widget == widget.column_4_widget_name.value %}
+        selected
+        {% endif %}
+        >
+        {{ garden_widget }}
+        </option>
+        {% endfor %}
+
+      </select>
+    </div>
+
+    <input type="submit" value="Save" class="btn" />
+  </div>
+</form>

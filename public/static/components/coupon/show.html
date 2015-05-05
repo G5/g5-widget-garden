@@ -1,0 +1,65 @@
+<div class="coupon widget h-card">
+
+  <div class="coupon-info">
+
+    {% if widget.location_logo_url != blank %}
+      <img src="{{widget.location_logo_url.value | url_encode}}" alt="{{widget.location_name.value}}" class="coupon-logo" />
+    {% endif %}
+
+    <h2 class="coupon-offer">{{ widget.coupon_text.value }}</h2>
+
+    {% if widget.coupon_description != blank %}
+      <p clas="coupon-description">{{ widget.coupon_description.value}}</p>
+    {% endif %}
+
+    {% if widget.coupon_barcode_url != blank %}
+      <img src="{{widget.coupon_barcode_url.value | url_encode}}" alt="{{widget.coupon_number.value}}" />
+    {% endif %}
+
+    {% if widget.coupon_number != blank %}
+      <p class="coupon-code"><strong>Offer #: {{ widget.coupon_number.value }}</strong></p>
+    {% endif %}
+
+    <div class="coupon-actions">
+      <button id="coupon-print" class="coupon-print btn">Print</button>
+      <button id="show-coupon-form" class="send-coupon btn">Send Coupon</button>
+      <button id="show-location-info" class="show-coupon-map btn">Map &amp; Directions</button>
+    </div> <!-- end .coupon-actions -->
+
+  </div> <!-- end .coupon-info -->
+
+
+  <div id="coupon-form" class="coupon-drawer">
+    <form action="{{widget.coupon_email_url.value | url_encode}}" class="form">
+      <div class="form-field">
+        <label for="coupon-email">Email or Cell #</label>
+        <input type="text" id="coupon-email" />
+        <input type="submit" class="btn" value="Send" />
+      </div>
+    </form>
+  </div>
+
+  <div id="location-info" class="coupon-drawer">
+    <div class="coupon-map">
+      <div id="map-canvas">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?markers={{ widget.location_street_address.value | HtmlEncode}},{{ widget.location_city.value | HtmlEncode}},{{ widget.location_state.value | HtmlEncode}},{{ widget.location_postal_code.value | HtmlEncode}}&zoom=15&size=400x400&scale=2&sensor=false" />
+      </div>
+    </div> <!-- end .coupon-map -->
+
+    <div class="coupon-address">
+      <p class="p-name"><strong>{{ widget.location_name.value }}</strong></p>
+      <p class="p-adr h-adr">
+        <span class="p-street-address">{{ widget.location_street_address.value }}</span>
+        <span class="p-locality">{{ widget.location_city.value }}</span>, <span class="p-region">{{ widget.location_city.value }}</span> <span class="p-postal-code">{{ widget.location_postal_code.value }}</span>
+        <span class="p-tel">{{ widget.location_tel.value }}</span>
+      </p>
+    </div> <!-- end .coupon-address -->
+
+    {% if widget.location_directions.value != blank %}
+      <div class="coupon-directions">
+        {{ widget.location_directions.value }}
+      </div>
+    {% endif %}
+
+  </div> <!-- end .coupon-drawer -->
+</div>

@@ -1,0 +1,163 @@
+# Logfile created on 2015-03-23 14:47:55 -0700 by logger.rb/44203
+D, [2015-03-23T14:50:02.903035 #37911] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-03-23T14:50:02.903109 #37911] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-03-23T14:50:03.089569 #37911] DEBUG -- : LE: Connection established
+D, [2015-03-24T12:56:36.167260 #37911] DEBUG -- : LE: Got exception in run loop - Broken pipe
+D, [2015-03-24T13:07:08.528710 #37911] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-03-24T13:07:08.713865 #37911] DEBUG -- : LE: Connection established
+D, [2015-03-24T13:19:19.206159 #37911] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-03-24T13:19:19.206261 #37911] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-03-24T13:19:19.407426 #37911] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-03-24T13:20:15.027740 #40815] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-03-24T13:20:15.030212 #40815] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-03-24T13:20:15.565872 #40815] DEBUG -- : LE: Connection established
+D, [2015-03-24T13:42:46.093508 #40815] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-03-24T13:42:46.093630 #40815] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-03-24T13:42:46.294206 #40815] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-03-24T13:43:38.523096 #41028] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-03-24T13:43:38.526541 #41028] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-03-24T13:43:38.709234 #41028] DEBUG -- : LE: Connection established
+D, [2015-03-24T13:46:39.387919 #41028] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-03-24T13:46:39.388088 #41028] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-03-24T13:46:39.589231 #41028] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-03-24T13:49:13.546047 #41109] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-03-24T13:49:13.548581 #41109] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-03-24T13:49:13.704007 #41109] DEBUG -- : LE: Connection established
+D, [2015-03-24T13:50:32.987386 #41109] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-03-24T13:50:32.987492 #41109] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-03-24T13:50:33.188642 #41109] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-17T14:31:03.817123 #1548] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-17T14:31:03.817198 #1548] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-17T14:31:04.001186 #1548] DEBUG -- : LE: Connection established
+D, [2015-04-17T15:57:32.890947 #1548] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-17T15:57:32.891508 #1548] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-17T15:57:33.091908 #1548] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-17T16:08:31.851932 #2508] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-17T16:08:31.854680 #2508] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-17T16:08:32.089449 #2508] DEBUG -- : LE: Connection established
+D, [2015-04-17T16:50:46.891207 #1214] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-17T16:50:46.891309 #1214] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-17T16:50:47.113604 #1214] DEBUG -- : LE: Connection established
+D, [2015-04-17T20:19:43.627581 #1214] DEBUG -- : LE: Got exception in run loop - Broken pipe
+D, [2015-04-17T20:21:01.816119 #1214] DEBUG -- : LE: commencing shutdown, queue has 2 entries to clear
+D, [2015-04-17T20:21:11.859935 #1214] DEBUG -- : LE: shutdown complete, queue is not empty with 3 entries
+D, [2015-04-17T20:22:04.918295 #2017] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-17T20:22:04.918364 #2017] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-17T20:22:05.159373 #2017] DEBUG -- : LE: Connection established
+D, [2015-04-17T20:47:48.543136 #2017] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-17T20:47:48.543271 #2017] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-17T20:47:48.744054 #2017] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-17T20:48:08.210634 #2169] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-17T20:48:08.210709 #2169] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-17T20:48:08.812777 #2169] DEBUG -- : LE: Connection established
+D, [2015-04-18T07:35:49.486932 #2169] DEBUG -- : LE: Got exception in run loop - Broken pipe
+D, [2015-04-18T07:35:49.488215 #2169] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-18T07:35:50.048290 #2169] DEBUG -- : LE: Connection established
+D, [2015-04-18T07:51:52.629181 #2169] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-18T07:51:52.629312 #2169] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-18T07:51:52.830566 #2169] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-21T11:36:32.081075 #16282] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-21T11:36:32.081181 #16282] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-21T11:36:32.283442 #16282] DEBUG -- : LE: Connection established
+D, [2015-04-21T13:47:43.189578 #16282] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-21T13:47:43.190439 #16282] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-21T13:47:43.390882 #16282] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-21T14:10:22.233249 #17810] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-21T14:10:22.233318 #17810] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-21T14:10:22.548512 #17810] DEBUG -- : LE: Connection established
+D, [2015-04-21T14:21:27.367727 #17810] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-21T14:21:27.367834 #17810] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-21T14:21:27.568750 #17810] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-21T14:23:38.249539 #17924] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-21T14:23:38.249616 #17924] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-21T14:23:38.809117 #17924] DEBUG -- : LE: Connection established
+D, [2015-04-21T14:35:53.552949 #17924] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-21T14:35:53.553051 #17924] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-21T14:35:53.754192 #17924] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-21T14:41:14.086677 #18029] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-21T14:41:14.089703 #18029] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-21T14:41:14.648686 #18029] DEBUG -- : LE: Connection established
+D, [2015-04-21T15:01:04.536295 #18029] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-21T15:01:04.536380 #18029] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-21T15:01:04.736638 #18029] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-22T15:04:45.261808 #4064] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-22T15:04:45.261910 #4064] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-22T15:04:45.452406 #4064] DEBUG -- : LE: Connection established
+D, [2015-04-22T15:35:11.778264 #4064] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-22T15:35:11.779068 #4064] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-22T15:35:11.980139 #4064] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-22T15:37:01.487946 #4640] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-22T15:37:01.488042 #4640] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-22T15:37:02.064372 #4640] DEBUG -- : LE: Connection established
+D, [2015-04-22T15:54:36.836337 #4640] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-22T15:54:36.836470 #4640] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-22T15:54:37.036818 #4640] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-22T15:54:42.053430 #4756] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-22T15:54:42.056090 #4756] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-22T15:54:42.252308 #4756] DEBUG -- : LE: Connection established
+D, [2015-04-22T16:13:52.028799 #4756] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-22T16:13:52.028878 #4756] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-22T16:13:52.229061 #4756] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-23T10:08:05.595218 #11482] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-23T10:08:05.595302 #11482] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-23T10:08:05.784885 #11482] DEBUG -- : LE: Connection established
+D, [2015-04-23T10:08:19.893659 #11482] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-23T10:08:19.894475 #11482] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-23T10:08:20.095128 #11482] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-23T10:09:02.146394 #11514] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-23T10:09:02.146484 #11514] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-23T10:09:02.298764 #11514] DEBUG -- : LE: Connection established
+D, [2015-04-23T10:53:22.279070 #11514] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-23T10:53:22.279208 #11514] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-23T10:53:22.480373 #11514] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-23T10:53:31.199492 #11944] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-23T10:53:31.199558 #11944] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-23T10:53:31.383742 #11944] DEBUG -- : LE: Connection established
+D, [2015-04-23T11:06:56.012843 #11944] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-23T11:06:56.012938 #11944] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-23T11:06:56.213105 #11944] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-23T11:07:54.279692 #12023] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-23T11:07:54.279759 #12023] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-23T11:07:54.874482 #12023] DEBUG -- : LE: Connection established
+D, [2015-04-23T11:12:31.114009 #12023] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-23T11:12:31.114120 #12023] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-23T11:12:31.315318 #12023] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-23T11:12:51.338642 #12070] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-23T11:12:51.338727 #12070] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-23T11:12:51.917278 #12070] DEBUG -- : LE: Connection established
+D, [2015-04-23T12:01:29.903941 #12070] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-23T12:01:29.904148 #12070] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-23T12:01:30.105267 #12070] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-23T12:02:08.603660 #12318] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-23T12:02:08.603747 #12318] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-23T12:02:08.780230 #12318] DEBUG -- : LE: Connection established
+D, [2015-04-23T12:08:25.634524 #12318] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-23T12:08:25.634655 #12318] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-23T12:08:25.835825 #12318] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-23T12:08:58.645460 #12387] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-23T12:08:58.647980 #12387] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-23T12:08:58.814414 #12387] DEBUG -- : LE: Connection established
+D, [2015-04-23T12:27:57.488192 #12387] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-23T12:27:57.488327 #12387] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-23T12:27:57.688434 #12387] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-23T12:28:31.668027 #12602] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-23T12:28:31.668105 #12602] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-23T12:28:32.249483 #12602] DEBUG -- : LE: Connection established
+D, [2015-04-23T12:54:44.033120 #12602] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-23T12:54:44.033534 #12602] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-23T12:54:44.234241 #12602] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-23T13:53:45.737748 #13002] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-23T13:53:45.737694 #13002] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-23T13:53:45.937033 #13002] DEBUG -- : LE: Connection established
+D, [2015-04-23T14:04:40.831292 #13002] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-23T14:04:40.832336 #13002] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-23T14:04:41.033099 #13002] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-04-24T14:25:54.574150 #19804] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-04-24T14:25:54.574256 #19804] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-04-24T14:25:54.753125 #19804] DEBUG -- : LE: Connection established
+D, [2015-04-24T15:04:17.232660 #19804] DEBUG -- : LE: commencing shutdown, queue has 0 entries to clear
+D, [2015-04-24T15:04:17.233581 #19804] DEBUG -- : LE: Closing Asyncrhonous socket writer
+D, [2015-04-24T15:04:17.435231 #19804] DEBUG -- : LE: shutdown complete, queue is empty with 0 entries
+D, [2015-05-04T16:57:39.950940 #4119] DEBUG -- : LE: Asynchronous socket writer started
+D, [2015-05-04T16:57:39.951047 #4119] DEBUG -- : LE: Reopening connection to Logentries API server
+D, [2015-05-04T16:57:40.404235 #4119] DEBUG -- : LE: Connection established

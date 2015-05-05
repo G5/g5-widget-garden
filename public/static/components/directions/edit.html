@@ -1,0 +1,54 @@
+<form>
+  <div class="form-field">
+    {{ widget.location_street_address.id_hidden_field }}
+    <label for="{{ widget.location_street_address.value_field_id }}" >
+      Street Address
+    </label>
+    <input type="text"
+      id="{{ widget.location_street_address.value_field_id }}"
+      name="{{ widget.location_street_address.value_field_name }}"
+      placeholder="{%raw%}{{location_street_address}}{%endraw%}"
+      value="{{ widget.location_street_address.value }}"
+    />
+  </div>
+  
+  <div class="form-field">
+    {{ widget.location_city.id_hidden_field }}
+    <label for="{{ widget.location_city.value_field_id }}" >
+      City
+    </label>
+    <input type="text"
+      id="{{ widget.location_city.value_field_id }}"
+      name="{{ widget.location_city.value_field_name }}"
+      placeholder="{%raw%}{{location_city}}{%endraw%}"
+      value="{{ widget.location_city.value }}"
+    />
+  </div>
+  
+  <div class="form-field">
+    {{ widget.location_state.id_hidden_field }}
+    <label for="{{ widget.location_state.value_field_id }}" >
+      State
+    </label>
+    <input type="text"
+      id="{{ widget.location_state.value_field_id }}"
+      name="{{ widget.location_state.value_field_name }}"
+      placeholder="{%raw%}{{location_state}}{%endraw%}"
+      value="{{ widget.location_state.value }}"
+    />
+  </div>
+  
+  <div class="form-field">
+    {{ widget.location_postal_code.id_hidden_field }}
+    <label for="{{ widget.location_postal_code.value_field_id }}" >
+      Postal Code
+    </label>
+    <input type="text"
+      id="{{ widget.location_postal_code.value_field_id }}"
+      name="{{ widget.location_postal_code.value_field_name }}"
+      placeholder="{%raw%}{{location_postal_code}}{%endraw%}"
+      value="{{ widget.location_postal_code.value }}"
+    />
+  </div>
+  <input type="submit" value="Save" class="btn" />
+</form>

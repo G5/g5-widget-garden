@@ -1,0 +1,20 @@
+<form>
+  <fieldset>
+    
+    <div class="form-field">
+      {{ widget.languages.id_hidden_field }}
+      <label for="{{ widget.languages.value_field_id }}">
+        Languages
+      </label>
+      <input type="text"
+        placeholder="en,es"
+        id="{{ widget.languages.value_field_id }}"
+        name="{{ widget.languages.value_field_name }}"
+        value="{{ widget.languages.best_value }}"
+      />
+    </div>
+    
+  </fieldset>
+
+  <input type="submit" value="Save" class="btn" />
+</form>

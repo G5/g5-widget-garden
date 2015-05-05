@@ -1,0 +1,8 @@
+<div class="video fluid-video widget h-media">
+  {% if widget.video_id.value != blank %}
+    {% if widget.video_title.value != blank %}
+      <h2>{{ widget.video_title.value }}</h2>
+    {% endif %}
+    <iframe src="{{ widget.source.value }}{{ widget.video_id.value }}?rel=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  {% endif %}
+</div>
